@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+**/node_modules/
+dist/
+build/
+.npm/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Database data
+data/neo4j/data/
+data/mongodb/data/
+data/weaviate/data/
+
+# Model files
+models/**/*.bin
+models/**/*.gguf
+models/**/*.safetensors
+
+# Backups
+backups/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker volumes
+docker/volumes/
+
+# Secrets
+secrets/
+*.key
+*.pem
+*.crt
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Production builds
+/dist
+/build

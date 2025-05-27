@@ -1,0 +1,23 @@
+version: '3.9'
+
+# Production-specific configuration
+services:
+  backend:
+    restart: always
+    environment:
+      - NODE_ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+
+  frontend:
+    restart: always
+    environment:
+      - NODE_ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2G

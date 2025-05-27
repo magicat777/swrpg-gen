@@ -1,0 +1,30 @@
+version: '3.9'
+
+networks:
+  swrpg-network:
+    name: swrpg-network
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+          gateway: 172.20.0.1
+
+volumes:
+  neo4j-data:
+  neo4j-logs:
+  mongodb-data:
+  mongodb-logs:
+  weaviate-data:
+  localai-models:
+  prometheus-data:
+  grafana-data:
+
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  # Services will be added in subsequent phases
+  # This file serves as the base structure

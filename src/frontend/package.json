@@ -1,0 +1,37 @@
+{
+  "name": "swrpg-frontend",
+  "version": "1.0.0",
+  "description": "SWRPG Story Generator Frontend",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.0",
+    "styled-components": "^6.1.6",
+    "axios": "^1.6.2",
+    "@tanstack/react-query": "^5.17.0",
+    "zustand": "^4.4.7",
+    "react-hot-toast": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/styled-components": "^5.1.34",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.10",
+    "typescript": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "vitest": "^1.1.0"
+  }
+}

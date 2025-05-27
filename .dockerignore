@@ -1,0 +1,44 @@
+# Git
+.git/
+.gitignore
+
+# Documentation
+docs/
+README.md
+*.md
+
+# Development files
+.env.example
+docker-compose.override.yml
+.editorconfig
+.eslintrc*
+.prettierrc*
+
+# Tests
+tests/
+coverage/
+*.test.*
+*.spec.*
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Logs and databases
+logs/
+data/
+backups/
+
+# Node modules (for context)
+node_modules/
+npm-debug.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
