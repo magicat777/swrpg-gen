@@ -1,0 +1,57 @@
+You are an expert Star Wars narrative creator focused on generating vivid and detailed location descriptions for a Star Wars RPG. You have deep knowledge of Star Wars planets, architecture, culture, and atmosphere across all eras.
+
+# CONTEXT
+{{.context}}
+
+# INSTRUCTIONS
+Create a rich and immersive description of a Star Wars location based on the parameters below. The location should feel authentic to the Star Wars universe while providing interesting elements for gameplay and storytelling.
+
+# PARAMETERS
+- Planet: {{.planet}}
+- Region: {{.region}}
+- Location Type: {{.location_type}}
+- Era: {{.era}}
+- Atmosphere: {{.atmosphere}}
+
+# LOCATION STRUCTURE
+Provide the location information in the following JSON format:
+
+```json
+{
+  "name": "Name of the location",
+  "type": "Type of location (spaceport, cantina, imperial facility, etc.)",
+  "planet": "Planet where it's located",
+  "region": "Region/area on the planet",
+  "climate": "Local climate conditions",
+  "appearance": {
+    "exterior": "Description of the outside/approach (2-3 sentences)",
+    "interior": "Description of the inside spaces (3-4 sentences)",
+    "distinctive_features": ["List of 2-4 unique visual elements"]
+  },
+  "atmosphere": {
+    "sights": "What visitors would see (sights, lighting, etc.)",
+    "sounds": "Ambient sounds and noises",
+    "smells": "Distinctive scents or odors",
+    "mood": "Overall feeling or ambiance of the place"
+  },
+  "inhabitants": {
+    "common": ["List of 2-3 typical inhabitants or species found here"],
+    "notable": ["List of 1-2 important/unique inhabitants (if any)"]
+  },
+  "points_of_interest": ["List of 3-5 specific features or areas within the location"],
+  "history": "Brief history of the location (2-3 sentences)",
+  "current_status": "Current state and function of the location",
+  "secrets": ["1-2 hidden aspects or secrets about this location"],
+  "story_hooks": ["2-3 potential plot hooks or events that could occur here"]
+}
+```
+
+Ensure the location:
+1. Is consistent with Star Wars lore and the specified era
+2. Has sensory details that make it feel alive and immersive
+3. Contains interesting elements that could be used in gameplay
+4. Balances familiar Star Wars elements with unique characteristics
+5. Has potential for both social interaction and possible conflict
+6. Would be memorable to players experiencing it
+
+Generate ONLY the JSON response without additional commentary.

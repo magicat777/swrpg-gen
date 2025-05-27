@@ -1,0 +1,234 @@
+{
+  "summary": {
+    "duration": 0.323,
+    "successRate": "88.24",
+    "passed": 30,
+    "failed": 4,
+    "total": 34,
+    "timestamp": "2025-05-23T16:43:33.649Z"
+  },
+  "results": [
+    {
+      "test": "Basic health check",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.342Z"
+    },
+    {
+      "test": "Detailed health check",
+      "passed": {
+        "api": {
+          "status": "ok",
+          "uptime": 6205.236740918,
+          "environment": "development"
+        },
+        "neo4j": {
+          "status": "ok"
+        },
+        "mongodb": {
+          "status": "ok"
+        },
+        "weaviate": {
+          "status": "ok"
+        },
+        "localai": {
+          "status": "ok"
+        }
+      },
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.359Z"
+    },
+    {
+      "test": "User registration",
+      "passed": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzBhNWI1NDQ3ZTJkNmU2Y2FjM2ZlZCIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc0ODAxODYxMzMyNSIsImVtYWlsIjoidGVzdF8xNzQ4MDE4NjEzMzI1QGV4YW1wbGUuY29tIiwicm9sZXMiOlsidXNlciJdLCJpYXQiOjE3NDgwMTg2MTMsImV4cCI6MTc0ODEwNTAxM30.obrQBjnNdjO3_oB7mplEVMdPgFYYYVkeESTckTUsbEc",
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.369Z"
+    },
+    {
+      "test": "Duplicate user registration (should fail)",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.372Z"
+    },
+    {
+      "test": "User login",
+      "passed": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzBhNWI1NDQ3ZTJkNmU2Y2FjM2ZlZCIsInVzZXJuYW1lIjoidGVzdHVzZXJfMTc0ODAxODYxMzMyNSIsImVtYWlsIjoidGVzdF8xNzQ4MDE4NjEzMzI1QGV4YW1wbGUuY29tIiwicm9sZXMiOlsidXNlciJdLCJpYXQiOjE3NDgwMTg2MTMsImV4cCI6MTc0ODEwNTAxM30.obrQBjnNdjO3_oB7mplEVMdPgFYYYVkeESTckTUsbEc",
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.379Z"
+    },
+    {
+      "test": "Invalid login (should fail)",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.386Z"
+    },
+    {
+      "test": "Get current user (authenticated)",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.389Z"
+    },
+    {
+      "test": "API key generation",
+      "passed": "d10de22e59cf8b4e9726c2b38d11a29e35c8a2a81a748379cc837e62c7e68847",
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.392Z"
+    },
+    {
+      "test": "Unauthorized access (should fail)",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.395Z"
+    },
+    {
+      "test": "Get characters",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.412Z"
+    },
+    {
+      "test": "Characters pagination",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.423Z"
+    },
+    {
+      "test": "Characters search",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.434Z"
+    },
+    {
+      "test": "Invalid character limit (should fail)",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.436Z"
+    },
+    {
+      "test": "Get locations",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.443Z"
+    },
+    {
+      "test": "Locations filtering",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.450Z"
+    },
+    {
+      "test": "Get factions",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.455Z"
+    },
+    {
+      "test": "Get faction by ID",
+      "passed": false,
+      "error": "Cannot read properties of undefined (reading 'id')",
+      "timestamp": "2025-05-23T16:43:33.481Z"
+    },
+    {
+      "test": "Non-existent faction ID (should fail)",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.498Z"
+    },
+    {
+      "test": "Database validation (authenticated)",
+      "passed": false,
+      "error": "Status: 404",
+      "timestamp": "2025-05-23T16:43:33.500Z"
+    },
+    {
+      "test": "Validation status",
+      "passed": false,
+      "error": "Status: 404",
+      "timestamp": "2025-05-23T16:43:33.501Z"
+    },
+    {
+      "test": "Registration validation: Username too short",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.503Z"
+    },
+    {
+      "test": "Registration validation: Invalid email",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.505Z"
+    },
+    {
+      "test": "Registration validation: Weak password",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.507Z"
+    },
+    {
+      "test": "Registration validation: Username with spaces",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.509Z"
+    },
+    {
+      "test": "SQL injection protection",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.519Z"
+    },
+    {
+      "test": "XSS injection protection",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.528Z"
+    },
+    {
+      "test": "Burst requests within limit",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.612Z"
+    },
+    {
+      "test": "404 for non-existent endpoint",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.614Z"
+    },
+    {
+      "test": "405 for wrong HTTP method",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.615Z"
+    },
+    {
+      "test": "Malformed JSON handling",
+      "passed": false,
+      "error": "Expected 400, got 500",
+      "timestamp": "2025-05-23T16:43:33.617Z"
+    },
+    {
+      "test": "Performance: /health (<100ms)",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.618Z"
+    },
+    {
+      "test": "Performance: /world/characters?limit=20 (<1000ms)",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.636Z"
+    },
+    {
+      "test": "Performance: /world/locations?limit=20 (<1000ms)",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.644Z"
+    },
+    {
+      "test": "Performance: /world/factions?limit=20 (<1000ms)",
+      "passed": true,
+      "error": null,
+      "timestamp": "2025-05-23T16:43:33.649Z"
+    }
+  ]
+}

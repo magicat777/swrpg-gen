@@ -1,0 +1,866 @@
+{
+  "core_worlds": {
+    "coruscant": {
+      "name": "Coruscant",
+      "system": "Coruscant System",
+      "sector": "Corusca Sector",
+      "region": "Core Worlds",
+      "climate": "Urban",
+      "terrain": "Cityscape",
+      "population": "1 trillion+",
+      "government": "Galactic Republic/Empire Capital",
+      "major_cities": ["Galactic City", "CoCo Town", "Uscru District"],
+      "notable_locations": {
+        "jedi_temple": {
+          "description": "Ancient pyramid-like structure serving as the headquarters of the Jedi Order",
+          "features": ["High Council Chamber", "Jedi Archives", "Training rooms", "Hangar bays"],
+          "history": "Built on ancient Sith shrine, source of growing darkness",
+          "fate": "Converted to Imperial Palace after Order 66"
+        },
+        "galactic_senate": {
+          "description": "Massive dome containing thousands of repulsorpods for senators",
+          "function": "Legislative body of the Galactic Republic",
+          "architecture": "Grand rotunda with floating platforms",
+          "significance": "Center of galactic democracy and politics"
+        },
+        "underworld": {
+          "description": "Lower levels of Coruscant where sunlight never reaches",
+          "characteristics": ["Criminal activity", "Pollution", "Poverty", "Danger"],
+          "levels": "Descends thousands of levels below surface",
+          "inhabitants": "Outcasts, criminals, forgotten species"
+        },
+        "works": {
+          "description": "Massive industrial district powering the planet",
+          "function": "Power generation and industrial production",
+          "dangers": "Extreme heat, toxic gases, industrial accidents",
+          "workforce": "Automated systems and desperate workers"
+        }
+      },
+      "cultural_significance": "Political and cultural center of the galaxy",
+      "history": [
+        "Ancient Sith presence",
+        "Rise of Galactic Republic",
+        "Jedi Order headquarters",
+        "Imperial capital",
+        "New Republic restoration"
+      ],
+      "sources": ["All major Star Wars media"]
+    },
+    "alderaan": {
+      "name": "Alderaan",
+      "system": "Alderaan System",
+      "sector": "Alderaan Sector",
+      "region": "Core Worlds",
+      "climate": "Temperate",
+      "terrain": "Grasslands, mountains, cities",
+      "population": "2 billion (destroyed)",
+      "government": "Constitutional monarchy",
+      "cultural_traits": ["Pacifist", "Artistic", "Diplomatic", "Scholarly"],
+      "notable_locations": {
+        "aldera": {
+          "description": "Capital city and royal residence",
+          "features": ["Royal Palace", "University of Alderaan", "Cultural centers"],
+          "architecture": "Elegant spires and artistic designs"
+        },
+        "castle_lands": {
+          "description": "Traditional noble estates in mountainous regions",
+          "culture": "Ancient Alderaanian traditions and ceremonies",
+          "significance": "Connection to planet's royal heritage"
+        },
+        "graveyard": {
+          "description": "Sacred burial grounds of Alderaanian royalty",
+          "tradition": "Elaborate funeral ceremonies and remembrance",
+          "protection": "Heavily guarded and revered"
+        }
+      },
+      "destruction": {
+        "date": "0 BBY",
+        "method": "Death Star superlaser",
+        "reason": "Demonstration of Imperial power and punishment for rebellion",
+        "survivors": ["Princess Leia", "off-world Alderaanians"],
+        "aftermath": "Asteroid field, galactic outrage, increased rebellion"
+      },
+      "legacy": "Symbol of Imperial tyranny and martyr for Rebellion",
+      "sources": ["Original Trilogy", "various novels and comics"]
+    },
+    "corellia": {
+      "name": "Corellia",
+      "system": "Corellian System",
+      "sector": "Corellian Sector",
+      "region": "Core Worlds",
+      "climate": "Temperate",
+      "terrain": "Plains, cities, shipyards",
+      "population": "18 billion",
+      "government": "Corellian Confederation",
+      "specialties": ["Shipbuilding", "Engineering", "Piloting"],
+      "notable_locations": {
+        "coronet_city": {
+          "description": "Capital city and major spaceport",
+          "features": ["Corellian Engineering Corporation headquarters", "Major shipyards"],
+          "culture": "Hub of engineering and piloting excellence"
+        },
+        "treasure_ship_row": {
+          "description": "Merchant district in Coronet City",
+          "character": "Bustling marketplace and trading center",
+          "diversity": "Aliens, traders, and merchants from across galaxy"
+        },
+        "blue_sector": {
+          "description": "Industrial district of Coronet City",
+          "function": "Manufacturing and heavy industry",
+          "working_class": "Home to shipyard workers and engineers"
+        }
+      },
+      "cultural_traits": ["Independent spirit", "Engineering excellence", "Piloting tradition"],
+      "famous_natives": ["Han Solo", "Wedge Antilles", "Corran Horn"],
+      "history": [
+        "Ancient hyperspace exploration",
+        "Founding member of Republic",
+        "Shipbuilding supremacy",
+        "Independence movements"
+      ],
+      "sources": ["Solo film", "X-Wing novels", "various EU works"]
+    }
+  },
+  "outer_rim": {
+    "tatooine": {
+      "name": "Tatooine",
+      "system": "Tatoo System",
+      "sector": "Arkanis Sector",
+      "region": "Outer Rim Territories",
+      "climate": "Desert",
+      "terrain": "Desert, mesas, canyons",
+      "suns": ["Tatoo I", "Tatoo II"],
+      "population": "200,000",
+      "government": "Hutt Cartel control",
+      "notable_locations": {
+        "mos_eisley": {
+          "description": "Largest spaceport and most famous settlement",
+          "reputation": "Wretched hive of scum and villainy",
+          "features": ["Cantina", "Docking bays", "Jawa trading posts"],
+          "significance": "Meeting place for smugglers, bounty hunters, and criminals"
+        },
+        "mos_espa": {
+          "description": "Smaller settlement known for podracing",
+          "features": ["Podracing arena", "Slave quarters", "Watto's junkshop"],
+          "culture": "Gambling, racing, and slavery hub",
+          "notable_residents": "Anakin Skywalker (childhood home)"
+        },
+        "lars_homestead": {
+          "description": "Moisture farm in the Jundland Wastes",
+          "residents": ["Owen and Beru Lars", "Luke Skywalker"],
+          "features": ["Underground dwelling", "Moisture vaporators", "Garage"],
+          "significance": "Luke Skywalker's childhood home"
+        },
+        "jundland_wastes": {
+          "description": "Dangerous desert region",
+          "inhabitants": ["Tusken Raiders", "Krayt dragons", "Jawas"],
+          "dangers": "Extreme heat, sandstorms, hostile natives",
+          "landmarks": "Ancient ruins and hidden settlements"
+        },
+        "jabbas_palace": {
+          "description": "Fortress of the crime lord Jabba the Hutt",
+          "features": ["Throne room", "Rancor pit", "Sail barge hangar"],
+          "culture": "Crime, slavery, and entertainment hub",
+          "fate": "Destroyed during Luke's rescue of Han Solo"
+        },
+        "ben_kenobis_hut": {
+          "description": "Hermit dwelling of Obi-Wan Kenobi",
+          "location": "Jundland Wastes",
+          "purpose": "Exile hideout while watching Luke",
+          "features": "Simple desert dwelling with hidden artifacts"
+        }
+      },
+      "native_species": ["Jawas", "Tusken Raiders"],
+      "dangerous_wildlife": ["Krayt Dragons", "Sarlacc", "Dewbacks"],
+      "cultural_significance": "Skywalker family origins, pivotal events",
+      "sources": ["Original Trilogy", "Prequel Trilogy", "The Mandalorian"]
+    },
+    "dagobah": {
+      "name": "Dagobah",
+      "system": "Dagobah System",
+      "sector": "Sluis Sector",
+      "region": "Outer Rim Territories",
+      "climate": "Swamp",
+      "terrain": "Swamps, bogs, forests",
+      "population": "Unknown (minimal)",
+      "atmosphere": "Breathable but humid",
+      "force_presence": "Very strong, naturally occurring",
+      "notable_locations": {
+        "yodas_hut": {
+          "description": "Simple mud hut dwelling of Jedi Master Yoda",
+          "features": ["Basic furnishings", "Cooking area", "Meditation space"],
+          "philosophy": "Reflects Yoda's humble lifestyle and connection to nature"
+        },
+        "dark_side_cave": {
+          "description": "Cave strong with dark side energy",
+          "purpose": "Trial location for Luke's Jedi training",
+          "nature": "Confronts visitors with their fears and inner darkness",
+          "significance": "Luke's vision of becoming Vader"
+        },
+        "crash_site": {
+          "description": "Location where Luke's X-wing sank",
+          "lesson": "Site of Force training about lifting sunken starfighter",
+          "teaching": "Size matters not, judge me by my size do you?"
+        }
+      },
+      "wildlife": [
+        "Dragonsnakes",
+        "Bogwings",
+        "Swamp rats",
+        "Various amphibians"
+      ],
+      "force_characteristics": [
+        "Natural Force nexus",
+        "Enhanced Force abilities",
+        "Spiritual revelations",
+        "Connection to living things"
+      ],
+      "history": "Yoda's exile location (19 BBY - 4 ABY)",
+      "significance": "Luke Skywalker's Jedi training ground",
+      "sources": ["The Empire Strikes Back", "Return of the Jedi"]
+    },
+    "hoth": {
+      "name": "Hoth",
+      "system": "Hoth System",
+      "sector": "Anoat Sector",
+      "region": "Outer Rim Territories",
+      "climate": "Frozen",
+      "terrain": "Ice plains, mountains, caves",
+      "temperature": "Sub-arctic to arctic",
+      "population": "Minimal (temporary bases)",
+      "notable_locations": {
+        "echo_base": {
+          "description": "Rebel Alliance hidden base in ice caves",
+          "features": ["Command center", "Hangar bays", "Medical facilities"],
+          "purpose": "Strategic headquarters after Death Star destruction",
+          "fate": "Evacuated during Imperial assault"
+        },
+        "north_ridge": {
+          "description": "Mountain range housing Echo Base entrance",
+          "defenses": ["Ion cannon", "Shield generator", "Trenches"],
+          "strategy": "Defensive positions against Imperial ground assault"
+        }
+      },
+      "wildlife": ["Tauntauns", "Wampas"],
+      "survival_challenges": [
+        "Extreme cold",
+        "Blizzards",
+        "Hostile wildlife",
+        "Limited resources"
+      ],
+      "strategic_importance": "Remote location ideal for hidden bases",
+      "major_events": ["Battle of Hoth", "Luke's survival trial"],
+      "sources": ["The Empire Strikes Back"]
+    },
+    "endor": {
+      "name": "Endor (Forest Moon)",
+      "system": "Endor System",
+      "sector": "Moddell Sector",
+      "region": "Outer Rim Territories",
+      "classification": "Forest moon",
+      "climate": "Temperate forest",
+      "terrain": "Dense forests, rivers, mountains",
+      "population": "30 million Ewoks",
+      "notable_locations": {
+        "shield_generator": {
+          "description": "Imperial installation protecting Death Star II",
+          "purpose": "Projecting deflector shield around battle station",
+          "security": "Heavily fortified bunker with garrison",
+          "fate": "Destroyed by Rebel strike team and Ewoks"
+        },
+        "bright_tree_village": {
+          "description": "Ewok tree-city in massive trees",
+          "culture": "Primitive but sophisticated Ewok society",
+          "features": ["Tree platforms", "Rope bridges", "Huts"],
+          "significance": "Where Rebels allied with Ewoks"
+        },
+        "imperial_landing_platform": {
+          "description": "Shuttle landing pad for Death Star personnel",
+          "function": "Transportation hub between moon and space station",
+          "security": "Stormtrooper patrols and checkpoints"
+        }
+      },
+      "native_species": ["Ewoks"],
+      "other_wildlife": ["Boar-wolves", "Gorax", "Various forest creatures"],
+      "cultural_significance": "Site of Emperor's death and Empire's defeat",
+      "ewok_culture": [
+        "Tribal society",
+        "Tree-dwelling civilization",
+        "Primitive technology",
+        "Strong warrior tradition",
+        "Nature worship"
+      ],
+      "sources": ["Return of the Jedi", "Ewok movies"]
+    }
+  },
+  "unknown_regions": {
+    "ahch_to": {
+      "name": "Ahch-To",
+      "system": "Unknown",
+      "sector": "Unknown Regions",
+      "region": "Unknown Regions",
+      "climate": "Oceanic",
+      "terrain": "Ocean world with scattered islands",
+      "population": "Minimal (Caretakers, Porgs)",
+      "force_significance": "First Jedi Temple location",
+      "notable_locations": {
+        "first_jedi_temple": {
+          "description": "Ancient stone structures of the original Jedi",
+          "features": ["Stone circles", "Ancient texts", "Meditation areas"],
+          "significance": "Birthplace of the Jedi Order",
+          "artifacts": "Sacred Jedi texts and artifacts"
+        },
+        "tree_library": {
+          "description": "Ancient tree housing Jedi sacred texts",
+          "contents": "Original Jedi teachings and philosophy",
+          "caretaker": "Maintained by native Caretakers",
+          "fate": "Burned by Yoda's Force ghost (texts saved by Rey)"
+        },
+        "mirror_cave": {
+          "description": "Dark side cave beneath the island",
+          "nature": "Reflects visitor's inner self and fears",
+          "significance": "Rey's vision of infinite selves",
+          "comparison": "Similar to Dagobah cave"
+        }
+      },
+      "native_species": ["Caretakers", "Porgs", "Thala-sirens"],
+      "jedi_connection": [
+        "Original Jedi homeworld",
+        "Luke's exile location",
+        "Repository of ancient knowledge",
+        "Strong Force presence"
+      ],
+      "isolation": "Deliberately hidden and difficult to find",
+      "sources": ["Sequel Trilogy"]
+    },
+    "exegol": {
+      "name": "Exegol",
+      "system": "Unknown",
+      "sector": "Unknown Regions",
+      "region": "Unknown Regions",
+      "climate": "Storm-wracked",
+      "terrain": "Dark rocky world",
+      "atmosphere": "Constant electrical storms",
+      "sith_significance": "Hidden Sith world",
+      "notable_locations": {
+        "sith_citadel": {
+          "description": "Massive pyramid containing Sith throne room",
+          "features": ["Throne of the Sith", "Sith wayfinders", "Ancient technology"],
+          "purpose": "Emperor Palpatine's secret stronghold",
+          "construction": "Built by Sith Eternal cultists"
+        },
+        "star_destroyer_yards": {
+          "description": "Underground shipyards building Final Order fleet",
+          "scale": "Thousands of Star Destroyers",
+          "workforce": "Sith cultists and automated systems",
+          "purpose": "Final Order fleet construction"
+        }
+      },
+      "inhabitants": ["Sith Eternal cultists", "Emperor Palpatine clones"],
+      "accessibility": "Requires Sith wayfinder to navigate",
+      "purpose": "Emperor's contingency plan and resurrection site",
+      "sources": ["The Rise of Skywalker"]
+    }
+  },
+  "ancient_worlds": {
+    "tython": {
+      "name": "Tython",
+      "system": "Tython System",
+      "sector": "Deep Core",
+      "region": "Deep Core",
+      "climate": "Varied",
+      "terrain": "Diverse biomes",
+      "historical_significance": "Birthplace of Je'daii Order",
+      "force_significance": "Powerful Force nexus",
+      "notable_locations": {
+        "anil_kesh": {
+          "description": "Great Temple of the Je'daii Order",
+          "purpose": "Central hub of Je'daii learning and balance",
+          "philosophy": "Balance between Ashla (light) and Bogan (dark)",
+          "architecture": "Massive pyramid structure"
+        },
+        "akar_kesh": {
+          "description": "Temple of Balance",
+          "focus": "Meditation and Force harmony",
+          "significance": "Where Je'daii learned balance",
+          "training": "Advanced Force techniques"
+        },
+        "bogan": {
+          "description": "Tython's dark side moon",
+          "nature": "Strong in dark side energy",
+          "exile": "Where Je'daii sent to meditate on imbalance",
+          "influence": "Corrupts those who stay too long"
+        },
+        "ashla": {
+          "description": "Tython's light side moon",
+          "nature": "Strong in light side energy",
+          "healing": "Where Je'daii went for purification",
+          "balance": "Counterpart to Bogan's darkness"
+        }
+      },
+      "ancient_history": [
+        "Je'daii Order foundation",
+        "Force Wars",
+        "Schism into Jedi and Sith",
+        "Abandonment and rediscovery"
+      ],
+      "philosophy": "Original Force balance before light/dark schism",
+      "sources": ["Dawn of the Jedi comics", "Old Republic references"]
+    },
+    "korriban": {
+      "name": "Korriban/Moraband",
+      "system": "Horuset System",
+      "sector": "Sith Space",
+      "region": "Outer Rim Territories",
+      "climate": "Desert",
+      "terrain": "Rocky deserts, ancient tombs",
+      "dark_side_significance": "Sith homeworld and burial ground",
+      "population": "Minimal (Sith spirits, archaeologists)",
+      "notable_locations": {
+        "valley_of_dark_lords": {
+          "description": "Valley containing tombs of ancient Sith Lords",
+          "tombs": ["Naga Sadow", "Marka Ragnos", "Ajunta Pall", "Tulak Hord"],
+          "dangers": "Sith spirits, dark side corruption, ancient traps",
+          "purpose": "Final resting place of Sith royalty"
+        },
+        "sith_academy": {
+          "description": "Training ground for Sith apprentices",
+          "purpose": "Dark side education and trials",
+          "trials": "Deadly competitions between students",
+          "philosophy": "Survival of the strongest"
+        },
+        "tomb_of_naga_sadow": {
+          "description": "Elaborate tomb of ancient Sith Lord",
+          "contents": "Sith artifacts, traps, and spirit",
+          "significance": "Major archaeological site",
+          "dangers": "Possessed by Naga Sadow's spirit"
+        }
+      },
+      "sith_history": [
+        "Original Sith species homeworld",
+        "Dark Jedi exile arrival",
+        "Birth of Sith Order",
+        "Multiple Sith empires"
+      ],
+      "dark_side_effects": [
+        "Corruption of visitors",
+        "Sith spirit manifestations",
+        "Enhanced dark side powers",
+        "Madness and paranoia"
+      ],
+      "sources": ["KOTOR games", "Clone Wars", "various EU works"]
+    }
+  },
+  "space_stations": {
+    "death_star": {
+      "name": "Death Star (DS-1)",
+      "classification": "Battle station",
+      "diameter": "120 kilometers",
+      "crew": "1.7 million personnel",
+      "armament": "Superlaser capable of destroying planets",
+      "notable_locations": {
+        "superlaser_core": {
+          "description": "Central weapon system",
+          "power": "Planet-destroying capability",
+          "targeting": "Single-reactor ignition or full power",
+          "weakness": "Thermal exhaust port vulnerability"
+        },
+        "detention_center": {
+          "description": "Prison facility (AA-23)",
+          "security": "Maximum security for high-value prisoners",
+          "notable_prisoners": "Princess Leia",
+          "rescue": "Site of Princess Leia's rescue"
+        },
+        "throne_room": {
+          "description": "Emperor's receiving chamber (Death Star II)",
+          "purpose": "Emperor's presence during Endor battle",
+          "significance": "Location of final Luke/Vader/Emperor confrontation",
+          "features": "Massive viewport overlooking space battle"
+        }
+      },
+      "construction": ["Geonosis (plans)", "Various Imperial shipyards"],
+      "fate": "Destroyed by Luke Skywalker at Battle of Yavin",
+      "sources": ["Original Trilogy", "Rogue One"]
+    },
+    "cloud_city": {
+      "name": "Cloud City",
+      "location": "Bespin",
+      "classification": "Tibanna gas mining facility",
+      "altitude": "Upper atmosphere",
+      "population": "5.4 million",
+      "government": "Baron Administrator",
+      "notable_locations": {
+        "carbon_freezing_chamber": {
+          "description": "Industrial facility for carbon freezing",
+          "purpose": "Tibanna gas processing",
+          "infamous_use": "Han Solo frozen in carbonite",
+          "features": "Lowering platform over freezing pit"
+        },
+        "dining_room": {
+          "description": "Elegant dining facility",
+          "significance": "Vader's trap for Luke Skywalker",
+          "atmosphere": "Deceptively civilized setting",
+          "revelation": "Site of Boba Fett reveal"
+        },
+        "reactor_shaft": {
+          "description": "Central power and ventilation system",
+          "significance": "Luke's escape route after duel",
+          "danger": "Long fall through city infrastructure",
+          "rescue": "Where Millennium Falcon caught Luke"
+        }
+      },
+      "administration": "Lando Calrissian (Baron Administrator)",
+      "economy": "Tibanna gas mining and export",
+      "sources": ["The Empire Strikes Back"]
+    }
+  },
+  "mid_rim_territories": {
+    "naboo": {
+      "name": "Naboo",
+      "system": "Naboo System",
+      "sector": "Chommell Sector",
+      "region": "Mid Rim",
+      "climate": "Temperate",
+      "terrain": "Rolling plains, grassy hills, swamps, mountains",
+      "diameter": "12,120 kilometers",
+      "population": "4.5 billion",
+      "species_composition": {
+        "gungan": "72%",
+        "human": "27%", 
+        "other": "1%"
+      },
+      "government": "Elective monarchy",
+      "major_cities": ["Theed", "Otoh Gunga", "Keren", "Moenia", "Dee'ja Peak"],
+      "notable_locations": {
+        "theed": {
+          "description": "Human capital city built on cliffs overlooking waterfalls",
+          "features": ["Royal Palace", "Theed Palace Hangar", "Plasma Processing Facility"],
+          "architecture": "Classical human design with integration of natural elements",
+          "significance": "Political and cultural center of human Naboo"
+        },
+        "otoh_gunga": {
+          "description": "Underwater Gungan capital city",
+          "features": ["High Council Chambers", "Sacred Place", "Bubble technology"],
+          "architecture": "Organic bubble-based structures",
+          "significance": "Traditional Gungan government seat"
+        },
+        "gungan_sacred_place": {
+          "description": "Ancient ceremonial ground where species united",
+          "historical_importance": "Site of Gungan-human alliance against Trade Federation",
+          "significance": "Symbol of planetary unity and cooperation",
+          "natural_features": "Ancient trees and mystical atmosphere"
+        },
+        "plasma_mines": {
+          "description": "Deep underground plasma extraction facilities",
+          "function": "Mining naturally occurring plasma for export",
+          "dangers": "Deep underground passages, plasma exposure",
+          "economic_importance": "Primary export commodity"
+        }
+      },
+      "cultural_significance": "Peaceful diplomatic traditions, artistic achievements",
+      "unique_features": [
+        "Lacks molten planetary core",
+        "Rich in naturally occurring plasma",
+        "Peaceful coexistence of two sapient species"
+      ],
+      "economy": {
+        "exports": ["Plasma", "Art", "Cultural items", "Grain", "Wine"],
+        "imports": ["Technology", "Processed foods", "Ore", "Silk"]
+      },
+      "history": [
+        "3900 BBY: Human colonization from Grizmallt",
+        "Initial human-Gungan conflicts",
+        "32 BBY: Trade Federation invasion and unity",
+        "Rise of Senator Palpatine",
+        "Imperial era survival",
+        "Operation: Cinder resistance",
+        "First Order resistance"
+      ],
+      "notable_figures": ["Queen Amidala", "Emperor Palpatine", "Boss Nass", "Jar Jar Binks"],
+      "sources": ["Prequel Trilogy", "Clone Wars", "Various novels"]
+    }
+  },
+  "wild_space_territories": {
+    "kamino": {
+      "name": "Kamino",
+      "system": "Kamino System", 
+      "sector": "Wild Space",
+      "region": "Beyond Outer Rim",
+      "distance_from_core": "70,000 light-years",
+      "climate": "Stormy oceanic",
+      "terrain": "100% ocean surface",
+      "diameter": "19,270 kilometers",
+      "population": "1 billion Kaminoans (pre-Imperial bombardment)",
+      "current_population": "Nearly extinct",
+      "government": "Kaminoan government (destroyed)",
+      "major_cities": ["Tipoca City"],
+      "notable_locations": {
+        "tipoca_city": {
+          "description": "Primary Kaminoan city built on stilts above the ocean",
+          "features": ["Cloning facilities", "Government buildings", "Landing platforms"],
+          "architecture": "Elegant white structures designed for ocean storms",
+          "significance": "Center of galactic clone production"
+        },
+        "cloning_facilities": {
+          "description": "Advanced genetic engineering and cloning laboratories",
+          "features": ["Growth chambers", "Training facilities", "Genetic archives"],
+          "technology": "Most advanced cloning technology in the galaxy",
+          "historical_importance": "Birthplace of the Clone Army"
+        },
+        "jango_fett_quarters": {
+          "description": "Residential quarters for genetic template donor",
+          "significance": "Home of Jango and Boba Fett during clone development",
+          "features": "Luxury accommodation for template family"
+        }
+      },
+      "native_species": {
+        "kaminoans": {
+          "description": "Tall, elegant beings with long necks and cloning expertise",
+          "characteristics": ["Highly intelligent", "Cloning specialists", "Isolationist culture"],
+          "current_status": "Nearly extinct after Imperial bombardment"
+        }
+      },
+      "cultural_significance": "Advanced genetic science, isolationist traditions",
+      "unique_features": [
+        "Perpetual electrical storms",
+        "Advanced cloning technology", 
+        "Ocean-only surface",
+        "Deleted from Jedi Archives"
+      ],
+      "economy": {
+        "primary_industry": "Genetic engineering and cloning services",
+        "clients": ["Galactic Republic", "Private contractors"],
+        "specialization": "Military clone production"
+      },
+      "history": [
+        "Ancient past: Land-based civilization",
+        "Rising sea levels forced adaptation",
+        "33 BBY: Commissioned for Republic clone army",
+        "22 BBY: Clone Wars begin",
+        "19 BBY: Imperial occupation",
+        "Early Imperial era: Orbital bombardment and near-extinction"
+      ],
+      "current_status": "Devastated, civilization nearly destroyed",
+      "sources": ["Attack of the Clones", "Clone Wars", "Bad Batch"]
+    }
+  },
+  "inner_rim_territories": {
+    "jakku": {
+      "name": "Jakku",
+      "system": "Jakku System",
+      "sector": "Western Reaches",
+      "region": "Inner Rim",
+      "climate": "Arid desert",
+      "terrain": "Desert plains, badlands, ship graveyard",
+      "diameter": "6,400 kilometers",
+      "population": "Mixed settlements, primarily scavengers",
+      "government": "No central government, local settlements",
+      "major_settlements": ["Niima Outpost", "Cratertown", "Tuanul Village"],
+      "notable_locations": {
+        "niima_outpost": {
+          "description": "Junkyard settlement built around scavenging operations",
+          "features": ["Trading posts", "Scrap yards", "Unkar Plutt's operation"],
+          "economy": "Scavenging and trading salvaged materials",
+          "significance": "Rey's home base for scavenging operations"
+        },
+        "starship_graveyard": {
+          "description": "Massive wreckage site from the Battle of Jakku",
+          "features": ["Star Destroyer wrecks", "Rebel ship remains", "Scattered debris"],
+          "historical_importance": "Final battle of Galactic Civil War",
+          "economic_value": "Primary source of salvageable technology"
+        },
+        "goazon_badlands": {
+          "description": "Harsh desert region with dangerous wildlife",
+          "features": ["Rocky outcroppings", "Sand dunes", "Hidden ruins"],
+          "dangers": ["Nightwatcher worms", "Extreme temperatures", "Sandstorms"],
+          "significance": "Remote wilderness area"
+        },
+        "tuanul_village": {
+          "description": "Remote settlement destroyed by First Order",
+          "historical_importance": "Lor San Tekka's hiding place",
+          "fate": "Destroyed in search for map to Luke Skywalker",
+          "significance": "Starting point of sequel trilogy events"
+        }
+      },
+      "native_species": ["Teedo", "Uthuthma"],
+      "cultural_significance": "Scavenger culture, post-war survival",
+      "unique_features": [
+        "Massive ship graveyard from galactic civil war",
+        "Extreme day/night temperature variations",
+        "Rich scavenging opportunities",
+        "Connection to sequel trilogy events"
+      ],
+      "wildlife": [
+        "Nightwatcher worms",
+        "Happabores", 
+        "Luggabeasts",
+        "Steelpeckers"
+      ],
+      "economy": {
+        "primary_industry": "Scavenging and salvage",
+        "trade_goods": ["Salvaged technology", "Ship parts", "Metals"],
+        "currency": "Food portions, credits"
+      },
+      "history": [
+        "Ancient past: Forested world with seas",
+        "Gradual desertification",
+        "5 ABY: Battle of Jakku - final Imperial defeat", 
+        "Post-war: Scavenger settlement period",
+        "34 ABY: First Order search operations",
+        "Beginning of sequel trilogy events"
+      ],
+      "climate_notes": {
+        "day_temperature": "Hot desert conditions",
+        "night_temperature": "Cold desert conditions", 
+        "weather_patterns": "Occasional sandstorms"
+      },
+      "sources": ["The Force Awakens", "Sequel Trilogy", "Various novels"]
+    },
+    "yavin_4": {
+      "name": "Yavin 4",
+      "system": "Yavin System",
+      "sector": "Gordian Reach",
+      "region": "Outer Rim",
+      "planetary_type": "Jungle moon",
+      "parent_body": "Yavin Prime (red gas giant)",
+      "climate": "Temperate to tropical",
+      "terrain": "Dense jungle and rainforest",
+      "diameter": "10,200 kilometers",
+      "atmosphere": "Type I breathable",
+      "population": "Former: Massassi (extinct), Current: Settlements",
+      "government": "No central government",
+      "notable_locations": {
+        "great_temple": {
+          "description": "Ancient Massassi pyramid temple converted to Rebel base",
+          "features": ["Hangar bays", "Command center", "Strategic planning rooms"],
+          "historical_importance": "Headquarters of Rebel Alliance during Battle of Yavin",
+          "architecture": "Ancient Sith-influenced Massassi construction"
+        },
+        "temple_of_the_blueleaf_cluster": {
+          "description": "Secondary ancient temple structure",
+          "features": "Ancient Massassi religious site",
+          "current_status": "Ruined but partially intact"
+        },
+        "massassi_temples": {
+          "description": "Network of ancient pyramid temples throughout jungle",
+          "historical_importance": "Built under Sith Lord Naga Sadow around 5000 BBY",
+          "significance": "Last remnants of extinct Massassi civilization"
+        }
+      },
+      "native_species": {
+        "massassi": {
+          "description": "Extinct humanoid species that built the temples",
+          "characteristics": "Sith-enslaved builders and warriors",
+          "fate": "Extinct millennia before Galactic Civil War",
+          "legacy": "Temple structures used by Rebel Alliance"
+        }
+      },
+      "ecosystem": {
+        "flora": ["Massassi trees", "Grenade fungi", "Bioluminescent orchids", "Climbing ferns"],
+        "fauna": ["Woolamanders", "Whisper birds", "Angler", "Armored eels"],
+        "environment": "Challenging jungle with dangerous predators"
+      },
+      "cultural_significance": "Symbol of Rebel Alliance victory, ancient Sith history",
+      "unique_features": [
+        "Ancient Sith temples converted to military base",
+        "Completely lacks significant mineral resources",
+        "Dense jungle providing natural camouflage",
+        "Moon of red gas giant Yavin Prime"
+      ],
+      "military_importance": {
+        "rebel_alliance": "Primary headquarters during Death Star threat",
+        "battle_of_yavin": "Launch point for Death Star assault",
+        "evacuation": "Abandoned after Imperial retaliation threat"
+      },
+      "history": [
+        "5000 BBY: Massassi temple construction under Sith influence",
+        "Ancient times: Massassi extinction", 
+        "0 BBY: Rebel Alliance establishes base",
+        "0 BBY: Battle of Yavin launched from Great Temple",
+        "Post-Yavin: Base evacuation and relocation",
+        "New Republic era: Civilian settlements"
+      ],
+      "sources": ["A New Hope", "Various Expanded Universe materials"]
+    }
+  },
+  "outer_rim_industrial": {
+    "geonosis": {
+      "name": "Geonosis",
+      "system": "Geonosis System",
+      "sector": "Arkanis Sector", 
+      "region": "Outer Rim",
+      "distance_from_core": "43,000 light-years",
+      "climate": "Hot and arid desert",
+      "terrain": "Rocky desert with red-tinted landscape",
+      "surface_water": "5%",
+      "orbital_features": "15 moons, distinctive planetary rings",
+      "population": "100 billion Geonosians (pre-Imperial sterilization)",
+      "current_population": "Virtually extinct",
+      "government": "Geonosian hive society (destroyed)",
+      "major_industrial_centers": ["Droid factories", "Separatist headquarters"],
+      "notable_locations": {
+        "petranaki_arena": {
+          "description": "Massive execution arena in rocky terrain",
+          "features": ["Execution platforms", "Beast pens", "Spectator areas"],
+          "historical_importance": "Site of Jedi execution attempt and first Clone Wars battle",
+          "architecture": "Natural rock formation enhanced for gladiatorial combat"
+        },
+        "droid_factories": {
+          "description": "Massive automated manufacturing complexes",
+          "features": ["Assembly lines", "Raw material processing", "Quality control"],
+          "production_capacity": "Tens of thousands of battle droids",
+          "significance": "Primary source of Separatist military forces"
+        },
+        "confederacy_headquarters": {
+          "description": "Separatist leadership complex",
+          "features": ["Command centers", "Meeting halls", "Communications arrays"],
+          "historical_importance": "Center of Separatist military and political operations",
+          "fate": "Destroyed during Imperial sterilization"
+        },
+        "death_star_construction": {
+          "description": "Secret Death Star development facility",
+          "features": ["Design labs", "Prototype testing", "Kyber crystal research"],
+          "secrecy_level": "Highly classified Imperial project",
+          "significance": "Early development site of Death Star superweapon"
+        }
+      },
+      "native_species": {
+        "geonosians": {
+          "description": "Insectoid species with hive-mind society",
+          "characteristics": ["Winged humanoids", "Hive structure", "Industrial focus"],
+          "government": "Caste-based hive society",
+          "fate": "Virtually exterminated by Imperial sterilization campaign"
+        }
+      },
+      "cultural_significance": "Industrial might, sacrifice for galactic conflict",
+      "unique_features": [
+        "Distinctive red rocky terrain",
+        "Planetary ring system",
+        "Massive droid manufacturing capacity",
+        "Site of first Clone Wars battle"
+      ],
+      "industrial_capacity": {
+        "specialization": "Battle droid mass production",
+        "clients": "Confederacy of Independent Systems",
+        "technology": "Advanced automated manufacturing",
+        "output": "Primary source of Separatist military hardware"
+      },
+      "history": [
+        "Ancient past: Evolution of Geonosian hive society",
+        "Pre-Clone Wars: Development of droid manufacturing",
+        "22 BBY: First Battle of Geonosis and Clone Wars beginning",
+        "Clone Wars era: Continued Separatist operations",
+        "Imperial era: Death Star development",
+        "Imperial sterilization: Near-complete extinction of population",
+        "Post-Empire: Abandoned and devastated"
+      ],
+      "strategic_importance": {
+        "separatists": "Primary military production center",
+        "empire": "Death Star development site", 
+        "republic": "Major military target in Clone Wars"
+      },
+      "current_status": "Devastated, population virtually extinct",
+      "sources": ["Attack of the Clones", "Clone Wars", "Expanded Universe"]
+    }
+  }
+}

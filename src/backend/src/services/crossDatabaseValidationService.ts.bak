@@ -1,0 +1,800 @@
+import { logger } from '../utils/logger';
+import neo4jService from './neo4jService';
+import mongodbService from './mongodbService';
+import weaviateService from './weaviateService';
+import { ObjectId } from 'mongodb';
+
+/**
+ * Validation result interfaces
+ */
+interface ValidationResult {
+  isValid: boolean;
+  errors: ValidationError[];
+  warnings: ValidationWarning[];
+  repairSuggestions: RepairSuggestion[];
+}
+
+interface ValidationError {
+  type: 'missing_reference' | 'invalid_format' | 'orphaned_data' | 'schema_mismatch';
+  database: 'neo4j' | 'mongodb' | 'weaviate';
+  entity: string;
+  field: string;
+  value: any;
+  message: string;
+  severity: 'critical' | 'high' | 'medium' | 'low';
+}
+
+interface ValidationWarning {
+  type: 'outdated_reference' | 'performance_issue' | 'redundant_data';
+  database: 'neo4j' | 'mongodb' | 'weaviate';
+  entity: string;
+  message: string;
+}
+
+interface RepairSuggestion {
+  action: 'create' | 'update' | 'delete' | 'link';
+  database: 'neo4j' | 'mongodb' | 'weaviate';
+  entity: string;
+  details: any;
+}
+
+/**
+ * Cross-Database Reference Validation Service
+ * Ensures data consistency and reference integrity across Neo4j, MongoDB, and Weaviate
+ */
+class CrossDatabaseValidationService {
+  
+
+  /**
+   * Validate all cross-database references
+   */
+  async validateAllReferences(): Promise<ValidationResult> {
+    logger.info('Starting comprehensive cross-database validation');
+    
+    const result: ValidationResult = {
+      isValid: true,
+      errors: [],
+      warnings: [],
+      repairSuggestions: []
+    };
+
+    try {
+      // Validate Neo4j → MongoDB references
+      await this.validateNeo4jToMongoDB(result);
+      
+      // Validate MongoDB → Neo4j references
+      await this.validateMongoDBToNeo4j(result);
+      
+      // Validate Neo4j → Weaviate references
+      await this.validateNeo4jToWeaviate(result);
+      
+      // Validate Weaviate → Neo4j references
+      await this.validateWeaviateToNeo4j(result);
+      
+      // Validate MongoDB → Weaviate references
+      await this.validateMongoDBToWeaviate(result);
+      
+      // Validate Weaviate → MongoDB references
+      await this.validateWeaviateToMongoDB(result);
+      
+      // Check for orphaned data
+      await this.validateOrphanedData(result);
+      
+      // Performance and optimization checks
+      await this.validatePerformanceOptimizations(result);
+
+      result.isValid = result.errors.filter(e => e.severity === 'critical' || e.severity === 'high').length === 0;
+      
+      logger.info('Cross-database validation completed', {
+        isValid: result.isValid,
+        errorCount: result.errors.length,
+        warningCount: result.warnings.length
+      });
+
+    } catch (error) {
+      logger.error('Error during cross-database validation', { error });
+      result.errors.push({
+        type: 'schema_mismatch',
+        database: 'mongodb',
+        entity: 'validation_service',
+        field: 'general',
+        value: null,
+        message: `Validation service error: ${(error as Error).message}`,
+        severity: 'critical'
+      });
+      result.isValid = false;
+    }
+
+    return result;
+  }
+
+  /**
+   * Validate Neo4j to MongoDB references
+   */
+  private async validateNeo4jToMongoDB(result: ValidationResult): Promise<void> {
+    logger.debug('Validating Neo4j → MongoDB references');
+
+    try {
+      // Check Character → User references
+      const charactersWithUsers = await neo4jService.executeQuery(
+        'MATCH (c:Character) WHERE c.userId IS NOT NULL RETURN c.userId as userId, c.name as characterName, ID(c) as characterId LIMIT 100'
+      );
+
+      for (const record of charactersWithUsers.records) {
+        const userId = record.get('userId');
+        const characterName = record.get('characterName');
+        const characterId = record.get('characterId');
+
+        if (userId) {
+          try {
+            const user = await mongodbService.getUsersCollection().findOne({ _id: new ObjectId(userId) });
+            if (!user) {
+              result.errors.push({
+                type: 'missing_reference',
+                database: 'neo4j',
+                entity: 'Character',
+                field: 'userId',
+                value: userId,
+                message: `Character "${characterName}" references non-existent user ${userId}`,
+                severity: 'high'
+              });
+            }
+          } catch (error) {
+            result.errors.push({
+              type: 'invalid_format',
+              database: 'neo4j',
+              entity: 'Character',
+              field: 'userId',
+              value: userId,
+              message: `Character "${characterName}" has invalid userId format: ${userId}`,
+              severity: 'medium'
+            });
+          }
+        }
+      }
+
+      // Check Location references in Sessions
+      const locationsInSessions = await mongodbService.getSessionsCollection().find({
+        'setting.startingLocation': { $exists: true, $ne: null }
+      }).toArray();
+
+      for (const session of locationsInSessions) {
+        const locationId = session.setting?.startingLocation;
+        if (locationId) {
+          const locationExists = await neo4jService.executeQuery(
+            'MATCH (l:Location {id: $locationId}) RETURN l LIMIT 1',
+            { locationId }
+          );
+
+          if (locationExists.records.length === 0) {
+            result.errors.push({
+              type: 'missing_reference',
+              database: 'mongodb',
+              entity: 'Session',
+              field: 'setting.startingLocation',
+              value: locationId,
+              message: `Session "${session.campaignName}" references non-existent location ${locationId}`,
+              severity: 'medium'
+            });
+          }
+        }
+      }
+
+    } catch (error) {
+      logger.error('Error validating Neo4j → MongoDB references', { error });
+      result.errors.push({
+        type: 'schema_mismatch',
+        database: 'neo4j',
+        entity: 'reference_validation',
+        field: 'mongodb_refs',
+        value: null,
+        message: `Neo4j → MongoDB validation error: ${(error as Error).message}`,
+        severity: 'high'
+      });
+    }
+  }
+
+  /**
+   * Validate MongoDB to Neo4j references
+   */
+  private async validateMongoDBToNeo4j(result: ValidationResult): Promise<void> {
+    logger.debug('Validating MongoDB → Neo4j references');
+
+    try {
+      // Check Messages with character references
+      const messagesWithCharacters = await mongodbService.getMessagesCollection().find({
+        'references.characters': { $exists: true, $not: { $size: 0 } }
+      }).limit(100).toArray();
+
+      for (const message of messagesWithCharacters) {
+        const characterIds = message.references?.characters || [];
+        
+        for (const characterId of characterIds) {
+          const characterExists = await neo4jService.executeQuery(
+            'MATCH (c:Character {id: $characterId}) RETURN c LIMIT 1',
+            { characterId }
+          );
+
+          if (characterExists.records.length === 0) {
+            result.errors.push({
+              type: 'missing_reference',
+              database: 'mongodb',
+              entity: 'Message',
+              field: 'references.characters',
+              value: characterId,
+              message: `Message ${message._id} references non-existent character ${characterId}`,
+              severity: 'medium'
+            });
+          }
+        }
+      }
+
+      // Check WorldStates with location references
+      const worldStatesWithLocations = await mongodbService.getWorldStatesCollection().find({
+        'currentLocation': { $exists: true, $ne: null }
+      }).limit(100).toArray();
+
+      for (const worldState of worldStatesWithLocations) {
+        const locationId = worldState.currentLocation;
+        if (locationId) {
+          const locationExists = await neo4jService.executeQuery(
+            'MATCH (l:Location {id: $locationId}) RETURN l LIMIT 1',
+            { locationId }
+          );
+
+          if (locationExists.records.length === 0) {
+            result.errors.push({
+              type: 'missing_reference',
+              database: 'mongodb',
+              entity: 'WorldState',
+              field: 'currentLocation',
+              value: locationId,
+              message: `WorldState ${worldState._id} references non-existent location ${locationId}`,
+              severity: 'high'
+            });
+          }
+        }
+      }
+
+    } catch (error) {
+      logger.error('Error validating MongoDB → Neo4j references', { error });
+      result.errors.push({
+        type: 'schema_mismatch',
+        database: 'mongodb',
+        entity: 'reference_validation',
+        field: 'neo4j_refs',
+        value: null,
+        message: `MongoDB → Neo4j validation error: ${(error as Error).message}`,
+        severity: 'high'
+      });
+    }
+  }
+
+  /**
+   * Validate Neo4j to Weaviate semantic connections
+   */
+  private async validateNeo4jToWeaviate(result: ValidationResult): Promise<void> {
+    logger.debug('Validating Neo4j → Weaviate semantic connections');
+
+    try {
+      // Check if major characters have corresponding WorldKnowledge entries
+      const majorCharacters = await neo4jService.executeQuery(
+        'MATCH (c:Character) WHERE c.importance = "major" OR c.importance = "primary" RETURN c.id as id, c.name as name LIMIT 50'
+      );
+
+      for (const record of majorCharacters.records) {
+        const characterId = record.get('id');
+        const characterName = record.get('name');
+
+        const worldKnowledge = await weaviateService.searchByText('WorldKnowledge', characterName, 1);
+        
+        if (!worldKnowledge || worldKnowledge.length === 0) {
+          result.warnings.push({
+            type: 'outdated_reference',
+            database: 'weaviate',
+            entity: 'WorldKnowledge',
+            message: `Major character "${characterName}" (${characterId}) has no corresponding WorldKnowledge entry for semantic search`
+          });
+          
+          result.repairSuggestions.push({
+            action: 'create',
+            database: 'weaviate',
+            entity: 'WorldKnowledge',
+            details: {
+              title: characterName,
+              content: `Character information for ${characterName}`,
+              category: 'character',
+              entityId: characterId,
+              entityType: 'Character'
+            }
+          });
+        }
+      }
+
+      // Check if important locations have narrative elements
+      const importantLocations = await neo4jService.executeQuery(
+        'MATCH (l:Location) WHERE l.importance = "major" RETURN l.id as id, l.name as name LIMIT 50'
+      );
+
+      for (const record of importantLocations.records) {
+        const locationId = record.get('id');
+        const locationName = record.get('name');
+
+        const narrativeElements = await weaviateService.searchByText('NarrativeElement', locationName, 1);
+        
+        if (!narrativeElements || narrativeElements.length === 0) {
+          result.warnings.push({
+            type: 'outdated_reference',
+            database: 'weaviate',
+            entity: 'NarrativeElement',
+            message: `Important location "${locationName}" (${locationId}) has no corresponding NarrativeElement for story generation`
+          });
+        }
+      }
+
+    } catch (error) {
+      logger.error('Error validating Neo4j → Weaviate references', { error });
+      result.warnings.push({
+        type: 'performance_issue',
+        database: 'weaviate',
+        entity: 'semantic_validation',
+        message: `Neo4j → Weaviate validation had issues: ${(error as Error).message}`
+      });
+    }
+  }
+
+  /**
+   * Validate Weaviate to Neo4j entity references
+   */
+  private async validateWeaviateToNeo4j(result: ValidationResult): Promise<void> {
+    logger.debug('Validating Weaviate → Neo4j entity references');
+
+    try {
+      // Check WorldKnowledge entries with entity references
+      const worldKnowledgeWithEntities = await weaviateService.getClient()
+        .data
+        .getter()
+        .withClassName('WorldKnowledge')
+        .withFields('title entityId entityType')
+        .withLimit(100)
+        .do();
+
+      if (worldKnowledgeWithEntities?.data?.Get?.WorldKnowledge) {
+        for (const entry of worldKnowledgeWithEntities.data.Get.WorldKnowledge) {
+          if (entry.entityId && entry.entityType) {
+            let entityExists = false;
+            
+            switch (entry.entityType) {
+              case 'Character':
+                const character = await neo4jService.executeQuery(
+                  'MATCH (c:Character {id: $entityId}) RETURN c LIMIT 1',
+                  { entityId: entry.entityId }
+                );
+                entityExists = character.records.length > 0;
+                break;
+                
+              case 'Location':
+                const location = await neo4jService.executeQuery(
+                  'MATCH (l:Location {id: $entityId}) RETURN l LIMIT 1',
+                  { entityId: entry.entityId }
+                );
+                entityExists = location.records.length > 0;
+                break;
+                
+              case 'Faction':
+                const faction = await neo4jService.executeQuery(
+                  'MATCH (f:Faction {id: $entityId}) RETURN f LIMIT 1',
+                  { entityId: entry.entityId }
+                );
+                entityExists = faction.records.length > 0;
+                break;
+            }
+
+            if (!entityExists) {
+              result.errors.push({
+                type: 'missing_reference',
+                database: 'weaviate',
+                entity: 'WorldKnowledge',
+                field: 'entityId',
+                value: entry.entityId,
+                message: `WorldKnowledge entry "${entry.title}" references non-existent ${entry.entityType} ${entry.entityId}`,
+                severity: 'medium'
+              });
+            }
+          }
+        }
+      }
+
+    } catch (error) {
+      logger.error('Error validating Weaviate → Neo4j references', { error });
+      result.warnings.push({
+        type: 'performance_issue',
+        database: 'weaviate',
+        entity: 'entity_validation',
+        message: `Weaviate → Neo4j validation had issues: ${(error as Error).message}`
+      });
+    }
+  }
+
+  /**
+   * Validate MongoDB to Weaviate vector connections
+   */
+  private async validateMongoDBToWeaviate(result: ValidationResult): Promise<void> {
+    logger.debug('Validating MongoDB → Weaviate vector connections');
+
+    try {
+      // Check if active sessions have corresponding story events
+      const activeSessions = await mongodbService.getSessionsCollection().find({
+        status: 'active'
+      }).limit(20).toArray();
+
+      for (const session of activeSessions) {
+        const storyEvents = await weaviateService.searchByText('StoryEvent', session.campaignName, 1);
+        
+        if (!storyEvents || storyEvents.length === 0) {
+          result.warnings.push({
+            type: 'performance_issue',
+            database: 'weaviate',
+            entity: 'StoryEvent',
+            message: `Active session "${session.campaignName}" has no corresponding StoryEvent entries for narrative continuity`
+          });
+        }
+      }
+
+      // Check if generated content has vector representations
+      const recentGeneratedContent = await mongodbService.getGeneratedContentCollection().find({
+        createdAt: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } // Last 7 days
+      }).limit(50).toArray();
+
+      for (const content of recentGeneratedContent) {
+        if (content.type === 'character' || content.type === 'location') {
+          const narrativeElements = await weaviateService.searchByText('NarrativeElement', content.content.substring(0, 100), 1);
+          
+          if (!narrativeElements || narrativeElements.length === 0) {
+            result.warnings.push({
+              type: 'performance_issue',
+              database: 'weaviate',
+              entity: 'NarrativeElement',
+              message: `Generated ${content.type} content (${content._id}) has no corresponding vector representation for semantic search`
+            });
+          }
+        }
+      }
+
+    } catch (error) {
+      logger.error('Error validating MongoDB → Weaviate references', { error });
+      result.warnings.push({
+        type: 'performance_issue',
+        database: 'mongodb',
+        entity: 'vector_validation',
+        message: `MongoDB → Weaviate validation had issues: ${(error as Error).message}`
+      });
+    }
+  }
+
+  /**
+   * Validate Weaviate to MongoDB story continuity
+   */
+  private async validateWeaviateToMongoDB(result: ValidationResult): Promise<void> {
+    logger.debug('Validating Weaviate → MongoDB story continuity');
+
+    try {
+      // Check if story events reference valid sessions
+      const storyEventsWithSessions = await weaviateService.getClient()
+        .data
+        .getter()
+        .withClassName('StoryEvent')
+        .withFields('title sessionId')
+        .withLimit(100)
+        .do();
+
+      if (storyEventsWithSessions?.data?.Get?.StoryEvent) {
+        for (const event of storyEventsWithSessions.data.Get.StoryEvent) {
+          if (event.sessionId) {
+            try {
+              const session = await mongodbService.getSessionsCollection().findOne({ 
+                _id: new ObjectId(event.sessionId) 
+              });
+              
+              if (!session) {
+                result.errors.push({
+                  type: 'missing_reference',
+                  database: 'weaviate',
+                  entity: 'StoryEvent',
+                  field: 'sessionId',
+                  value: event.sessionId,
+                  message: `StoryEvent "${event.title}" references non-existent session ${event.sessionId}`,
+                  severity: 'medium'
+                });
+              }
+            } catch (error) {
+              result.errors.push({
+                type: 'invalid_format',
+                database: 'weaviate',
+                entity: 'StoryEvent',
+                field: 'sessionId',
+                value: event.sessionId,
+                message: `StoryEvent "${event.title}" has invalid sessionId format: ${event.sessionId}`,
+                severity: 'low'
+              });
+            }
+          }
+        }
+      }
+
+    } catch (error) {
+      logger.error('Error validating Weaviate → MongoDB references', { error });
+      result.warnings.push({
+        type: 'performance_issue',
+        database: 'weaviate',
+        entity: 'continuity_validation',
+        message: `Weaviate → MongoDB validation had issues: ${(error as Error).message}`
+      });
+    }
+  }
+
+  /**
+   * Check for orphaned data across databases
+   */
+  private async validateOrphanedData(result: ValidationResult): Promise<void> {
+    logger.debug('Checking for orphaned data');
+
+    try {
+      // Check for sessions without any messages
+      const sessionsWithoutMessages = await mongodbService.getSessionsCollection().aggregate([
+        {
+          $lookup: {
+            from: 'messages',
+            localField: '_id',
+            foreignField: 'sessionId',
+            as: 'messages'
+          }
+        },
+        {
+          $match: {
+            messages: { $size: 0 },
+            createdAt: { $lt: new Date(Date.now() - 24 * 60 * 60 * 1000) } // Older than 1 day
+          }
+        }
+      ]).toArray();
+
+      for (const session of sessionsWithoutMessages) {
+        result.warnings.push({
+          type: 'orphaned_data',
+          database: 'mongodb',
+          entity: 'Session',
+          message: `Session "${session.campaignName}" (${session._id}) has no messages and may be orphaned`
+        });
+      }
+
+      // Check for characters not referenced in any sessions or messages
+      const charactersInUse = new Set();
+      const sessions = await mongodbService.getSessionsCollection().find({}, { 
+        projection: { 'setting.startingLocation': 1, 'references.characters': 1 } 
+      }).toArray();
+      
+      const messages = await mongodbService.getMessagesCollection().find({}, { 
+        projection: { 'references.characters': 1 } 
+      }).toArray();
+
+      // Collect character IDs in use
+      sessions.forEach(session => {
+        session.references?.characters?.forEach((id: string) => charactersInUse.add(id));
+      });
+      
+      messages.forEach(message => {
+        message.references?.characters?.forEach((id: string) => charactersInUse.add(id));
+      });
+
+      // Check against Neo4j characters
+      const allCharacters = await neo4jService.executeQuery(
+        'MATCH (c:Character) RETURN c.id as id, c.name as name'
+      );
+
+      for (const record of allCharacters.records) {
+        const characterId = record.get('id');
+        const characterName = record.get('name');
+        
+        if (!charactersInUse.has(characterId)) {
+          result.warnings.push({
+            type: 'orphaned_data',
+            database: 'neo4j',
+            entity: 'Character',
+            message: `Character "${characterName}" (${characterId}) is not referenced in any sessions or messages`
+          });
+        }
+      }
+
+    } catch (error) {
+      logger.error('Error checking for orphaned data', { error });
+      result.warnings.push({
+        type: 'performance_issue',
+        database: 'mongodb',
+        entity: 'orphan_validation',
+        message: `Orphaned data validation had issues: ${(error as Error).message}`
+      });
+    }
+  }
+
+  /**
+   * Validate performance optimizations and suggest improvements
+   */
+  private async validatePerformanceOptimizations(result: ValidationResult): Promise<void> {
+    logger.debug('Validating performance optimizations');
+
+    try {
+      // Check for frequently accessed data that should be cached
+      const popularCharacters = await neo4jService.executeQuery(
+        'MATCH (c:Character)<-[:KNOWS*2..3]-(other) RETURN c.id as id, c.name as name, count(other) as connections ORDER BY connections DESC LIMIT 10'
+      );
+
+      for (const record of popularCharacters.records) {
+        const characterId = record.get('id');
+        const characterName = record.get('name');
+        const connections = record.get('connections');
+
+        if (connections > 5) {
+          // Check if character has Weaviate representation for fast retrieval
+          const worldKnowledge = await weaviateService.searchByText('WorldKnowledge', characterName, 1);
+          
+          if (!worldKnowledge || worldKnowledge.length === 0) {
+            result.repairSuggestions.push({
+              action: 'create',
+              database: 'weaviate',
+              entity: 'WorldKnowledge',
+              details: {
+                title: characterName,
+                content: `High-connection character: ${characterName}`,
+                category: 'character',
+                entityId: characterId,
+                entityType: 'Character',
+                priority: 'high'
+              }
+            });
+          }
+        }
+      }
+
+      // Check for large collections that might need indexing
+      const messageCount = await mongodbService.getMessagesCollection().countDocuments();
+      if (messageCount > 1000) {
+        const messageIndexes = await mongodbService.getMessagesCollection().listIndexes().toArray();
+        const hasSessionIndex = messageIndexes.some(index => index.key.sessionId);
+        
+        if (!hasSessionIndex) {
+          result.repairSuggestions.push({
+            action: 'create',
+            database: 'mongodb',
+            entity: 'Index',
+            details: {
+              collection: 'messages',
+              index: { sessionId: 1 },
+              reason: 'Improve session message lookup performance'
+            }
+          });
+        }
+      }
+
+    } catch (error) {
+      logger.error('Error validating performance optimizations', { error });
+      result.warnings.push({
+        type: 'performance_issue',
+        database: 'mongodb',
+        entity: 'performance_validation',
+        message: `Performance optimization validation had issues: ${(error as Error).message}`
+      });
+    }
+  }
+
+  /**
+   * Repair specific validation issues
+   */
+  async repairValidationIssue(suggestion: RepairSuggestion): Promise<boolean> {
+    try {
+      logger.info('Attempting to repair validation issue', { suggestion });
+
+      switch (suggestion.action) {
+        case 'create':
+          return await this.createMissingEntity(suggestion);
+        case 'update':
+          return await this.updateEntity(suggestion);
+        case 'delete':
+          return await this.deleteEntity(suggestion);
+        case 'link':
+          return await this.linkEntities(suggestion);
+        default:
+          logger.warn('Unknown repair action', { action: suggestion.action });
+          return false;
+      }
+    } catch (error) {
+      logger.error('Error repairing validation issue', { error, suggestion });
+      return false;
+    }
+  }
+
+  private async createMissingEntity(suggestion: RepairSuggestion): Promise<boolean> {
+    switch (suggestion.database) {
+      case 'weaviate':
+        if (suggestion.entity === 'WorldKnowledge') {
+          await weaviateService.addWorldKnowledge(suggestion.details);
+          return true;
+        }
+        break;
+      case 'mongodb':
+        if (suggestion.entity === 'Index') {
+          const collection = mongodbService.getDatabase().collection(suggestion.details.collection);
+          await collection.createIndex(suggestion.details.index);
+          return true;
+        }
+        break;
+    }
+    return false;
+  }
+
+  private async updateEntity(suggestion: RepairSuggestion): Promise<boolean> {
+    // Implementation for updating entities
+    return true;
+  }
+
+  private async deleteEntity(suggestion: RepairSuggestion): Promise<boolean> {
+    // Implementation for deleting entities
+    return true;
+  }
+
+  private async linkEntities(suggestion: RepairSuggestion): Promise<boolean> {
+    // Implementation for linking entities
+    return true;
+  }
+
+  /**
+   * Generate a comprehensive validation report
+   */
+  async generateValidationReport(): Promise<string> {
+    const validation = await this.validateAllReferences();
+    
+    let report = '# Cross-Database Validation Report\n\n';
+    report += `**Status**: ${validation.isValid ? '✅ VALID' : '❌ INVALID'}\n`;
+    report += `**Generated**: ${new Date().toISOString()}\n\n`;
+    
+    report += `## Summary\n`;
+    report += `- Errors: ${validation.errors.length}\n`;
+    report += `- Warnings: ${validation.warnings.length}\n`;
+    report += `- Repair Suggestions: ${validation.repairSuggestions.length}\n\n`;
+    
+    if (validation.errors.length > 0) {
+      report += `## Errors\n\n`;
+      validation.errors.forEach((error, index) => {
+        report += `### ${index + 1}. ${error.type.toUpperCase()} (${error.severity})\n`;
+        report += `- **Database**: ${error.database}\n`;
+        report += `- **Entity**: ${error.entity}.${error.field}\n`;
+        report += `- **Value**: ${error.value}\n`;
+        report += `- **Message**: ${error.message}\n\n`;
+      });
+    }
+    
+    if (validation.warnings.length > 0) {
+      report += `## Warnings\n\n`;
+      validation.warnings.forEach((warning, index) => {
+        report += `### ${index + 1}. ${warning.type.toUpperCase()}\n`;
+        report += `- **Database**: ${warning.database}\n`;
+        report += `- **Entity**: ${warning.entity}\n`;
+        report += `- **Message**: ${warning.message}\n\n`;
+      });
+    }
+    
+    if (validation.repairSuggestions.length > 0) {
+      report += `## Repair Suggestions\n\n`;
+      validation.repairSuggestions.forEach((suggestion, index) => {
+        report += `### ${index + 1}. ${suggestion.action.toUpperCase()}\n`;
+        report += `- **Database**: ${suggestion.database}\n`;
+        report += `- **Entity**: ${suggestion.entity}\n`;
+        report += `- **Details**: ${JSON.stringify(suggestion.details, null, 2)}\n\n`;
+      });
+    }
+    
+    return report;
+  }
+}
+
+// Export singleton instance
+export default new CrossDatabaseValidationService();

@@ -1,0 +1,14 @@
+name: mistral
+backend: llama-cpp
+parameters:
+  model: mistral-7b-instruct-v0.2.Q5_K_M.gguf
+  context_size: 8192
+  threads: 8
+  f16: false
+  gpu_layers: 0
+  mmap: true
+template:
+  chat: |
+    [INST] {{.Input}} [/INST]
+  completion: |
+    {{.Input}}

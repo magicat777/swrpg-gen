@@ -1,0 +1,87 @@
+<svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for the glow effect -->
+    <linearGradient id="starGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F9EFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#63b3ed;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FCD34D;stop-opacity:0.6" />
+    </linearGradient>
+    
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e2e8f0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f7fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cbd5e0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="2" dy="2" result="offset"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Transparent background to blend with sidebar -->
+  <!-- <rect width="240" height="80" fill="url(#starGlow)" opacity="0.1" rx="8"/> -->
+  
+  <!-- Central Star with glow -->
+  <g transform="translate(30, 40)">
+    <path d="M0,-18 L5.4,-5.4 L18,0 L5.4,5.4 L0,18 L-5.4,5.4 L-18,0 L-5.4,-5.4 Z" 
+          fill="url(#starGlow)" 
+          filter="url(#glow)" 
+          opacity="0.9"/>
+    <path d="M0,-15 L4.5,-4.5 L15,0 L4.5,4.5 L0,15 L-4.5,4.5 L-15,0 L-4.5,-4.5 Z" 
+          fill="#f7fafc" 
+          opacity="0.8"/>
+  </g>
+  
+  <!-- Decorative elements - smaller stars -->
+  <circle cx="15" cy="15" r="1.5" fill="#4F9EFF" opacity="0.7"/>
+  <circle cx="225" cy="20" r="1" fill="#FCD34D" opacity="0.6"/>
+  <circle cx="20" cy="65" r="1" fill="#63b3ed" opacity="0.5"/>
+  <circle cx="220" cy="60" r="1.5" fill="#4F9EFF" opacity="0.6"/>
+  
+  <!-- Main Text -->
+  <text x="65" y="35" 
+        font-family="StarJedi, Orbitron, sans-serif" 
+        font-size="16" 
+        font-weight="bold" 
+        fill="url(#textGradient)" 
+        filter="url(#dropShadow)">
+    SWRPG
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="65" y="55" 
+        font-family="StarJedi, Orbitron, sans-serif" 
+        font-size="11" 
+        font-weight="normal" 
+        fill="#cbd5e0" 
+        opacity="0.9">
+    STORY GENERATOR
+  </text>
+  
+  <!-- Decorative line elements -->
+  <line x1="65" y1="42" x2="180" y2="42" stroke="#4F9EFF" stroke-width="1" opacity="0.4"/>
+  <line x1="65" y1="60" x2="200" y2="60" stroke="#4F9EFF" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Side accent lines -->
+  <rect x="55" y="25" width="2" height="25" fill="url(#starGlow)" opacity="0.6"/>
+  <rect x="210" y="30" width="1" height="15" fill="#FCD34D" opacity="0.5"/>
+</svg>

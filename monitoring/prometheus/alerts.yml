@@ -1,0 +1,134 @@
+groups:
+  - name: swrpg-alerts
+    rules:
+      # Service availability alerts
+      - alert: ServiceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Service {{ $labels.job }} is down"
+          description: "{{ $labels.job }} has been down for more than 1 minute."
+
+      # High CPU usage
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage on {{ $labels.instance }}"
+          description: "CPU usage is above 80% for more than 5 minutes."
+
+      # High Memory usage
+      - alert: HighMemoryUsage
+        expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100 > 90
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage on {{ $labels.instance }}"
+          description: "Memory usage is above 90% for more than 5 minutes."
+
+      # Disk space usage
+      - alert: DiskSpaceUsage
+        expr: 100 - ((node_filesystem_avail_bytes{mountpoint="/"} * 100) / node_filesystem_size_bytes{mountpoint="/"}) > 85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High disk usage on {{ $labels.instance }}"
+          description: "Disk usage is above 85% for more than 5 minutes."
+
+      # API response time
+      - alert: HighAPIResponseTime
+        expr: histogram_quantile(0.95, rate(swrpg_http_request_duration_seconds_bucket[5m])) > 2
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High API response time"
+          description: "95th percentile response time is above 2 seconds for more than 5 minutes."
+
+      # Database query performance
+      - alert: SlowDatabaseQueries
+        expr: histogram_quantile(0.95, rate(swrpg_db_query_duration_seconds_bucket[5m])) > 5
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Slow database queries detected"
+          description: "95th percentile database query time is above 5 seconds for more than 3 minutes."
+
+      # Database connection issues
+      - alert: DatabaseConnectionError
+        expr: rate(swrpg_db_operations_total{status="error"}[5m]) > 0.1
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Database connection errors detected"
+          description: "Database error rate is {{ $value }} operations per second."
+
+  - name: swrpg-business-logic
+    rules:
+      # High error rate
+      - alert: HighErrorRate
+        expr: rate(swrpg_http_requests_total{status_code=~"5.."}[5m]) / rate(swrpg_http_requests_total[5m]) * 100 > 5
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High error rate detected"
+          description: "Error rate is above 5% for more than 3 minutes."
+
+      # Authentication failures
+      - alert: HighAuthenticationFailures
+        expr: rate(swrpg_auth_attempts_total{status="failure"}[5m]) > 0.5
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High authentication failure rate"
+          description: "More than 0.5 authentication failures per second in the last 5 minutes."
+
+      # Story generation failures
+      - alert: StoryGenerationFailures
+        expr: rate(swrpg_story_generations_total{status="error"}[10m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Story generation failures detected"
+          description: "Story generation error rate is {{ $value }} per second over the last 10 minutes."
+
+      # Low story generation success rate
+      - alert: LowStoryGenerationSuccessRate
+        expr: (rate(swrpg_story_generations_total{status="success"}[1h]) / rate(swrpg_story_generations_total[1h])) * 100 < 80
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low story generation success rate"
+          description: "Story generation success rate is {{ $value }}% over the last hour."
+
+      # No active users for extended period
+      - alert: NoActiveUsers
+        expr: sum(swrpg_active_users) == 0
+        for: 30m
+        labels:
+          severity: info
+        annotations:
+          summary: "No active users"
+          description: "No active users detected for 30 minutes."
+
+      # Unusual faction selection patterns
+      - alert: FactionSelectionAnomaly
+        expr: rate(swrpg_faction_selections_total[1h]) > 10
+        for: 15m
+        labels:
+          severity: info
+        annotations:
+          summary: "High faction selection activity"
+          description: "Unusual high faction selection rate: {{ $value }} per second over the last hour."

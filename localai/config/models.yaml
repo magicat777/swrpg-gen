@@ -1,0 +1,18 @@
+name: swrpg-mistral7b
+backend: llama-cpp
+parameters:
+  model: mistral-7b-instruct-v0.2.Q5_K_M.gguf
+  context_size: 8192
+  threads: 8
+  f16: true
+  gpu_layers: 40  # Offload most layers to GPU
+  mmap: true
+  embeddings: false
+  # Performance optimizations
+  batch_size: 512
+  n_parallel: 4
+  template:
+    chat: |
+      {{.Input}}
+    completion: |
+      {{.Input}}

@@ -1,0 +1,7 @@
+{
+  "status": "healthy",
+  "service": "swrpg-gen-frontend",
+  "version": "1.0.0",
+  "timestamp": "2025-01-22T07:00:00.000Z",
+  "environment": "development"
+}

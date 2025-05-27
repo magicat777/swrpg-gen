@@ -1,0 +1,555 @@
+{
+  "classes": [
+    {
+      "class": "Character",
+      "description": "A Star Wars character",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "name",
+          "dataType": ["text"],
+          "description": "Character's name",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "description",
+          "dataType": ["text"],
+          "description": "Detailed character description",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "species",
+          "dataType": ["text"],
+          "description": "Character's species",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "occupation",
+          "dataType": ["text"],
+          "description": "Character's occupation or role",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "homeworld",
+          "dataType": ["text"],
+          "description": "Character's planet of origin",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "Location",
+      "description": "A place or setting in the Star Wars universe",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "name",
+          "dataType": ["text"],
+          "description": "Location name",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "description",
+          "dataType": ["text"],
+          "description": "Detailed location description",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "type",
+          "dataType": ["text"],
+          "description": "Location type (planet, city, building, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "region",
+          "dataType": ["text"],
+          "description": "Galactic region location",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "Faction",
+      "description": "An organization or group in the Star Wars universe",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "name",
+          "dataType": ["text"],
+          "description": "Faction name",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "description",
+          "dataType": ["text"],
+          "description": "Detailed faction description",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "type",
+          "dataType": ["text"],
+          "description": "Faction type (military, political, criminal, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "StoryEvent",
+      "description": "Story events that occurred in Star Wars narratives",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "title",
+          "dataType": ["text"],
+          "description": "Title of the story event",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "description",
+          "dataType": ["text"],
+          "description": "Detailed description of the event",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "participants",
+          "dataType": ["text[]"],
+          "description": "Characters involved in the event",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "location",
+          "dataType": ["text"],
+          "description": "Where the event took place",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "importance",
+          "dataType": ["int"],
+          "description": "Significance level (1-10)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "type",
+          "dataType": ["text"],
+          "description": "Type of event (battle, negotiation, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "WorldKnowledge",
+      "description": "Knowledge about the Star Wars universe",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "title",
+          "dataType": ["text"],
+          "description": "Title of the knowledge entry",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "content",
+          "dataType": ["text"],
+          "description": "The actual knowledge content",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "category",
+          "dataType": ["text"],
+          "description": "Category (technology, politics, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "era",
+          "dataType": ["text"],
+          "description": "Star Wars era this knowledge applies to",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "canonicity",
+          "dataType": ["text"],
+          "description": "Canon status (canon, legends, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "importance",
+          "dataType": ["int"],
+          "description": "Importance level (1-10)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "NarrativeElement",
+      "description": "Narrative elements and writing patterns for Star Wars stories",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "title",
+          "dataType": ["text"],
+          "description": "Title of the narrative element",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "content",
+          "dataType": ["text"],
+          "description": "The narrative content or pattern",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "type",
+          "dataType": ["text"],
+          "description": "Type (description, dialogue, action)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "tone",
+          "dataType": ["text"],
+          "description": "Narrative tone (dramatic, humorous, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "useContext",
+          "dataType": ["text"],
+          "description": "When to use this element",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "quality",
+          "dataType": ["int"],
+          "description": "Quality rating (1-10)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "PlotTemplate",
+      "description": "Plot templates and story structures for Star Wars adventures",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "title",
+          "dataType": ["text"],
+          "description": "Title of the plot template",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "summary",
+          "dataType": ["text"],
+          "description": "Brief summary of the plot",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "structure",
+          "dataType": ["text"],
+          "description": "Detailed plot structure",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "type",
+          "dataType": ["text"],
+          "description": "Plot type (heist, rescue, investigation)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "complexity",
+          "dataType": ["text"],
+          "description": "Complexity level (simple, moderate, complex)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "recommendedLength",
+          "dataType": ["text"],
+          "description": "Recommended session length",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "challenges",
+          "dataType": ["text"],
+          "description": "Key challenges and obstacles",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "CharacterResponse",
+      "description": "Character responses and dialogue patterns",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "situation",
+          "dataType": ["text"],
+          "description": "The situation or context",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "response",
+          "dataType": ["text"],
+          "description": "How the character responds",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "characterType",
+          "dataType": ["text"],
+          "description": "Type of character (Jedi, Sith, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "alignment",
+          "dataType": ["text"],
+          "description": "Character alignment (light, dark, neutral)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "emotionalState",
+          "dataType": ["text"],
+          "description": "Emotional state during response",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "quality",
+          "dataType": ["int"],
+          "description": "Quality rating (1-10)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

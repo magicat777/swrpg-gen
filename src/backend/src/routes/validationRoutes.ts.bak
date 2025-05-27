@@ -1,0 +1,321 @@
+import express from 'express';
+import { body, param } from 'express-validator';
+import validationController from '../controllers/validationController';
+import { validate } from '../middlewares/validationMiddleware';
+import { authenticateJWT } from '../middlewares/authMiddleware';
+import { 
+  requirePermission, 
+  requireMinimumRole, 
+  attachUserPermissions,
+  UserRole,
+  Permission 
+} from '../middlewares/roleAuthMiddleware';
+
+const router = express.Router();
+
+// Apply authentication to all validation routes
+router.use(authenticateJWT);
+router.use(attachUserPermissions);
+
+/**
+ * @swagger
+ * /api/validation/databases:
+ *   post:
+ *     summary: Run comprehensive cross-database validation
+ *     description: Validates data consistency and references across Neo4j, MongoDB, and Weaviate
+ *     tags: [Validation]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Validation completed successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: success
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     validation:
+ *                       type: object
+ *                       properties:
+ *                         isValid:
+ *                           type: boolean
+ *                         errors:
+ *                           type: array
+ *                           items:
+ *                             type: object
+ *                         warnings:
+ *                           type: array
+ *                           items:
+ *                             type: object
+ *                         repairSuggestions:
+ *                           type: array
+ *                           items:
+ *                             type: object
+ *                     summary:
+ *                       type: object
+ *                       properties:
+ *                         isValid:
+ *                           type: boolean
+ *                         totalErrors:
+ *                           type: integer
+ *                         criticalErrors:
+ *                           type: integer
+ *                         highPriorityErrors:
+ *                           type: integer
+ *                         warnings:
+ *                           type: integer
+ *                         repairSuggestions:
+ *                           type: integer
+ *       403:
+ *         description: Insufficient permissions
+ *       500:
+ *         description: Validation error
+ */
+router.post(
+  '/databases',
+  requirePermission(Permission.VIEW_SYSTEM_STATS),
+  validationController.validateDatabases
+);
+
+/**
+ * @swagger
+ * /api/validation/databases/{database}:
+ *   post:
+ *     summary: Run validation for a specific database
+ *     description: Validates data consistency for a specific database (neo4j, mongodb, or weaviate)
+ *     tags: [Validation]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: database
+ *         required: true
+ *         schema:
+ *           type: string
+ *           enum: [neo4j, mongodb, weaviate]
+ *         description: Database to validate
+ *     responses:
+ *       200:
+ *         description: Database validation completed successfully
+ *       400:
+ *         description: Invalid database specified
+ *       403:
+ *         description: Insufficient permissions
+ *       500:
+ *         description: Validation error
+ */
+router.post(
+  '/databases/:database',
+  requirePermission(Permission.VIEW_SYSTEM_STATS),
+  validate([
+    param('database')
+      .isIn(['neo4j', 'mongodb', 'weaviate'])
+      .withMessage('Database must be neo4j, mongodb, or weaviate')
+  ]),
+  validationController.validateSpecificDatabase
+);
+
+/**
+ * @swagger
+ * /api/validation/status:
+ *   get:
+ *     summary: Get validation status summary
+ *     description: Returns a quick summary of cross-database validation status
+ *     tags: [Validation]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Validation status retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: success
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     validationStatus:
+ *                       type: object
+ *                       properties:
+ *                         overall:
+ *                           type: string
+ *                           enum: [healthy, issues_detected]
+ *                         lastChecked:
+ *                           type: string
+ *                           format: date-time
+ *                         summary:
+ *                           type: object
+ *                           properties:
+ *                             databases:
+ *                               type: object
+ *                               properties:
+ *                                 neo4j:
+ *                                   type: string
+ *                                   enum: [healthy, minor_issues, degraded, critical]
+ *                                 mongodb:
+ *                                   type: string
+ *                                   enum: [healthy, minor_issues, degraded, critical]
+ *                                 weaviate:
+ *                                   type: string
+ *                                   enum: [healthy, minor_issues, degraded, critical]
+ *                             issues:
+ *                               type: object
+ *                               properties:
+ *                                 critical:
+ *                                   type: integer
+ *                                 high:
+ *                                   type: integer
+ *                                 medium:
+ *                                   type: integer
+ *                                 low:
+ *                                   type: integer
+ *                             warnings:
+ *                               type: integer
+ *                             optimizations:
+ *                               type: integer
+ *       403:
+ *         description: Insufficient permissions
+ *       500:
+ *         description: Status retrieval error
+ */
+router.get(
+  '/status',
+  requirePermission(Permission.VIEW_SYSTEM_STATS),
+  validationController.getValidationStatus
+);
+
+/**
+ * @swagger
+ * /api/validation/report:
+ *   get:
+ *     summary: Generate comprehensive validation report
+ *     description: Generates a detailed markdown report of cross-database validation results
+ *     tags: [Validation]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Validation report generated successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: success
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     report:
+ *                       type: string
+ *                       description: Markdown formatted validation report
+ *                     generatedAt:
+ *                       type: string
+ *                       format: date-time
+ *                     format:
+ *                       type: string
+ *                       example: markdown
+ *       403:
+ *         description: Insufficient permissions
+ *       500:
+ *         description: Report generation error
+ */
+router.get(
+  '/report',
+  requirePermission(Permission.VIEW_SYSTEM_STATS),
+  validationController.generateReport
+);
+
+/**
+ * @swagger
+ * /api/validation/repair:
+ *   post:
+ *     summary: Repair validation issues (Admin only)
+ *     description: Attempts to automatically repair cross-database validation issues
+ *     tags: [Validation]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - repairSuggestion
+ *             properties:
+ *               repairSuggestion:
+ *                 type: object
+ *                 properties:
+ *                   action:
+ *                     type: string
+ *                     enum: [create, update, delete, link]
+ *                   database:
+ *                     type: string
+ *                     enum: [neo4j, mongodb, weaviate]
+ *                   entity:
+ *                     type: string
+ *                   details:
+ *                     type: object
+ *     responses:
+ *       200:
+ *         description: Repair completed successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: success
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     repaired:
+ *                       type: boolean
+ *                     repairSuggestion:
+ *                       type: object
+ *                     message:
+ *                       type: string
+ *       400:
+ *         description: Invalid repair suggestion or repair failed
+ *       403:
+ *         description: Insufficient permissions (Admin required)
+ *       500:
+ *         description: Repair error
+ */
+router.post(
+  '/repair',
+  requireMinimumRole(UserRole.ADMIN),
+  validate([
+    body('repairSuggestion')
+      .isObject()
+      .withMessage('Repair suggestion must be an object'),
+    body('repairSuggestion.action')
+      .isIn(['create', 'update', 'delete', 'link'])
+      .withMessage('Action must be create, update, delete, or link'),
+    body('repairSuggestion.database')
+      .isIn(['neo4j', 'mongodb', 'weaviate'])
+      .withMessage('Database must be neo4j, mongodb, or weaviate'),
+    body('repairSuggestion.entity')
+      .notEmpty()
+      .withMessage('Entity is required'),
+    body('repairSuggestion.details')
+      .isObject()
+      .withMessage('Details must be an object')
+  ]),
+  validationController.repairIssue
+);
+
+export default router;

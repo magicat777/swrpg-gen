@@ -1,0 +1,127 @@
+<svg width="250" height="100%" viewBox="0 0 250 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="spaceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:0.95" />
+      <stop offset="30%" style="stop-color:#1E293B;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#2D3748;stop-opacity:0.85" />
+      <stop offset="100%" style="stop-color:#1A202C;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- Nebula gradient -->
+    <radialGradient id="nebula1" cx="20%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#4F9EFF;stop-opacity:0.08" />
+      <stop offset="50%" style="stop-color:#63b3ed;stop-opacity:0.04" />
+      <stop offset="100%" style="stop-color:#4F9EFF;stop-opacity:0.01" />
+    </radialGradient>
+    
+    <radialGradient id="nebula2" cx="80%" cy="70%" r="50%">
+      <stop offset="0%" style="stop-color:#FCD34D;stop-opacity:0.06" />
+      <stop offset="50%" style="stop-color:#F6AD55;stop-opacity:0.03" />
+      <stop offset="100%" style="stop-color:#FCD34D;stop-opacity:0.01" />
+    </radialGradient>
+    
+    <!-- Star glow -->
+    <filter id="starGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Subtle glow for larger stars -->
+    <filter id="bigStarGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Base space background -->
+  <rect width="250" height="800" fill="url(#spaceGradient)"/>
+  
+  <!-- Nebula effects -->
+  <ellipse cx="50" cy="320" rx="80" ry="120" fill="url(#nebula1)"/>
+  <ellipse cx="200" cy="560" rx="70" ry="100" fill="url(#nebula2)"/>
+  <ellipse cx="30" cy="650" rx="60" ry="80" fill="url(#nebula1)" opacity="0.5"/>
+  
+  <!-- Star field - small stars -->
+  <circle cx="45" cy="25" r="0.5" fill="#f7fafc" opacity="0.7"/>
+  <circle cx="180" cy="45" r="0.5" fill="#cbd5e0" opacity="0.6"/>
+  <circle cx="90" cy="35" r="0.3" fill="#e2e8f0" opacity="0.5"/>
+  <circle cx="220" cy="30" r="0.4" fill="#f7fafc" opacity="0.8"/>
+  <circle cx="30" cy="55" r="0.3" fill="#4F9EFF" opacity="0.6"/>
+  
+  <!-- Section 1 stars (around 120px) -->
+  <circle cx="70" cy="110" r="0.5" fill="#f7fafc" opacity="0.6"/>
+  <circle cx="200" cy="125" r="0.3" fill="#FCD34D" opacity="0.7"/>
+  <circle cx="40" cy="140" r="0.4" fill="#63b3ed" opacity="0.5"/>
+  <circle cx="160" cy="135" r="0.5" fill="#e2e8f0" opacity="0.8"/>
+  <circle cx="220" cy="115" r="0.3" fill="#f7fafc" opacity="0.6"/>
+  
+  <!-- Section 2 stars (around 200px) -->
+  <circle cx="80" cy="190" r="0.6" fill="#4F9EFF" opacity="0.7" filter="url(#starGlow)"/>
+  <circle cx="150" cy="210" r="0.4" fill="#f7fafc" opacity="0.6"/>
+  <circle cx="35" cy="220" r="0.3" fill="#FCD34D" opacity="0.8"/>
+  <circle cx="210" cy="195" r="0.5" fill="#cbd5e0" opacity="0.7"/>
+  <circle cx="120" cy="185" r="0.3" fill="#e2e8f0" opacity="0.5"/>
+  
+  <!-- Section 3 stars (around 280px) -->
+  <circle cx="60" cy="270" r="0.5" fill="#f7fafc" opacity="0.8"/>
+  <circle cx="190" cy="285" r="0.4" fill="#4F9EFF" opacity="0.6"/>
+  <circle cx="25" cy="295" r="0.3" fill="#63b3ed" opacity="0.7"/>
+  <circle cx="170" cy="275" r="0.6" fill="#FCD34D" opacity="0.7" filter="url(#starGlow)"/>
+  <circle cx="110" cy="290" r="0.3" fill="#e2e8f0" opacity="0.6"/>
+  
+  <!-- Section 4 stars (around 360px) -->
+  <circle cx="85" cy="350" r="0.4" fill="#f7fafc" opacity="0.7"/>
+  <circle cx="200" cy="370" r="0.5" fill="#cbd5e0" opacity="0.6"/>
+  <circle cx="45" cy="380" r="0.3" fill="#4F9EFF" opacity="0.8"/>
+  <circle cx="160" cy="355" r="0.4" fill="#FCD34D" opacity="0.7"/>
+  <circle cx="230" cy="365" r="0.3" fill="#e2e8f0" opacity="0.5"/>
+  
+  <!-- Section 5 stars (around 440px) -->
+  <circle cx="75" cy="430" r="0.6" fill="#4F9EFF" opacity="0.8" filter="url(#starGlow)"/>
+  <circle cx="180" cy="450" r="0.4" fill="#f7fafc" opacity="0.6"/>
+  <circle cx="35" cy="460" r="0.3" fill="#FCD34D" opacity="0.7"/>
+  <circle cx="220" cy="435" r="0.5" fill="#63b3ed" opacity="0.8"/>
+  <circle cx="130" cy="445" r="0.3" fill="#cbd5e0" opacity="0.6"/>
+  
+  <!-- Section 6 stars (around 520px) -->
+  <circle cx="65" cy="510" r="0.5" fill="#f7fafc" opacity="0.7"/>
+  <circle cx="190" cy="530" r="0.4" fill="#4F9EFF" opacity="0.6"/>
+  <circle cx="30" cy="540" r="0.3" fill="#e2e8f0" opacity="0.8"/>
+  <circle cx="170" cy="515" r="0.6" fill="#FCD34D" opacity="0.7" filter="url(#starGlow)"/>
+  <circle cx="240" cy="525" r="0.3" fill="#cbd5e0" opacity="0.5"/>
+  
+  <!-- Bottom section stars -->
+  <circle cx="55" cy="600" r="0.4" fill="#f7fafc" opacity="0.8"/>
+  <circle cx="185" cy="620" r="0.5" fill="#4F9EFF" opacity="0.7"/>
+  <circle cx="25" cy="640" r="0.3" fill="#FCD34D" opacity="0.6"/>
+  <circle cx="200" cy="610" r="0.4" fill="#63b3ed" opacity="0.8"/>
+  <circle cx="90" cy="630" r="0.3" fill="#e2e8f0" opacity="0.7"/>
+  
+  <circle cx="75" cy="680" r="0.5" fill="#f7fafc" opacity="0.6"/>
+  <circle cx="170" cy="700" r="0.4" fill="#cbd5e0" opacity="0.7"/>
+  <circle cx="40" cy="720" r="0.3" fill="#4F9EFF" opacity="0.8"/>
+  <circle cx="210" cy="685" r="0.5" fill="#FCD34D" opacity="0.6"/>
+  <circle cx="120" cy="695" r="0.3" fill="#e2e8f0" opacity="0.5"/>
+  
+  <!-- Larger accent stars -->
+  <circle cx="95" cy="160" r="1" fill="#4F9EFF" opacity="0.8" filter="url(#bigStarGlow)"/>
+  <circle cx="155" cy="320" r="1.2" fill="#FCD34D" opacity="0.7" filter="url(#bigStarGlow)"/>
+  <circle cx="205" cy="480" r="1" fill="#63b3ed" opacity="0.8" filter="url(#bigStarGlow)"/>
+  <circle cx="50" cy="580" r="1.1" fill="#f7fafc" opacity="0.9" filter="url(#bigStarGlow)"/>
+  
+  <!-- Distant galaxy effect -->
+  <ellipse cx="225" cy="200" rx="8" ry="3" fill="#4F9EFF" opacity="0.3" transform="rotate(25 225 200)"/>
+  <ellipse cx="15" cy="400" rx="6" ry="2" fill="#FCD34D" opacity="0.4" transform="rotate(-15 15 400)"/>
+  
+  <!-- Subtle connecting lines (hyperspace routes) -->
+  <line x1="95" y1="160" x2="155" y2="320" stroke="#4F9EFF" stroke-width="0.2" opacity="0.2"/>
+  <line x1="155" y1="320" x2="205" y2="480" stroke="#63b3ed" stroke-width="0.2" opacity="0.3"/>
+  <line x1="205" y1="480" x2="50" y2="580" stroke="#FCD34D" stroke-width="0.2" opacity="0.2"/>
+</svg>

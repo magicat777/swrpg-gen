@@ -1,0 +1,25 @@
+name: mistral-7b-instruct-v0.2.Q5_K_M
+backend: llama-cpp
+parameters:
+  # Model file path
+  model: mistral-7b-instruct-v0.2.Q5_K_M.gguf
+  # CPU-only configuration
+  f16: false
+  gpu_layers: 0
+  # Context window size (8K tokens)
+  context_size: 8192
+  # KV cache optimization
+  mmap: true
+  # Inference batch size
+  batch_size: 512
+  # Thread settings
+  threads: 8
+  # Generation parameters
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 40
+  repeat_penalty: 1.1
+  # Token output limit
+  max_tokens: 1024
+  # Prompt format template
+  chat_template: "{{if .System}}<s>{{.System}}</s>{{end}}{{range $i, $message := .Messages}}{{if eq $message.Role \"user\"}}<s>[INST] {{$message.Content}} [/INST]</s>{{else if eq $message.Role \"assistant\"}}<s>{{$message.Content}}</s>{{end}}{{end}}"

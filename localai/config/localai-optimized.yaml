@@ -1,0 +1,43 @@
+# LocalAI Optimized Configuration
+# Prevents unnecessary CUDA rebuilds and improves startup time
+
+backend: llama
+context_size: 8192
+f16: true
+threads: 8
+gpu_layers: 40
+
+# Model configuration
+model: mistral-7b-instruct-v0.2.Q5_K_M.gguf
+name: mistral-7b-instruct-v0.2.Q5_K_M
+
+# Optimization settings
+mmap: true
+mlock: true
+low_vram: false
+
+# Template configuration
+template:
+  chat: |
+    <s>[INST] {{.Input}} [/INST]
+  completion: |
+    {{.Input}}
+
+# Stop sequences
+stopwords:
+  - "</s>"
+  - "[/INST]"
+
+# Performance tuning
+parameters:
+  temperature: 0.7
+  top_k: 40
+  top_p: 0.9
+  max_tokens: 512
+  repeat_penalty: 1.1
+
+# CUDA optimization
+cuda:
+  allocator: "cudaMallocAsync"
+  memory_pool: true
+  compute_capability: "8.6"  # RTX 4080 compute capability

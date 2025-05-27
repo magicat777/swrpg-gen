@@ -1,0 +1,666 @@
+{
+  "metadata": {
+    "title": "Enhanced Original Trilogy Character Profiles",
+    "description": "Comprehensive character profiles for the 15 canonical Original Trilogy characters with RPG-focused enhancements",
+    "canon_source": "A New Hope (1977), The Empire Strikes Back (1980), Return of the Jedi (1983)",
+    "last_updated": "2025-05-23",
+    "total_characters": 15,
+    "enhancement_version": "1.0"
+  },
+  "characters": {
+    "luke_skywalker": {
+      "basic_info": {
+        "id": "luke-skywalker",
+        "name": "Luke Skywalker",
+        "species": "Human",
+        "homeworld": "Tatooine",
+        "birth_year": "19 BBY",
+        "age_during_trilogy": "19-23 years",
+        "affiliations": ["Rebel Alliance", "Jedi Order"]
+      },
+      "physical_description": {
+        "height": "1.72 meters",
+        "hair": "Blonde",
+        "eyes": "Blue",
+        "distinctive_features": ["Farm-toughened hands", "Youthful appearance", "Determined expression"],
+        "typical_attire": ["Moisture farmer garb", "Rebel pilot uniform", "Jedi robes (black)"]
+      },
+      "personality": {
+        "core_traits": ["Idealistic", "Impatient", "Loyal", "Brave", "Compassionate"],
+        "strengths": ["Natural pilot", "Strong in the Force", "Inspires others", "Never gives up"],
+        "weaknesses": ["Reckless", "Impatient", "Trusts too easily", "Struggles with anger"],
+        "motivations": ["Seeking adventure", "Protecting friends", "Restoring the Jedi Order", "Redeeming his father"],
+        "fears": ["Losing loved ones", "Falling to the dark side", "Failing as a Jedi", "Being like his father"]
+      },
+      "abilities": {
+        "force_sensitivity": "Very High",
+        "force_powers": ["Telekinesis", "Enhanced reflexes", "Precognition", "Force jump", "Mind trick (developing)"],
+        "lightsaber_form": "Form V: Djem So (learned from Vader's style)",
+        "combat_skills": ["Lightsaber combat", "Blaster proficiency", "Starfighter piloting"],
+        "other_skills": ["Mechanical aptitude", "Speeder bike operation", "Leadership potential"]
+      },
+      "equipment": {
+        "primary_weapon": "Blue lightsaber (Anakin's, later replaced with green)",
+        "secondary_weapons": ["Blaster pistol", "Thermal detonator"],
+        "signature_items": ["X-wing starfighter", "R2-D2 companion", "Rebel pilot helmet"],
+        "tools": ["Lightsaber construction materials", "Jedi texts (later)", "Comlink"]
+      },
+      "relationships": {
+        "family": {
+          "father": "Anakin Skywalker/Darth Vader",
+          "sister": "Leia Organa (twin)",
+          "guardians": ["Owen Lars (uncle)", "Beru Lars (aunt)"],
+          "grandmother": "Shmi Skywalker (deceased)"
+        },
+        "mentors": {
+          "obi_wan": "Primary teacher of lightsaber basics and Jedi philosophy",
+          "yoda": "Advanced Force training and Jedi wisdom",
+          "biggs": "Childhood friend and pilot inspiration"
+        },
+        "allies": {
+          "han_solo": "Close friend and brother-in-law",
+          "chewbacca": "Loyal friend and co-pilot",
+          "leia": "Sister and fellow rebel leader",
+          "droids": "R2-D2 and C-3PO companions"
+        },
+        "enemies": {
+          "vader": "Father turned enemy (later redeemed)",
+          "emperor": "Ultimate enemy and corruptor of father",
+          "imperial_forces": "Stormtroopers, officers, Inquisitors"
+        }
+      },
+      "character_development": {
+        "episode_4": "Naive farm boy discovers destiny, joins Rebellion, destroys Death Star",
+        "episode_5": "Begins Jedi training, learns harsh truths about father, loses hand",
+        "episode_6": "Completes training, redeems father, becomes full Jedi Knight",
+        "key_moments": [
+          "Learning about his father from Obi-Wan",
+          "First lightsaber activation",
+          "Destroying the Death Star",
+          "Training with Yoda on Dagobah",
+          "Vader reveals he is his father",
+          "Confronting the Emperor",
+          "Redeeming Darth Vader"
+        ]
+      },
+      "rpg_elements": {
+        "notable_quotes": [
+          "I want to learn the ways of the Force and become a Jedi like my father.",
+          "I'll never turn to the dark side.",
+          "I feel the conflict within you. Let go of your hate.",
+          "I am a Jedi, like my father before me."
+        ],
+        "mannerisms": [
+          "Looks to the horizon when dreaming",
+          "Fidgets with lightsaber when nervous",
+          "Quick to defend the innocent",
+          "Sometimes speaks without thinking"
+        ],
+        "gm_hooks": [
+          "Training new Force-sensitive recruits",
+          "Exploring ancient Jedi ruins",
+          "Dealing with family legacy issues",
+          "Leading Rebel missions",
+          "Discovering lost Jedi artifacts",
+          "Confronting dark side temptations"
+        ],
+        "story_seeds": [
+          "Finding other survivors of Order 66",
+          "Investigating Sith artifacts",
+          "Protecting moisture farmers on Tatooine",
+          "Building a new Jedi academy",
+          "Diplomatic missions for the New Republic"
+        ]
+      },
+      "reputation": {
+        "rebel_alliance": "Hero of the Rebellion, Death Star destroyer",
+        "imperial_forces": "Most wanted terrorist, Jedi threat",
+        "jedi_survivors": "New hope for the Order's return",
+        "general_public": "Legendary pilot and warrior",
+        "underworld": "Valuable target with high bounty"
+      },
+      "wookieepedia_url": "https://starwars.fandom.com/wiki/Luke_Skywalker"
+    },
+    "leia_organa": {
+      "basic_info": {
+        "id": "princess-leia",
+        "name": "Leia Organa",
+        "titles": ["Princess of Alderaan", "General of the Rebel Alliance"],
+        "species": "Human",
+        "homeworld": "Alderaan (adopted), Polis Massa (birth)",
+        "birth_year": "19 BBY",
+        "age_during_trilogy": "19-23 years",
+        "affiliations": ["Royal House of Alderaan", "Rebel Alliance", "Imperial Senate (formerly)"]
+      },
+      "physical_description": {
+        "height": "1.50 meters",
+        "hair": "Brown (signature buns and braids)",
+        "eyes": "Brown",
+        "distinctive_features": ["Regal bearing", "Determined expression", "Iconic hair styles"],
+        "typical_attire": ["White senatorial robes", "Rebel military uniform", "Endor camouflage"]
+      },
+      "personality": {
+        "core_traits": ["Diplomatic", "Fierce", "Compassionate", "Stubborn", "Natural leader"],
+        "strengths": ["Political acumen", "Inspirational speaker", "Strategic mind", "Unwavering courage"],
+        "weaknesses": ["Sometimes too trusting", "Carries weight of Alderaan's destruction", "Can be overly serious"],
+        "motivations": ["Freeing the galaxy from tyranny", "Honoring Alderaan's memory", "Protecting innocent lives"],
+        "fears": ["More worlds being destroyed", "Failing the Rebellion", "Losing more family"]
+      },
+      "abilities": {
+        "force_sensitivity": "High (untrained, intuitive)",
+        "force_powers": ["Empathic sensing", "Intuitive precognition", "Natural leadership presence"],
+        "combat_skills": ["Blaster proficiency", "Basic hand-to-hand combat", "Strategic warfare"],
+        "political_skills": ["Diplomacy", "Negotiation", "Public speaking", "Intelligence gathering"],
+        "other_skills": ["Multi-lingual", "Starship operation", "Resistance organizing"]
+      },
+      "equipment": {
+        "primary_weapon": "Hold-out blaster (Defender sporting blaster)",
+        "secondary_weapons": ["Thermal detonator", "Stolen Imperial weapons"],
+        "signature_items": ["Diplomatic credentials", "Rebel communication codes", "Royal jewelry (hidden)"],
+        "tools": ["Encrypted datapads", "Holographic projectors", "Emergency supplies"]
+      },
+      "relationships": {
+        "family": {
+          "father": "Anakin Skywalker/Darth Vader (biological)",
+          "brother": "Luke Skywalker (twin)",
+          "adoptive_father": "Bail Organa",
+          "adoptive_mother": "Breha Organa"
+        },
+        "political": {
+          "mon_mothma": "Fellow leader and mentor figure",
+          "admiral_ackbar": "Military ally and strategist",
+          "bail_organa": "Father and political mentor"
+        },
+        "personal": {
+          "han_solo": "Romantic interest and eventual husband",
+          "luke": "Close friend before learning family connection",
+          "chewbacca": "Trusted ally and friend"
+        },
+        "enemies": {
+          "grand_moff_tarkin": "Destroyer of Alderaan",
+          "vader": "Imperial enforcer (unknown father)",
+          "emperor": "Ultimate enemy of freedom"
+        }
+      },
+      "character_development": {
+        "episode_4": "Desperate princess delivers Death Star plans, loses homeworld",
+        "episode_5": "Becomes military leader, begins relationship with Han",
+        "episode_6": "Leads Endor mission, learns of Force heritage",
+        "key_moments": [
+          "Recording message in R2-D2",
+          "Witnessing Alderaan's destruction",
+          "Rescuing Luke from Cloud City",
+          "Infiltrating Jabba's palace",
+          "Leading the Endor strike team",
+          "Learning Luke is her brother"
+        ]
+      },
+      "rpg_elements": {
+        "notable_quotes": [
+          "Help me, Obi-Wan Kenobi. You're my only hope.",
+          "The more you tighten your grip, Tarkin, the more star systems will slip through your fingers.",
+          "I love you. I know.",
+          "Someone has to save our skins!"
+        ],
+        "mannerisms": [
+          "Maintains composure under pressure",
+          "Uses diplomatic language even in combat",
+          "Protective of her friends",
+          "Quick wit and sharp comebacks"
+        ],
+        "gm_hooks": [
+          "Diplomatic missions to neutral systems",
+          "Searching for Alderaan survivors",
+          "Organizing rebel cells",
+          "Negotiating with alien species",
+          "Dealing with political intrigue",
+          "Force sensitivity training"
+        ],
+        "story_seeds": [
+          "Establishing New Republic government",
+          "Hunting down Imperial war criminals",
+          "Recovering Alderaanian artifacts",
+          "Training in the Force with Luke",
+          "Diplomatic crises requiring her expertise"
+        ]
+      },
+      "reputation": {
+        "rebel_alliance": "Inspirational leader and princess of martyred world",
+        "imperial_forces": "High-value target and dangerous rebel leader",
+        "galactic_senate": "Respected former senator from peaceful world",
+        "general_public": "Symbol of resistance against tyranny",
+        "alderaan_survivors": "Last princess and keeper of their heritage"
+      },
+      "wookieepedia_url": "https://starwars.fandom.com/wiki/Leia_Organa"
+    },
+    "han_solo": {
+      "basic_info": {
+        "id": "han-solo",
+        "name": "Han Solo",
+        "species": "Human",
+        "homeworld": "Corellia",
+        "birth_year": "32 BBY",
+        "age_during_trilogy": "29-33 years",
+        "affiliations": ["Independent smuggler", "Rebel Alliance (later)"]
+      },
+      "physical_description": {
+        "height": "1.80 meters",
+        "hair": "Dark brown",
+        "eyes": "Brown",
+        "distinctive_features": ["Roguish smile", "Confident swagger", "Quick-draw stance"],
+        "typical_attire": ["Corellian bloodstripe trousers", "White shirt", "Black vest", "Holster belt"]
+      },
+      "personality": {
+        "core_traits": ["Cynical exterior hiding nobility", "Quick-witted", "Loyal to friends", "Independent"],
+        "strengths": ["Exceptional pilot", "Street smart", "Loyal once committed", "Natural leader"],
+        "weaknesses": ["Commitment issues", "Skeptical of the Force", "Gambling addiction", "Reckless"],
+        "motivations": ["Personal freedom", "Protecting his crew", "Eventually the Rebellion's cause"],
+        "fears": ["Being tied down", "Losing independence", "Carbonite freezing", "Failing his friends"]
+      },
+      "abilities": {
+        "force_sensitivity": "None (relies on luck and skill)",
+        "combat_skills": ["Expert marksman", "Ship-to-ship combat", "Improvised tactics", "Hand-to-hand combat"],
+        "piloting_skills": ["Legendary starship pilot", "Fastest ship in the galaxy", "Astrogation expertise"],
+        "other_skills": ["Smuggling operations", "Underworld contacts", "Mechanical repair", "Fast-talk diplomacy"]
+      },
+      "equipment": {
+        "primary_weapon": "DL-44 heavy blaster pistol",
+        "signature_items": ["Millennium Falcon", "Holster and gun belt", "Pilot's luck dice"],
+        "ship_modifications": ["Hidden cargo compartments", "Enhanced hyperdrive", "Illegal modifications"],
+        "tools": ["Ship repair tools", "Smuggling equipment", "Sabacc cards"]
+      },
+      "relationships": {
+        "partners": {
+          "chewbacca": "Co-pilot bound by Wookiee life debt",
+          "lando": "Old friend and sometimes rival",
+          "fellow_smugglers": "Professional network of contacts"
+        },
+        "romance": {
+          "leia_organa": "Love interest and eventual wife"
+        },
+        "enemies": {
+          "jabba_hutt": "Crime lord holding his debt",
+          "greedo": "Bounty hunter after the bounty",
+          "boba_fett": "Bounty hunter who captured him",
+          "imperial_forces": "After joining the Rebellion"
+        },
+        "allies": {
+          "luke": "Friend and brother-in-law",
+          "rebel_alliance": "Eventual comrades in arms"
+        }
+      },
+      "character_development": {
+        "episode_4": "Mercenary smuggler reluctantly helps rescue mission",
+        "episode_5": "Commits to Rebellion and romance with Leia, gets captured",
+        "episode_6": "Rescued friend becomes full Rebel general",
+        "key_moments": [
+          "Meeting Luke and Obi-Wan in cantina",
+          "Rescuing Princess Leia",
+          "Kessel Run boast",
+          "Saving Luke at Death Star battle",
+          "Being frozen in carbonite",
+          "Leading Endor strike team"
+        ]
+      },
+      "rpg_elements": {
+        "notable_quotes": [
+          "I made the Kessel Run in less than twelve parsecs.",
+          "Never tell me the odds!",
+          "I have a bad feeling about this.",
+          "I know.",
+          "Great kid, don't get cocky."
+        ],
+        "mannerisms": [
+          "Shoots first, asks questions later",
+          "Adjusts his vest when nervous",
+          "Leans against walls casually",
+          "Quick with sarcastic comments"
+        ],
+        "gm_hooks": [
+          "Smuggling runs for the Rebellion",
+          "Dealing with underworld contacts",
+          "Ship modification adventures",
+          "Sabacc tournaments",
+          "Evading bounty hunters",
+          "Romantic subplot development"
+        ],
+        "story_seeds": [
+          "Paying off old debts",
+          "Reuniting with old smuggling partners",
+          "Acquiring rare cargo for missions",
+          "Teaching others to pilot",
+          "Investigating Imperial shipping routes"
+        ]
+      },
+      "reputation": {
+        "rebel_alliance": "Brave pilot and general who came through when needed",
+        "imperial_forces": "Dangerous rebel operative and skilled pilot",
+        "underworld": "Reliable smuggler with questionable luck",
+        "bounty_hunters": "High-value target worth significant credits",
+        "pilots": "Legend for his skills and his ship"
+      },
+      "wookieepedia_url": "https://starwars.fandom.com/wiki/Han_Solo"
+    },
+    "darth_vader": {
+      "basic_info": {
+        "id": "darth-vader",
+        "name": "Darth Vader",
+        "birth_name": "Anakin Skywalker",
+        "titles": ["Dark Lord of the Sith", "Supreme Commander of Imperial Forces"],
+        "species": "Human (cyborg)",
+        "homeworld": "Tatooine",
+        "birth_year": "41 BBY",
+        "transformation_year": "19 BBY",
+        "age_during_trilogy": "41-45 years",
+        "affiliations": ["Galactic Empire", "Sith Order"]
+      },
+      "physical_description": {
+        "height": "2.02 meters (in armor)",
+        "distinctive_features": ["Black life support armor", "Mechanical breathing", "Red lightsaber", "Imposing presence"],
+        "armor_components": ["Life support chest plate", "Cape", "Helmet with eye lenses", "Mechanical limbs"],
+        "voice": "Deep, mechanically modulated"
+      },
+      "personality": {
+        "core_traits": ["Conflicted", "Authoritative", "Feared", "Buried compassion", "Tragic"],
+        "strengths": ["Tactical brilliance", "Unwavering determination", "Inspiring fear", "Combat mastery"],
+        "weaknesses": ["Emotional turmoil", "Dependence on armor", "Conflicted loyalties", "Anger"],
+        "motivations": ["Serving the Emperor", "Hunting remaining Jedi", "Suppressed desire for redemption"],
+        "fears": ["Losing control", "His past as Anakin", "Disappointing the Emperor", "His children's safety"]
+      },
+      "abilities": {
+        "force_sensitivity": "Legendary (diminished by injuries but still immensely powerful)",
+        "force_powers": ["Force choke", "Telekinesis", "Precognition", "Force lightning resistance", "Telepathy"],
+        "lightsaber_form": "Form V: Djem So (adapted for his mechanical suit)",
+        "combat_skills": ["Master lightsaber duelist", "Starfighter pilot", "Strategic warfare", "Intimidation"],
+        "leadership_skills": ["Military command", "Inspiring loyalty through fear", "Strategic planning"]
+      },
+      "equipment": {
+        "primary_weapon": "Red lightsaber (Sith crystal)",
+        "armor": "Life support suit with integrated systems",
+        "signature_items": ["Meditation chamber", "Personal shuttle", "Breathing apparatus"],
+        "tools": ["Comlink systems", "Imperial access codes", "Sith artifacts"]
+      },
+      "relationships": {
+        "master": {
+          "emperor_palpatine": "Sith Master and manipulator"
+        },
+        "children": {
+          "luke_skywalker": "Son (unknown until ESB)",
+          "leia_organa": "Daughter (unknown until later)"
+        },
+        "past_connections": {
+          "obi_wan": "Former master, now enemy",
+          "padme": "Deceased wife and love",
+          "ahsoka": "Former padawan (if considering Clone Wars)"
+        },
+        "imperial_hierarchy": {
+          "grand_moff_tarkin": "Respected Imperial ally",
+          "imperial_officers": "Subordinates who fear him"
+        }
+      },
+      "character_development": {
+        "episode_4": "Ruthless Imperial enforcer hunting Rebel Alliance",
+        "episode_5": "Reveals truth to Luke, attempts to turn him",
+        "episode_6": "Redeemed through son's love, destroys Emperor",
+        "key_moments": [
+          "Boarding Tantive IV",
+          "Sensing Obi-Wan's presence",
+          "Dueling Obi-Wan on Death Star",
+          "Pursuing Luke through galaxy",
+          "Revealing parentage to Luke",
+          "Choosing Luke over Emperor"
+        ]
+      },
+      "rpg_elements": {
+        "notable_quotes": [
+          "I find your lack of faith disturbing.",
+          "You underestimate the power of the dark side.",
+          "I am your father.",
+          "It is too late for me, son.",
+          "Tell your sister... you were right."
+        ],
+        "mannerisms": [
+          "Mechanical breathing pattern",
+          "Deliberate, measured movements",
+          "Uses Force choke as intimidation",
+          "Cape dramatically flows behind him"
+        ],
+        "gm_hooks": [
+          "Hunting down remaining Jedi",
+          "Imperial military operations",
+          "Investigating Force-sensitive individuals",
+          "Personal quests for Sith artifacts",
+          "Conflicts between duty and hidden compassion",
+          "Meditation and introspection scenes"
+        ],
+        "story_seeds": [
+          "Discovering Luke's Force sensitivity",
+          "Investigating Rebel Alliance activities",
+          "Confronting his past as Anakin",
+          "Training potential dark side apprentices",
+          "Dealing with Imperial politics"
+        ]
+      },
+      "reputation": {
+        "imperial_forces": "Most feared enforcer, symbol of Imperial might",
+        "rebel_alliance": "Primary enemy and greatest threat",
+        "force_sensitives": "Nightmare figure who hunts their kind",
+        "general_public": "Terrifying legend of Imperial power",
+        "sith_legacy": "Powerful but conflicted dark side user"
+      },
+      "wookieepedia_url": "https://starwars.fandom.com/wiki/Darth_Vader"
+    },
+    "obi_wan_kenobi": {
+      "basic_info": {
+        "id": "obi-wan-kenobi",
+        "name": "Obi-Wan Kenobi",
+        "alias": "Ben Kenobi",
+        "titles": ["Jedi Master", "General (formerly)"],
+        "species": "Human",
+        "homeworld": "Stewjon",
+        "birth_year": "57 BBY",
+        "age_during_trilogy": "57-61 years",
+        "affiliations": ["Jedi Order (in exile)"]
+      },
+      "physical_description": {
+        "height": "1.82 meters",
+        "hair": "Grey-brown hair and beard",
+        "eyes": "Blue-grey",
+        "distinctive_features": ["Weathered by desert exile", "Wise eyes", "Humble robes"],
+        "typical_attire": ["Desert hermit robes", "Traditional Jedi robes", "Simple belt and boots"]
+      },
+      "personality": {
+        "core_traits": ["Wise", "Patient", "Diplomatic", "Haunted by past failures", "Selfless"],
+        "strengths": ["Vast Jedi knowledge", "Diplomatic skills", "Defensive combat mastery", "Mentoring ability"],
+        "weaknesses": ["Guilt over Anakin's fall", "Sometimes overly cautious", "Burden of secrets"],
+        "motivations": ["Protecting Luke", "Atoning for past mistakes", "Preserving Jedi knowledge"],
+        "fears": ["Luke falling to darkness", "Repeating failures with Anakin", "Empire discovering Luke"]
+      },
+      "abilities": {
+        "force_sensitivity": "Very High (experienced Jedi Master)",
+        "force_powers": ["Mind trick", "Force push/pull", "Enhanced senses", "Force ghost ability"],
+        "lightsaber_form": "Form III: Soresu (master of defensive combat)",
+        "combat_skills": ["Defensive lightsaber specialist", "Strategic combat", "Evasive techniques"],
+        "other_skills": ["Desert survival", "Jedi history knowledge", "Diplomatic negotiation", "Teaching"]
+      },
+      "equipment": {
+        "primary_weapon": "Blue lightsaber (later given to Luke)",
+        "signature_items": ["Desert survival gear", "Jedi archives knowledge", "Hermit's cave dwelling"],
+        "tools": ["Meditation materials", "Ancient Jedi texts", "Basic survival equipment"]
+      },
+      "relationships": {
+        "students": {
+          "luke_skywalker": "Current padawan and hope for the future",
+          "anakin_skywalker": "Former padawan who fell to darkness"
+        },
+        "jedi_colleagues": {
+          "yoda": "Fellow master and old friend",
+          "mace_windu": "Former council colleague",
+          "qui_gon": "Former master and mentor"
+        },
+        "guardians": {
+          "owen_lars": "Luke's uncle, uneasy relationship",
+          "beru_lars": "Luke's aunt, more understanding"
+        },
+        "enemies": {
+          "darth_vader": "Former padawan now dark enemy",
+          "emperor": "Ultimate corruptor of the galaxy"
+        }
+      },
+      "character_development": {
+        "episode_4": "Hermit emerges to guide new hope, sacrifices self",
+        "episode_5": "Appears as Force ghost to guide Luke",
+        "episode_6": "Final guidance as Luke completes his journey",
+        "key_moments": [
+          "Rescuing Luke from Tusken Raiders",
+          "Revealing Luke's heritage (partial truth)",
+          "Training Luke in basic Force use",
+          "Sacrificial duel with Darth Vader",
+          "Appearing as Force ghost on Dagobah",
+          "Final appearance at Endor celebration"
+        ]
+      },
+      "rpg_elements": {
+        "notable_quotes": [
+          "That's no moon... it's a space station.",
+          "Use the Force, Luke.",
+          "You were the chosen one!",
+          "If you strike me down, I shall become more powerful than you can possibly imagine.",
+          "From a certain point of view."
+        ],
+        "mannerisms": [
+          "Strokes beard when thinking",
+          "Speaks in measured, thoughtful tones",
+          "Maintains calm under pressure",
+          "Uses diplomatic language even in conflict"
+        ],
+        "gm_hooks": [
+          "Sharing Jedi history and knowledge",
+          "Guiding Force-sensitive characters",
+          "Providing wisdom about past conflicts",
+          "Hermit encounters in desert",
+          "Force ghost appearances",
+          "Moral guidance during difficult choices"
+        ],
+        "story_seeds": [
+          "Protecting other Force-sensitive children",
+          "Recovering hidden Jedi artifacts",
+          "Sharing Clone Wars battle stories",
+          "Teaching ancient Jedi techniques",
+          "Confronting surviving Jedi hunters"
+        ]
+      },
+      "reputation": {
+        "rebel_alliance": "Legendary Jedi and hero of Clone Wars",
+        "imperial_forces": "Dangerous Jedi fugitive (though believed dead)",
+        "tatooine_locals": "Eccentric hermit Ben Kenobi",
+        "jedi_survivors": "Respected master and keeper of traditions",
+        "force_sensitives": "Wise teacher and guide"
+      },
+      "wookieepedia_url": "https://starwars.fandom.com/wiki/Obi-Wan_Kenobi"
+    },
+    "yoda": {
+      "basic_info": {
+        "id": "yoda",
+        "name": "Yoda",
+        "titles": ["Grand Master of the Jedi Order", "Master"],
+        "species": "Unknown (Yoda's species)",
+        "homeworld": "Unknown",
+        "birth_year": "896 BBY",
+        "death_year": "4 ABY",
+        "age_during_trilogy": "896-900 years old",
+        "affiliations": ["Jedi Order (in exile)"]
+      },
+      "physical_description": {
+        "height": "0.66 meters",
+        "distinctive_features": ["Green skin", "Large ears", "Clawed hands", "Walking stick"],
+        "eyes": "Large, wise eyes",
+        "typical_attire": ["Simple Jedi robes", "Gimer stick for walking"]
+      },
+      "personality": {
+        "core_traits": ["Wise", "Cryptic", "Playful", "Patient", "Powerful", "Humble"],
+        "strengths": ["900 years of experience", "Deep Force connection", "Teaching ability", "Hidden strength"],
+        "weaknesses": ["Physical frailty", "Sometimes too cryptic", "Burden of knowledge"],
+        "motivations": ["Training Luke", "Preserving Jedi wisdom", "Balancing the Force"],
+        "fears": ["Luke falling to darkness", "Jedi knowledge being lost", "Repeating past failures"]
+      },
+      "abilities": {
+        "force_sensitivity": "Legendary (strongest Force connection ever recorded)",
+        "force_powers": ["Incredible telekinesis", "Force lightning absorption", "Precognition", "Force ghost"],
+        "lightsaber_form": "Form IV: Ataru (despite size, incredibly acrobatic)",
+        "combat_skills": ["Exceptional lightsaber combat despite size", "Force-enhanced agility"],
+        "teaching_skills": ["Master instructor", "Patience with students", "Wisdom sharing"]
+      },
+      "equipment": {
+        "primary_weapon": "Green lightsaber (small hilt)",
+        "signature_items": ["Gimer stick", "Dagobah dwelling", "Ancient Jedi artifacts"],
+        "tools": ["Cooking pot", "Simple survival items", "Meditation materials"]
+      },
+      "relationships": {
+        "students": {
+          "luke_skywalker": "Final padawan and last hope",
+          "count_dooku": "Former student who fell (prequel era)",
+          "many_others": "800 years of teaching Jedi"
+        },
+        "colleagues": {
+          "obi_wan": "Fellow master and friend",
+          "mace_windu": "Former council colleague",
+          "qui_gon": "Former student of students"
+        },
+        "enemies": {
+          "emperor_palpatine": "Ancient enemy and dark side master",
+          "darth_vader": "Former student's fallen apprentice"
+        }
+      },
+      "character_development": {
+        "episode_5": "Hermit tests then trains Luke in advanced Force use",
+        "episode_6": "Dying master passes final wisdom to Luke",
+        "key_moments": [
+          "Testing Luke's patience in the swamp",
+          "Lifting the X-wing from the swamp",
+          "Training Luke in Force abilities",
+          "Revealing truth about Vader and Leia",
+          "Peaceful death and becoming one with Force"
+        ]
+      },
+      "rpg_elements": {
+        "notable_quotes": [
+          "Do or do not, there is no try.",
+          "Size matters not. Look at me. Judge me by my size, do you?",
+          "Fear leads to anger, anger leads to hate, hate leads to suffering.",
+          "Luminous beings are we, not this crude matter.",
+          "When 900 years old you reach, look as good you will not."
+        ],
+        "mannerisms": [
+          "Inverted speech pattern (object-subject-verb)",
+          "Taps ground with gimer stick",
+          "Giggles at students' confusion",
+          "Acts frail then shows incredible power"
+        ],
+        "gm_hooks": [
+          "Training scenes with Force powers",
+          "Sharing ancient Jedi wisdom",
+          "Testing student's patience and dedication",
+          "Cryptic advice that becomes clear later",
+          "Force ghost guidance",
+          "Philosophical discussions about the Force"
+        ],
+        "story_seeds": [
+          "Teaching advanced Force techniques",
+          "Sharing stories of ancient Jedi",
+          "Guiding through moral dilemmas",
+          "Testing worthiness for Jedi training",
+          "Revealing hidden knowledge when needed"
+        ]
+      },
+      "reputation": {
+        "jedi_order": "Greatest master and teacher in Jedi history",
+        "sith": "Most dangerous enemy of the dark side",
+        "force_sensitives": "Legend of wisdom and power",
+        "dagobah_wildlife": "Respected hermit of the swamp",
+        "galaxy": "Mythical figure from a more civilized age"
+      },
+      "wookieepedia_url": "https://starwars.fandom.com/wiki/Yoda"
+    }
+  }
+}

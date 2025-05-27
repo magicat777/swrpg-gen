@@ -1,0 +1,429 @@
+{
+  "force_philosophy": {
+    "jedi_code": {
+      "traditional": {
+        "text": "There is no emotion, there is peace. There is no ignorance, there is knowledge. There is no passion, there is serenity. There is no chaos, there is harmony. There is no death, there is the Force.",
+        "interpretation": "The traditional Jedi Code emphasizes emotional control, knowledge-seeking, inner peace, cosmic harmony, and acceptance of mortality through connection to the eternal Force.",
+        "era": "Old Republic to Prequel Era",
+        "source": "Jedi Academy Training Manual, various novels"
+      },
+      "emotion_variant": {
+        "text": "Emotion, yet peace. Ignorance, yet knowledge. Passion, yet serenity. Chaos, yet harmony. Death, yet the Force.",
+        "interpretation": "A more nuanced interpretation acknowledging that emotions exist but should not control decisions, popular during Luke's New Jedi Order era.",
+        "era": "New Republic Era",
+        "source": "New Jedi Order novels"
+      }
+    },
+    "sith_code": {
+      "text": "Peace is a lie, there is only passion. Through passion, I gain strength. Through strength, I gain power. Through power, I gain victory. Through victory, my chains are broken. The Force shall free me.",
+      "interpretation": "The Sith philosophy embraces emotion and personal power as paths to freedom and strength, directly opposing Jedi restraint.",
+      "principles": [
+        "Rejection of peace in favor of passionate pursuit",
+        "Strength through emotional intensity",
+        "Power as the ultimate goal",
+        "Victory over all opposition",
+        "Freedom through dominance"
+      ],
+      "source": "Book of Sith, KOTOR games"
+    },
+    "gray_philosophies": {
+      "potentium": {
+        "description": "Belief that the Force itself is neither light nor dark, but that evil comes from the choices of individuals.",
+        "adherents": ["Vergere", "some Jedi dissidents"],
+        "controversy": "Rejected by mainstream Jedi Order as dangerous oversimplification"
+      },
+      "imperial_knights": {
+        "description": "Force users serving the Fel Empire, using both light and dark side techniques while maintaining loyalty to order and justice.",
+        "principles": ["Service to the Empire", "Practical use of all Force abilities", "Emotional balance without suppression"],
+        "era": "Legacy Era (130+ ABY)"
+      }
+    }
+  },
+  "force_powers": {
+    "universal": {
+      "force_push": {
+        "name": "Force Push/Telekinesis",
+        "description": "The most basic telekinetic ability, allowing Force users to move objects with their minds.",
+        "variations": ["Force Pull", "Force Throw", "Force Grip"],
+        "difficulty": "Novice",
+        "notable_users": ["Luke Skywalker", "Darth Vader", "Yoda"],
+        "limitations": "Requires concentration and line of sight, effectiveness decreases with distance and object mass"
+      },
+      "force_jump": {
+        "name": "Force Jump/Leap",
+        "description": "Enhancement of natural jumping ability through Force augmentation.",
+        "applications": ["Combat mobility", "Terrain navigation", "Escape techniques"],
+        "difficulty": "Novice",
+        "notable_users": ["Qui-Gon Jinn", "Obi-Wan Kenobi", "Jedi in general"]
+      },
+      "force_speed": {
+        "name": "Force Speed/Burst of Speed",
+        "description": "Temporary enhancement of movement and reaction speed through Force energy.",
+        "duration": "Brief bursts, unsustainable for extended periods",
+        "difficulty": "Apprentice",
+        "notable_users": ["Jedi Council members", "Sith Lords"],
+        "side_effects": "Physical exhaustion if overused"
+      },
+      "force_sense": {
+        "name": "Force Sense/Perception",
+        "description": "Passive awareness of Force disturbances, emotions, and presences.",
+        "applications": ["Danger sense", "Emotion detection", "Force user identification"],
+        "difficulty": "Innate (varies by sensitivity)",
+        "enhancement": "Can be trained to incredible precision"
+      }
+    },
+    "light_side": {
+      "force_heal": {
+        "name": "Force Heal",
+        "description": "Acceleration of natural healing processes through Force energy.",
+        "applications": ["Wound treatment", "Disease healing", "Fatigue recovery"],
+        "difficulty": "Apprentice to Knight",
+        "limitations": "Cannot heal death, requires physical contact or close proximity",
+        "notable_users": ["Rey", "Baby Yoda/Grogu", "Jedi healers"],
+        "cost": "Drains Force user's energy, potentially life force for severe healing"
+      },
+      "battle_meditation": {
+        "name": "Battle Meditation",
+        "description": "Large-scale coordination and morale enhancement of allied forces through the Force.",
+        "effects": ["Improved coordination", "Enhanced morale", "Strategic clarity"],
+        "difficulty": "Master level",
+        "notable_users": ["Bastila Shan", "Nomi Sunrider", "Emperor Palpatine (dark variant)"],
+        "range": "Can affect entire fleets and armies",
+        "requirements": "Exceptional Force sensitivity and training"
+      },
+      "force_protection": {
+        "name": "Force Protection/Barrier",
+        "description": "Creation of protective Force barriers against physical and energy attacks.",
+        "applications": ["Deflecting blaster bolts", "Stopping physical objects", "Environmental protection"],
+        "difficulty": "Knight level",
+        "variations": ["Tutaminis (energy absorption)", "Force Shield", "Force Bubble"],
+        "notable_users": ["Yoda", "Obi-Wan Kenobi", "Luke Skywalker"]
+      },
+      "animal_friendship": {
+        "name": "Animal Friendship/Beast Control",
+        "description": "Communication with and influence over non-sentient creatures.",
+        "applications": ["Mount training", "Wildlife communication", "Creature calming"],
+        "difficulty": "Padawan to Knight",
+        "notable_users": ["Ezra Bridger", "Anakin Skywalker", "various Jedi"],
+        "limitations": "Effectiveness varies by creature intelligence and Force sensitivity"
+      }
+    },
+    "dark_side": {
+      "force_lightning": {
+        "name": "Force Lightning",
+        "description": "Projection of deadly electrical energy through hatred and anger.",
+        "variations": ["Force Storm", "Chain Lightning", "Lightning Bomb"],
+        "difficulty": "Advanced Sith technique",
+        "notable_users": ["Emperor Palpatine", "Count Dooku", "Darth Sidious"],
+        "dangers": "Corrupts user, can be redirected, deadly to cybernetics",
+        "requirements": "Deep connection to dark side emotions"
+      },
+      "force_choke": {
+        "name": "Force Choke/Grip",
+        "description": "Telekinetic constriction of target's airway or entire body.",
+        "applications": ["Interrogation", "Execution", "Intimidation"],
+        "difficulty": "Intermediate dark side",
+        "notable_users": ["Darth Vader", "Kylo Ren", "various Sith"],
+        "variations": ["Force Crush (more lethal)", "Mass Force Choke"],
+        "range": "Can be performed at great distances with sufficient power"
+      },
+      "drain_life": {
+        "name": "Drain Life/Force Drain",
+        "description": "Absorption of life energy from living beings to strengthen oneself.",
+        "effects": ["Heals user", "Weakens or kills target", "Extends lifespan"],
+        "difficulty": "Advanced Sith technique",
+        "notable_users": ["Darth Nihilus", "Darth Sion", "ancient Sith Lords"],
+        "corruption": "Highly corrupting, can become addictive",
+        "scale": "Masters can drain entire planets"
+      },
+      "force_rage": {
+        "name": "Force Rage",
+        "description": "Enhancement of physical abilities through channeled anger and hatred.",
+        "effects": ["Increased strength", "Enhanced speed", "Pain resistance"],
+        "difficulty": "Intermediate",
+        "notable_users": ["Sith Warriors", "Dark Jedi", "corrupted Force users"],
+        "cost": "Physical and mental exhaustion, potential loss of control",
+        "duration": "Short bursts, unsustainable long-term"
+      }
+    },
+    "rare_specialized": {
+      "force_phantom": {
+        "name": "Force Phantom/Projection",
+        "description": "Creation of a Force-projected duplicate capable of interacting with the physical world.",
+        "difficulty": "Legendary Master level",
+        "notable_users": ["Luke Skywalker", "ancient Jedi Masters"],
+        "cost": "Potentially life-threatening energy expenditure",
+        "capabilities": ["Physical interaction", "Lightsaber combat", "Force power usage"],
+        "limitations": "Extreme concentration required, often fatal to user"
+      },
+      "shatterpoint": {
+        "name": "Shatterpoint",
+        "description": "Perception of critical stress points in objects, situations, and the Force itself.",
+        "applications": ["Tactical analysis", "Precise destruction", "Destiny perception"],
+        "difficulty": "Extremely rare natural talent",
+        "notable_users": ["Mace Windu", "ancient Jedi seers"],
+        "philosophy": "Reveals the fragility underlying apparent strength"
+      },
+      "force_walk": {
+        "name": "Force Walk/Essence Transfer",
+        "description": "Binding the spirits of dead Force users to serve the practitioner.",
+        "classification": "Forbidden Sith sorcery",
+        "effects": ["Increased power", "Access to bound spirits' knowledge", "Eventual corruption"],
+        "notable_users": ["Darth Krayt", "ancient Sith sorcerers"],
+        "dangers": "Risk of possession, madness, spiritual destruction"
+      },
+      "force_storm": {
+        "name": "Force Storm (Space-Time)",
+        "description": "Creation of hyperspace wormholes and space-time distortions.",
+        "classification": "Ultimate dark side power",
+        "effects": ["Hyperspace travel", "Destruction of fleets", "Planetary devastation"],
+        "notable_users": ["Emperor Palpatine (Dark Empire)"],
+        "control": "Extremely difficult to control, often destroys user"
+      }
+    }
+  },
+  "lightsaber_combat": {
+    "seven_forms": {
+      "form_i_shii_cho": {
+        "name": "Form I: Shii-Cho (Way of the Sarlacc)",
+        "description": "The most ancient lightsaber form, emphasizing basic techniques and wide, sweeping movements.",
+        "philosophy": "Determination and persistence, like the sarlacc's patient hunting",
+        "strengths": ["Simple to learn", "Effective against multiple opponents", "Strong foundation"],
+        "weaknesses": ["Lacks sophistication", "Vulnerable to precise attacks", "Limited defensive capability"],
+        "notable_practitioners": ["Kit Fisto", "Most Jedi Padawans", "Traditional Jedi training"],
+        "techniques": ["Disarming strikes", "Wide sweeping attacks", "Basic parries"],
+        "era": "Ancient Jedi Order to present"
+      },
+      "form_ii_makashi": {
+        "name": "Form II: Makashi (Way of the Ysalamiri)",
+        "description": "Elegant dueling form focused on precision and economy of motion, developed for lightsaber-to-lightsaber combat.",
+        "philosophy": "Refinement and superiority, precise control over raw power",
+        "strengths": ["Excellent for dueling", "Minimal energy expenditure", "Precise attacks"],
+        "weaknesses": ["Poor against blasters", "Struggle with aggressive opponents", "Limited against multiple foes"],
+        "notable_practitioners": ["Count Dooku", "ancient Jedi duelists", "Sith Lords"],
+        "techniques": ["Thrust attacks", "Precise parries", "Counterattacks", "Elegant footwork"],
+        "stance": "Side-facing stance with one-handed grip"
+      },
+      "form_iii_soresu": {
+        "name": "Form III: Soresu (Way of the Mynock)",
+        "description": "Defensive form emphasizing protection and patience, perfect against blaster fire.",
+        "philosophy": "Patience and protection, wearing down opponents through defense",
+        "strengths": ["Ultimate defense", "Excellent against blasters", "Energy conservation"],
+        "weaknesses": ["Lacks offensive power", "Can lead to stalemates", "Requires patience"],
+        "notable_practitioners": ["Obi-Wan Kenobi", "Luminara Unduli", "Kanan Jarrus"],
+        "techniques": ["Tight defensive movements", "Blaster deflection", "Circle of protection"],
+        "philosophy_note": "Defense until opponent makes fatal mistake"
+      },
+      "form_iv_ataru": {
+        "name": "Form IV: Ataru (Way of the Hawk-Bat)",
+        "description": "Aggressive form utilizing acrobatics and Force-enhanced mobility for overwhelming offense.",
+        "philosophy": "Aggression and speed, striking from unexpected angles",
+        "strengths": ["Overwhelming offense", "Superior mobility", "Breaks defensive forms"],
+        "weaknesses": ["High energy cost", "Poor in confined spaces", "Vulnerable when exhausted"],
+        "notable_practitioners": ["Yoda", "Qui-Gon Jinn", "Ahsoka Tano", "Ki-Adi-Mundi"],
+        "techniques": ["Force-enhanced jumps", "Spinning attacks", "Aerial combat"],
+        "requirements": "High Force sensitivity and physical conditioning"
+      },
+      "form_v_shien_djem_so": {
+        "name": "Form V: Shien/Djem So (Way of the Krayt Dragon)",
+        "description": "Power-based form combining strong defense with devastating counterattacks.",
+        "variants": {
+          "shien": "Focus on deflecting blaster bolts back at attackers",
+          "djem_so": "Emphasis on overpowering lightsaber opponents with strength"
+        },
+        "philosophy": "Strength and domination, turning defense into offense",
+        "strengths": ["Powerful attacks", "Strong defense", "Excellent against blasters and sabers"],
+        "weaknesses": ["Requires physical strength", "Can become overly aggressive", "Energy intensive"],
+        "notable_practitioners": ["Anakin Skywalker", "Luke Skywalker", "Aayla Secura"],
+        "techniques": ["Power attacks", "Aggressive blocks", "Counterattack combinations"]
+      },
+      "form_vi_niman": {
+        "name": "Form VI: Niman (Way of the Rancor)",
+        "description": "Balanced form incorporating elements from all previous forms, emphasizing Force integration.",
+        "philosophy": "Balance and moderation, combining lightsaber skills with Force powers",
+        "strengths": ["Well-rounded", "Integrates Force powers", "Adaptable to situations"],
+        "weaknesses": ["Master of none", "Lacks specialization", "Vulnerable to masters of other forms"],
+        "notable_practitioners": ["Exar Kun", "many Jedi Consulars", "balanced Jedi"],
+        "techniques": ["Force-assisted attacks", "Balanced offense/defense", "Dual-wielding preparation"],
+        "specialization": "Often used as foundation for dual-saber combat"
+      },
+      "form_vii_juyo_vaapad": {
+        "name": "Form VII: Juyo/Vaapad (Way of the Vornskr)",
+        "description": "Ferocious form channeling inner darkness while maintaining light side control.",
+        "variants": {
+          "juyo": "Ancient aggressive form, largely forbidden",
+          "vaapad": "Mace Windu's refinement, channeling inner darkness safely"
+        },
+        "philosophy": "Controlled ferocity, using inner darkness without falling",
+        "strengths": ["Overwhelming aggression", "Unpredictable", "Channels emotion safely"],
+        "weaknesses": ["Risk of dark side corruption", "Extremely difficult to master", "Dangerous to learn"],
+        "notable_practitioners": ["Mace Windu", "Depa Billaba", "ancient Jedi"],
+        "requirements": "Exceptional mental discipline and Force mastery",
+        "danger": "Only three Jedi successfully mastered Vaapad without falling"
+      }
+    },
+    "specialized_techniques": {
+      "jar_kai": {
+        "name": "Jar'Kai (Dual-blade combat)",
+        "description": "Fighting style using two lightsabers simultaneously.",
+        "variations": ["Two single sabers", "One standard + one shoto", "Curved hilts"],
+        "practitioners": ["Ahsoka Tano", "Asajj Ventress", "Anakin Skywalker (briefly)"],
+        "advantages": ["Multiple attack angles", "Enhanced defense", "Intimidation factor"],
+        "disadvantages": ["Divided attention", "Requires ambidextrous skill", "Complex coordination"]
+      },
+      "saberstaff": {
+        "name": "Saberstaff/Double-bladed lightsaber",
+        "description": "Lightsaber with blades on both ends of an extended hilt.",
+        "practitioners": ["Darth Maul", "Bastila Shan", "Jedi Temple Guards"],
+        "advantages": ["Reach advantage", "Defensive coverage", "Intimidation"],
+        "disadvantages": ["Can injure user", "Limited in tight spaces", "Complex to master"]
+      },
+      "curved_hilt": {
+        "name": "Curved-hilt lightsaber",
+        "description": "Lightsaber with curved handle for enhanced precision and dueling capability.",
+        "practitioners": ["Count Dooku", "Asajj Ventress", "ancient Makashi masters"],
+        "advantages": ["Superior control", "Better angles", "Precision enhancement"],
+        "philosophy": "Designed specifically for lightsaber-to-lightsaber combat"
+      }
+    }
+  },
+  "jedi_organization": {
+    "ranks": {
+      "youngling": {
+        "description": "Force-sensitive children brought to the Jedi Temple for initial training.",
+        "age_range": "Infancy to 13 years",
+        "training": ["Basic Force sensitivity", "Meditation", "Physical conditioning", "Basic academics"],
+        "trials": "Selection by a Jedi Master as Padawan",
+        "fate_if_not_chosen": "Reassignment to Jedi Service Corps"
+      },
+      "padawan": {
+        "description": "Apprentice to a Jedi Knight or Master, learning through direct mentorship.",
+        "age_range": "13+ years (varies by species)",
+        "training": ["Lightsaber construction", "Advanced Force techniques", "Field missions", "Specialized studies"],
+        "identification": "Padawan braid (human) or species-appropriate marker",
+        "relationship": "One-on-one mentorship with Jedi Master"
+      },
+      "jedi_knight": {
+        "description": "Full Jedi who has passed the trials and gained independence.",
+        "requirements": "Completion of Jedi Trials",
+        "responsibilities": ["Independent missions", "Potential Padawan training", "Service to Republic"],
+        "trials": ["Trial of Skill", "Trial of Courage", "Trial of Flesh", "Trial of Spirit", "Trial of Insight"],
+        "specializations": ["Guardian", "Consular", "Sentinel"]
+      },
+      "jedi_master": {
+        "description": "Experienced Jedi who has trained a Padawan to Knighthood or shown exceptional wisdom.",
+        "requirements": "Train Padawan to Knight status OR exceptional service/wisdom",
+        "privileges": ["Jedi Council eligibility", "Access to restricted archives", "Advanced teaching roles"],
+        "responsibilities": ["Training new Jedi", "Major diplomatic missions", "Council service"]
+      },
+      "grand_master": {
+        "description": "Leader of the Jedi Order, typically the wisest and most experienced Master.",
+        "notable_holders": ["Yoda", "Luke Skywalker", "ancient Jedi leaders"],
+        "responsibilities": ["Order leadership", "Major policy decisions", "Crisis management"],
+        "selection": "Chosen by Jedi Council or circumstances"
+      }
+    },
+    "councils": {
+      "jedi_high_council": {
+        "description": "Primary governing body of the Jedi Order.",
+        "composition": "12 Jedi Masters",
+        "location": "High Council Chamber, Jedi Temple",
+        "responsibilities": ["Order governance", "Major mission assignments", "Policy decisions"],
+        "notable_members": ["Yoda", "Mace Windu", "Ki-Adi-Mundi", "Plo Koon"]
+      },
+      "council_of_first_knowledge": {
+        "description": "Council overseeing Jedi education and training.",
+        "responsibilities": ["Curriculum development", "Archive management", "Academic standards"],
+        "location": "Jedi Archives, Jedi Temple"
+      },
+      "council_of_reconciliation": {
+        "description": "Council handling diplomatic missions and peaceful conflict resolution.",
+        "responsibilities": ["Diplomatic assignments", "Negotiation missions", "Peaceful solutions"],
+        "philosophy": "Preference for negotiation over force"
+      },
+      "council_of_reassignment": {
+        "description": "Council managing Jedi Service Corps and alternative assignments.",
+        "responsibilities": ["Service Corps management", "Alternative career paths", "Non-combat assignments"],
+        "purpose": "Ensuring all Force-sensitives can serve meaningfully"
+      }
+    },
+    "jedi_service_corps": {
+      "agricultural_corps": {
+        "description": "Jedi who use Force abilities to enhance farming and food production.",
+        "assignments": ["Terraforming projects", "Crop enhancement", "Agricultural worlds"],
+        "force_applications": ["Plant growth acceleration", "Soil improvement", "Weather sensing"]
+      },
+      "educational_corps": {
+        "description": "Jedi serving as teachers and educators throughout the galaxy.",
+        "assignments": ["Remote world education", "Cultural exchange", "Academic institutions"],
+        "skills": ["Knowledge transmission", "Cultural sensitivity", "Educational methodology"]
+      },
+      "medical_corps": {
+        "description": "Jedi specializing in healing and medical assistance.",
+        "assignments": ["Disaster relief", "Remote medical care", "Force healing research"],
+        "abilities": ["Force healing", "Diagnostic sensing", "Emotional support"]
+      },
+      "exploration_corps": {
+        "description": "Jedi exploring unknown regions and surveying new worlds.",
+        "assignments": ["Unknown Regions", "Hyperspace route mapping", "First contact situations"],
+        "skills": ["Navigation", "Survival", "Xenobiology", "Cultural assessment"]
+      }
+    }
+  },
+  "force_traditions": {
+    "non_jedi_sith": {
+      "nightsisters": {
+        "location": "Dathomir",
+        "description": "Matriarchal society using dark side magic and alchemy.",
+        "abilities": ["Force magic", "Alchemy", "Spirit manipulation", "Enhancement rituals"],
+        "notable_members": ["Mother Talzin", "Asajj Ventress", "Merrin"],
+        "philosophy": "Feminine power through dark side mastery",
+        "practices": ["Male Zabrak enslavement", "Magical rituals", "Spirit communication"]
+      },
+      "sith_species": {
+        "location": "Korriban/Moraband",
+        "description": "Original Sith species who developed dark side practices before human Jedi arrival.",
+        "characteristics": ["Natural dark side affinity", "Hierarchical society", "Warrior culture"],
+        "history": "Conquered by Dark Jedi exiles who became Sith Lords",
+        "legacy": "Genetic and cultural foundation of Sith Order"
+      },
+      "prophets_dark_side": {
+        "location": "Various",
+        "description": "Cultists worshipping the dark side as a deity.",
+        "beliefs": ["Dark side divinity", "Apocalyptic prophecies", "Sith Lord worship"],
+        "practices": ["Ritual sacrifice", "Dark side meditation", "Sith artifact worship"]
+      }
+    },
+    "force_churches": {
+      "church_of_force": {
+        "description": "Religious organization venerating the Force during Imperial era.",
+        "beliefs": ["Force as divine entity", "Balance between light and dark", "Spiritual guidance"],
+        "members": ["Non-Force sensitives", "Former Jedi sympathizers", "Spiritual seekers"],
+        "practices": ["Meditation", "Charitable works", "Preservation of Jedi teachings"]
+      },
+      "guardians_whills": {
+        "location": "Jedha",
+        "description": "Ancient order protecting Jedi holy sites and kyber crystals.",
+        "philosophy": "Force balance and protection of sacred places",
+        "notable_members": ["Chirrut Îmwe", "Baze Malbus"],
+        "practices": ["Martial arts", "Spiritual discipline", "Site protection"],
+        "connection": "One with the Force, the Force is with me"
+      }
+    },
+    "ancient_orders": {
+      "je_daii": {
+        "description": "Precursor organization to both Jedi and Sith orders.",
+        "location": "Tython",
+        "philosophy": "Balance between Ashla (light) and Bogan (dark)",
+        "history": "Split into light and dark factions, leading to modern orders",
+        "practices": ["Force balance", "Philosophical study", "Lightsaber precursors"]
+      },
+      "rakatan_builders": {
+        "description": "Ancient species using Force-powered technology.",
+        "achievements": ["Star Forge construction", "Force-powered hyperdrives", "Galactic empire"],
+        "downfall": "Plague that severed Force connection",
+        "legacy": "Technological applications of Force power"
+      }
+    }
+  }
+}

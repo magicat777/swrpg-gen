@@ -1,0 +1,679 @@
+{
+  "classes": [
+    {
+      "class": "Character",
+      "description": "A Star Wars character",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "name",
+          "dataType": ["text"],
+          "description": "Character's name",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "description",
+          "dataType": ["text"],
+          "description": "Detailed character description",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "species",
+          "dataType": ["text"],
+          "description": "Character's species",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "gender",
+          "dataType": ["text"],
+          "description": "Character's gender",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "era",
+          "dataType": ["text"],
+          "description": "Star Wars era this character exists in",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "affiliations",
+          "dataType": ["text[]"],
+          "description": "Groups or factions the character is affiliated with",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "occupation",
+          "dataType": ["text"],
+          "description": "Character's occupation or role",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "skills",
+          "dataType": ["text[]"],
+          "description": "Character's notable skills",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "traits",
+          "dataType": ["text[]"],
+          "description": "Character's personality traits",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "homeworld",
+          "dataType": ["text"],
+          "description": "Character's planet of origin",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "relationships",
+          "dataType": ["text[]"],
+          "description": "Character's key relationships",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "Location",
+      "description": "A place or setting in the Star Wars universe",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "name",
+          "dataType": ["text"],
+          "description": "Location name",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "description",
+          "dataType": ["text"],
+          "description": "Detailed location description",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "type",
+          "dataType": ["text"],
+          "description": "Location type (planet, city, building, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "region",
+          "dataType": ["text"],
+          "description": "Galactic region location",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "climate",
+          "dataType": ["text"],
+          "description": "Location climate",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "terrain",
+          "dataType": ["text[]"],
+          "description": "Terrain features",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "inhabitants",
+          "dataType": ["text[]"],
+          "description": "Notable inhabitants or species",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "era",
+          "dataType": ["text"],
+          "description": "Era this location is primarily associated with",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "pointsOfInterest",
+          "dataType": ["text[]"],
+          "description": "Notable features or landmarks",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "history",
+          "dataType": ["text"],
+          "description": "Historical information about the location",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "Faction",
+      "description": "An organization or group in the Star Wars universe",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "name",
+          "dataType": ["text"],
+          "description": "Faction name",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "description",
+          "dataType": ["text"],
+          "description": "Detailed faction description",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "type",
+          "dataType": ["text"],
+          "description": "Faction type (military, political, criminal, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "era",
+          "dataType": ["text"],
+          "description": "Era this faction is primarily active in",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "leaders",
+          "dataType": ["text[]"],
+          "description": "Notable leaders of the faction",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "headquarters",
+          "dataType": ["text"],
+          "description": "Primary base of operations",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "goals",
+          "dataType": ["text[]"],
+          "description": "Faction's primary motivations and objectives",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "resources",
+          "dataType": ["text[]"],
+          "description": "Resources and assets available to the faction",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "allies",
+          "dataType": ["text[]"],
+          "description": "Allied groups or factions",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "enemies",
+          "dataType": ["text[]"],
+          "description": "Enemy groups or factions",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "Item",
+      "description": "Equipment, weapons, vehicles, or important objects",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "name",
+          "dataType": ["text"],
+          "description": "Item name",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "description",
+          "dataType": ["text"],
+          "description": "Detailed item description",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "type",
+          "dataType": ["text"],
+          "description": "Item type (weapon, vehicle, tool, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "era",
+          "dataType": ["text"],
+          "description": "Era this item is primarily associated with",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "properties",
+          "dataType": ["text[]"],
+          "description": "Special properties or characteristics",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "origin",
+          "dataType": ["text"],
+          "description": "Where the item was created or where it comes from",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "usage",
+          "dataType": ["text"],
+          "description": "How the item is typically used",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "owners",
+          "dataType": ["text[]"],
+          "description": "Notable owners or users of the item",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "Event",
+      "description": "Historical or narrative events in the Star Wars universe",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "name",
+          "dataType": ["text"],
+          "description": "Event name",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "description",
+          "dataType": ["text"],
+          "description": "Detailed event description",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "year",
+          "dataType": ["text"],
+          "description": "Year(s) the event took place",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "era",
+          "dataType": ["text"],
+          "description": "Era this event occurred in",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "location",
+          "dataType": ["text"],
+          "description": "Where the event took place",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "participants",
+          "dataType": ["text[]"],
+          "description": "Key figures or factions involved",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "outcome",
+          "dataType": ["text"],
+          "description": "Result or resolution of the event",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "significance",
+          "dataType": ["text"],
+          "description": "Historical importance of the event",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "class": "Narrative",
+      "description": "Story elements, plot hooks, or scene descriptions for RPG sessions",
+      "vectorizer": "text2vec-transformers",
+      "moduleConfig": {
+        "text2vec-transformers": {
+          "vectorizeClassName": true
+        }
+      },
+      "properties": [
+        {
+          "name": "title",
+          "dataType": ["text"],
+          "description": "Title of the narrative element",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "content",
+          "dataType": ["text"],
+          "description": "Full narrative text",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": false
+            }
+          }
+        },
+        {
+          "name": "type",
+          "dataType": ["text"],
+          "description": "Type of narrative (scene, encounter, plot hook, etc.)",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "tone",
+          "dataType": ["text[]"],
+          "description": "Emotional tone or mood",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "themes",
+          "dataType": ["text[]"],
+          "description": "Thematic elements",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "era",
+          "dataType": ["text"],
+          "description": "Star Wars era setting",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        },
+        {
+          "name": "locations",
+          "dataType": ["text[]"],
+          "description": "Locations featured in the narrative",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "characters",
+          "dataType": ["text[]"],
+          "description": "Characters featured in the narrative",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": false,
+              "vectorizePropertyName": true
+            }
+          }
+        },
+        {
+          "name": "tags",
+          "dataType": ["text[]"],
+          "description": "Searchable tags",
+          "moduleConfig": {
+            "text2vec-transformers": {
+              "skip": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+import { Request, Response, NextFunction } from 'express';
+import { AppError } from '../middlewares/errorHandler';
+import { logger } from '../utils/logger';
+import crossDatabaseValidationService from '../services/crossDatabaseValidationService';
+
+/**
+ * Controller for cross-database validation operations
+ */
+class ValidationController {
+  
+  /**
+   * Run comprehensive cross-database validation
+   */
+  async validateDatabases(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      logger.info('Cross-database validation requested', { 
+        userId: req.user?.id,
+        userRoles: req.user?.roles 
+      });
+
+      const validationResult = await crossDatabaseValidationService.validateAllReferences();
+
+      // Log validation results for monitoring
+      logger.info('Cross-database validation completed', {
+        isValid: validationResult.isValid,
+        errorCount: validationResult.errors.length,
+        warningCount: validationResult.warnings.length,
+        repairSuggestionsCount: validationResult.repairSuggestions.length,
+        userId: req.user?.id
+      });
+
+      // Filter sensitive information for non-admin users
+      const filteredResult = this.filterValidationResult(validationResult, req.user?.roles || []);
+
+      res.status(200).json({
+        status: 'success',
+        data: {
+          validation: filteredResult,
+          summary: {
+            isValid: validationResult.isValid,
+            totalErrors: validationResult.errors.length,
+            criticalErrors: validationResult.errors.filter(e => e.severity === 'critical').length,
+            highPriorityErrors: validationResult.errors.filter(e => e.severity === 'high').length,
+            warnings: validationResult.warnings.length,
+            repairSuggestions: validationResult.repairSuggestions.length
+          }
+        }
+      });
+    } catch (error) {
+      logger.error('Error during cross-database validation', { 
+        error,
+        userId: req.user?.id 
+      });
+      next(new AppError('Failed to validate databases', 500, 'VALIDATION_ERROR'));
+    }
+  }
+
+  /**
+   * Generate and return validation report
+   */
+  async generateReport(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      logger.info('Validation report requested', { 
+        userId: req.user?.id,
+        userRoles: req.user?.roles 
+      });
+
+      const report = await crossDatabaseValidationService.generateValidationReport();
+
+      res.status(200).json({
+        status: 'success',
+        data: {
+          report,
+          generatedAt: new Date().toISOString(),
+          format: 'markdown'
+        }
+      });
+    } catch (error) {
+      logger.error('Error generating validation report', { 
+        error,
+        userId: req.user?.id 
+      });
+      next(new AppError('Failed to generate validation report', 500, 'REPORT_ERROR'));
+    }
+  }
+
+  /**
+   * Repair specific validation issues
+   */
+  async repairIssue(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const { repairSuggestion } = req.body;
+
+      if (!repairSuggestion) {
+        throw new AppError('Repair suggestion is required', 400, 'MISSING_REPAIR_SUGGESTION');
+      }
+
+      logger.info('Validation repair requested', { 
+        repairSuggestion,
+        userId: req.user?.id,
+        userRoles: req.user?.roles 
+      });
+
+      const success = await crossDatabaseValidationService.repairValidationIssue(repairSuggestion);
+
+      if (success) {
+        logger.info('Validation repair completed successfully', { 
+          repairSuggestion,
+          userId: req.user?.id 
+        });
+
+        res.status(200).json({
+          status: 'success',
+          data: {
+            repaired: true,
+            repairSuggestion,
+            message: 'Validation issue repaired successfully'
+          }
+        });
+      } else {
+        logger.warn('Validation repair failed', { 
+          repairSuggestion,
+          userId: req.user?.id 
+        });
+
+        res.status(400).json({
+          status: 'error',
+          message: 'Failed to repair validation issue',
+          data: {
+            repaired: false,
+            repairSuggestion
+          }
+        });
+      }
+    } catch (error) {
+      logger.error('Error during validation repair', { 
+        error,
+        userId: req.user?.id 
+      });
+      next(new AppError('Failed to repair validation issue', 500, 'REPAIR_ERROR'));
+    }
+  }
+
+  /**
+   * Get validation status summary
+   */
+  async getValidationStatus(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      // Run a quick validation check
+      const validationResult = await crossDatabaseValidationService.validateAllReferences();
+
+      const status = {
+        overall: validationResult.isValid ? 'healthy' : 'issues_detected',
+        lastChecked: new Date().toISOString(),
+        summary: {
+          databases: {
+            neo4j: this.getDatabaseStatus(validationResult, 'neo4j'),
+            mongodb: this.getDatabaseStatus(validationResult, 'mongodb'),
+            weaviate: this.getDatabaseStatus(validationResult, 'weaviate')
+          },
+          issues: {
+            critical: validationResult.errors.filter(e => e.severity === 'critical').length,
+            high: validationResult.errors.filter(e => e.severity === 'high').length,
+            medium: validationResult.errors.filter(e => e.severity === 'medium').length,
+            low: validationResult.errors.filter(e => e.severity === 'low').length
+          },
+          warnings: validationResult.warnings.length,
+          optimizations: validationResult.repairSuggestions.length
+        }
+      };
+
+      res.status(200).json({
+        status: 'success',
+        data: { validationStatus: status }
+      });
+    } catch (error) {
+      logger.error('Error getting validation status', { 
+        error,
+        userId: req.user?.id 
+      });
+      next(new AppError('Failed to get validation status', 500, 'STATUS_ERROR'));
+    }
+  }
+
+  /**
+   * Run validation checks for a specific database
+   */
+  async validateSpecificDatabase(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const { database } = req.params;
+      
+      if (!['neo4j', 'mongodb', 'weaviate'].includes(database)) {
+        throw new AppError('Invalid database specified', 400, 'INVALID_DATABASE');
+      }
+
+      logger.info('Specific database validation requested', { 
+        database,
+        userId: req.user?.id 
+      });
+
+      const fullValidation = await crossDatabaseValidationService.validateAllReferences();
+      
+      // Filter results for the specific database
+      const filteredResult = {
+        isValid: true,
+        errors: fullValidation.errors.filter(e => e.database === database),
+        warnings: fullValidation.warnings.filter(w => w.database === database),
+        repairSuggestions: fullValidation.repairSuggestions.filter(r => r.database === database)
+      };
+
+      filteredResult.isValid = filteredResult.errors.filter(e => 
+        e.severity === 'critical' || e.severity === 'high'
+      ).length === 0;
+
+      res.status(200).json({
+        status: 'success',
+        data: {
+          database,
+          validation: filteredResult,
+          summary: {
+            isValid: filteredResult.isValid,
+            errorCount: filteredResult.errors.length,
+            warningCount: filteredResult.warnings.length,
+            repairSuggestionsCount: filteredResult.repairSuggestions.length
+          }
+        }
+      });
+    } catch (error) {
+      logger.error('Error during specific database validation', { 
+        error,
+        database: req.params.database,
+        userId: req.user?.id 
+      });
+      next(new AppError('Failed to validate specific database', 500, 'DATABASE_VALIDATION_ERROR'));
+    }
+  }
+
+  /**
+   * Filter validation results based on user roles
+   */
+  private filterValidationResult(result: any, userRoles: string[]): any {
+    const isAdmin = userRoles.includes('admin') || userRoles.includes('super_admin');
+    
+    if (isAdmin) {
+      return result; // Admins see everything
+    }
+
+    // Regular users see limited information
+    return {
+      isValid: result.isValid,
+      errors: result.errors.map((error: any) => ({
+        type: error.type,
+        severity: error.severity,
+        database: error.database,
+        entity: error.entity,
+        message: error.message
+        // Hide sensitive fields like 'value' and detailed stack traces
+      })),
+      warnings: result.warnings.map((warning: any) => ({
+        type: warning.type,
+        database: warning.database,
+        entity: warning.entity,
+        message: warning.message
+      })),
+      repairSuggestions: [] // Hide repair suggestions from regular users
+    };
+  }
+
+  /**
+   * Get status for a specific database from validation results
+   */
+  private getDatabaseStatus(validationResult: any, database: string): string {
+    const dbErrors = validationResult.errors.filter((e: any) => e.database === database);
+    const criticalErrors = dbErrors.filter((e: any) => e.severity === 'critical');
+    const highErrors = dbErrors.filter((e: any) => e.severity === 'high');
+
+    if (criticalErrors.length > 0) {
+      return 'critical';
+    } else if (highErrors.length > 0) {
+      return 'degraded';
+    } else if (dbErrors.length > 0) {
+      return 'minor_issues';
+    } else {
+      return 'healthy';
+    }
+  }
+}
+
+// Create and export singleton instance
+export default new ValidationController();

@@ -1,0 +1,16 @@
+{
+  "name": "swrpg-lore-scripts",
+  "version": "1.0.0",
+  "description": "Star Wars RPG lore management scripts",
+  "main": "import-lore-data.js",
+  "scripts": {
+    "import": "node import-lore-data.js",
+    "validate": "node validate-lore-data.js"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "mongodb": "^6.16.0",
+    "neo4j-driver": "^5.28.1",
+    "weaviate-ts-client": "^2.2.0"
+  }
+}

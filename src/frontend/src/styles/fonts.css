@@ -1,0 +1,58 @@
+/* Custom Star Wars Fonts */
+
+/* Star Jedi - Classic Star Wars Logo Font */
+@font-face {
+  font-family: 'StarJedi';
+  src: url('/fonts/StarJedi-DGRW.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Improves loading performance */
+}
+
+/* Star Jedi Special Edition - Alternative */
+@font-face {
+  font-family: 'StarJediSpecial';
+  src: url('/fonts/StarjediSpecialEdition-9Bqy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold variant if available */
+@font-face {
+  font-family: 'StarWarsCustom';
+  src: url('/fonts/StarWarsCustom-Bold.woff2') format('woff2'),
+       url('/fonts/StarWarsCustom-Bold.woff') format('woff'),
+       url('/fonts/StarWarsCustom-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Example for popular Star Wars fonts - update font-family and file names as needed */
+
+/* If using "Star Jedi" font */
+/*
+@font-face {
+  font-family: 'StarJedi';
+  src: url('/fonts/StarJedi.woff2') format('woff2'),
+       url('/fonts/StarJedi.woff') format('woff'),
+       url('/fonts/StarJedi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+/* If using "Aurebesh" font */
+/*
+@font-face {
+  font-family: 'Aurebesh';
+  src: url('/fonts/Aurebesh.woff2') format('woff2'),
+       url('/fonts/Aurebesh.woff') format('woff'),
+       url('/fonts/Aurebesh.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*/

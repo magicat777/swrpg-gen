@@ -1,0 +1,291 @@
+import { Request, Response, NextFunction } from 'express';
+import { body, param, query, ValidationChain } from 'express-validator';
+import { AppError } from './errorHandler';
+import { logger } from '../utils/logger';
+import xss from 'xss';
+
+/**
+ * Enhanced validation middleware with security features
+ */
+
+/**
+ * XSS Protection middleware
+ */
+export const sanitizeInput = (req: Request, res: Response, next: NextFunction) => {
+  const sanitizeObject = (obj: any): any => {
+    if (typeof obj === 'string') {
+      // Basic XSS protection
+      return xss(obj, {
+        whiteList: {}, // No HTML tags allowed
+        stripIgnoreTag: true,
+        stripIgnoreTagBody: ['script']
+      });
+    } else if (Array.isArray(obj)) {
+      return obj.map(sanitizeObject);
+    } else if (obj && typeof obj === 'object') {
+      const sanitized: any = {};
+      for (const [key, value] of Object.entries(obj)) {
+        sanitized[key] = sanitizeObject(value);
+      }
+      return sanitized;
+    }
+    return obj;
+  };
+
+  // Sanitize request body
+  if (req.body && typeof req.body === 'object') {
+    req.body = sanitizeObject(req.body);
+  }
+
+  // Sanitize query parameters
+  if (req.query && typeof req.query === 'object') {
+    req.query = sanitizeObject(req.query);
+  }
+
+  next();
+};
+
+/**
+ * Rate limiting per user
+ */
+const userRequestCounts = new Map<string, { count: number; resetTime: number }>();
+
+export const rateLimitPerUser = (maxRequests: number = 100, windowMs: number = 3600000) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    const userId = req.user?.id || req.ip;
+    const now = Date.now();
+    const windowStart = now - windowMs;
+
+    // Clean old entries
+    for (const [key, data] of userRequestCounts.entries()) {
+      if (data.resetTime < windowStart) {
+        userRequestCounts.delete(key);
+      }
+    }
+
+    // Check current user's request count
+    const userData = userRequestCounts.get(userId);
+    if (!userData) {
+      userRequestCounts.set(userId, { count: 1, resetTime: now });
+      return next();
+    }
+
+    if (userData.resetTime < windowStart) {
+      // Reset counter for new window
+      userRequestCounts.set(userId, { count: 1, resetTime: now });
+      return next();
+    }
+
+    if (userData.count >= maxRequests) {
+      logger.warn('Rate limit exceeded', { userId, count: userData.count, maxRequests });
+      return next(new AppError('Rate limit exceeded', 429, 'RATE_LIMIT_EXCEEDED'));
+    }
+
+    // Increment counter
+    userData.count++;
+    next();
+  };
+};
+
+/**
+ * Content validation rules
+ */
+export const ContentValidation = {
+  // Star Wars specific content validation
+  STAR_WARS_ERA: body('era')
+    .optional()
+    .isIn(['Old Republic', 'Prequel Era', 'Clone Wars', 'Original Trilogy', 'New Republic', 'Sequel Era'])
+    .withMessage('Invalid Star Wars era'),
+
+  STAR_WARS_SPECIES: body('species')
+    .optional()
+    .isLength({ min: 2, max: 50 })
+    .withMessage('Species must be 2-50 characters')
+    .matches(/^[a-zA-Z\s\-']+$/)
+    .withMessage('Species can only contain letters, spaces, hyphens, and apostrophes'),
+
+  STAR_WARS_LOCATION: body('location')
+    .optional()
+    .isLength({ min: 2, max: 100 })
+    .withMessage('Location must be 2-100 characters')
+    .matches(/^[a-zA-Z0-9\s\-'.,()]+$/)
+    .withMessage('Invalid characters in location name'),
+
+  // Generation parameters
+  GENERATION_TOKENS: body('maxTokens')
+    .optional()
+    .isInt({ min: 10, max: 4000 })
+    .withMessage('Max tokens must be between 10 and 4000'),
+
+  GENERATION_TEMPERATURE: body('temperature')
+    .optional()
+    .isFloat({ min: 0.1, max: 2.0 })
+    .withMessage('Temperature must be between 0.1 and 2.0'),
+
+  // Common content validation
+  SAFE_HTML_CONTENT: (field: string) => body(field)
+    .optional()
+    .custom((value: string) => {
+      if (typeof value !== 'string') return true;
+      
+      // Check for dangerous patterns
+      const dangerousPatterns = [
+        /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+        /javascript:/gi,
+        /on\w+\s*=/gi,
+        /<iframe/gi,
+        /<object/gi,
+        /<embed/gi
+      ];
+
+      for (const pattern of dangerousPatterns) {
+        if (pattern.test(value)) {
+          throw new Error('Content contains potentially dangerous HTML');
+        }
+      }
+      return true;
+    }),
+
+  // Text content validation
+  NARRATIVE_CONTENT: body('content')
+    .optional()
+    .isLength({ min: 1, max: 10000 })
+    .withMessage('Content must be between 1 and 10000 characters')
+    .custom((value: string) => {
+      // Check for spam patterns
+      const spamPatterns = [
+        /(.)\1{20,}/g, // Repeated characters
+        /https?:\/\/[^\s]+/g, // URLs
+        /\b(?:viagra|casino|lottery|winner|congratulations|claim now)\b/gi // Common spam words
+      ];
+
+      for (const pattern of spamPatterns) {
+        if (pattern.test(value)) {
+          throw new Error('Content appears to be spam or inappropriate');
+        }
+      }
+      return true;
+    })
+};
+
+/**
+ * Database validation rules
+ */
+export const DatabaseValidation = {
+  MONGODB_ID: (field: string) => body(field)
+    .optional()
+    .isMongoId()
+    .withMessage(`${field} must be a valid MongoDB ID`),
+
+  UUID: (field: string) => body(field)
+    .optional()
+    .isUUID()
+    .withMessage(`${field} must be a valid UUID`),
+
+  PAGINATION: [
+    query('limit')
+      .optional()
+      .isInt({ min: 1, max: 100 })
+      .withMessage('Limit must be between 1 and 100'),
+    query('offset')
+      .optional()
+      .isInt({ min: 0 })
+      .withMessage('Offset must be non-negative'),
+    query('page')
+      .optional()
+      .isInt({ min: 1 })
+      .withMessage('Page must be positive')
+  ]
+};
+
+/**
+ * File upload validation
+ */
+export const FileValidation = {
+  IMAGE_UPLOAD: [
+    body('filename')
+      .optional()
+      .matches(/\.(jpg|jpeg|png|gif|webp)$/i)
+      .withMessage('Only image files are allowed'),
+    body('fileSize')
+      .optional()
+      .isInt({ min: 1, max: 5 * 1024 * 1024 }) // 5MB max
+      .withMessage('File size must be under 5MB')
+  ],
+
+  EXPORT_FORMAT: body('format')
+    .optional()
+    .isIn(['json', 'pdf', 'txt', 'markdown'])
+    .withMessage('Export format must be json, pdf, txt, or markdown')
+};
+
+/**
+ * Session validation
+ */
+export const SessionValidation = {
+  CAMPAIGN_SETTINGS: [
+    body('campaignName')
+      .isLength({ min: 1, max: 100 })
+      .withMessage('Campaign name must be 1-100 characters')
+      .matches(/^[a-zA-Z0-9\s\-_.!?]+$/)
+      .withMessage('Campaign name contains invalid characters'),
+    
+    body('playerCount')
+      .optional()
+      .isInt({ min: 1, max: 8 })
+      .withMessage('Player count must be between 1 and 8'),
+    
+    body('difficulty')
+      .optional()
+      .isIn(['easy', 'normal', 'hard', 'epic'])
+      .withMessage('Difficulty must be easy, normal, hard, or epic'),
+    
+    body('campaignLength')
+      .optional()
+      .isIn(['short', 'medium', 'long', 'ongoing'])
+      .withMessage('Campaign length must be short, medium, long, or ongoing')
+  ]
+};
+
+/**
+ * Security headers middleware
+ */
+export const securityHeaders = (req: Request, res: Response, next: NextFunction) => {
+  // Set security headers
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  
+  // Remove server information
+  res.removeHeader('X-Powered-By');
+  
+  next();
+};
+
+/**
+ * Request size limiter
+ */
+export const limitRequestSize = (maxSize: number = 1024 * 1024) => { // 1MB default
+  return (req: Request, res: Response, next: NextFunction) => {
+    const contentLength = parseInt(req.headers['content-length'] || '0');
+    
+    if (contentLength > maxSize) {
+      logger.warn('Request size exceeded', { contentLength, maxSize, ip: req.ip });
+      return next(new AppError('Request too large', 413, 'REQUEST_TOO_LARGE'));
+    }
+    
+    next();
+  };
+};
+
+export default {
+  sanitizeInput,
+  rateLimitPerUser,
+  ContentValidation,
+  DatabaseValidation,
+  FileValidation,
+  SessionValidation,
+  securityHeaders,
+  limitRequestSize
+};

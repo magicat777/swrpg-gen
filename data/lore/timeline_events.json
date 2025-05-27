@@ -1,0 +1,315 @@
+{
+  "galactic_timeline": {
+    "dating_system": {
+      "BBY": "Before Battle of Yavin",
+      "ABY": "After Battle of Yavin",
+      "reference_point": "Battle of Yavin (Death Star destruction) = Year 0"
+    },
+    "major_eras": {
+      "dawn_of_the_jedi": {
+        "timeframe": "25,000+ BBY",
+        "description": "Formation of the Je'daii Order on Tython",
+        "key_events": [
+          "Tho Yor ships gather Force-sensitives",
+          "Je'daii Order establishment",
+          "Force Wars between Je'daii factions",
+          "Schism creating Jedi and Sith"
+        ],
+        "significance": "Origins of Force-using orders"
+      },
+      "old_republic": {
+        "timeframe": "25,000 - 1,000 BBY",
+        "description": "Era of the original Galactic Republic and multiple Sith conflicts",
+        "major_periods": {
+          "great_hyperspace_war": {
+            "date": "5,000 BBY",
+            "description": "First major conflict between Republic and Sith Empire",
+            "participants": ["Galactic Republic", "Sith Empire", "Jedi Order"],
+            "outcome": "Sith Empire defeat, survivors flee to Unknown Regions",
+            "significance": "Established Republic as galactic power"
+          },
+          "great_sith_war": {
+            "date": "3,996 BBY",
+            "description": "Conflict sparked by Exar Kun's fall to dark side",
+            "key_figures": ["Exar Kun", "Ulic Qel-Droma", "Nomi Sunrider"],
+            "outcome": "Jedi victory, near-extinction of Sith",
+            "aftermath": "Jedi reform their practices"
+          },
+          "mandalorian_wars": {
+            "date": "3,976-3,960 BBY",
+            "description": "Mandalorian Neo-Crusaders' conquest campaign",
+            "key_figures": ["Mandalore the Ultimate", "Revan", "Malak"],
+            "turning_point": "Revan's use of Mass Shadow Generator at Malachor V",
+            "outcome": "Republic victory, Mandalorian defeat",
+            "consequences": "Revan and Malak's fall to dark side"
+          },
+          "jedi_civil_war": {
+            "date": "3,959-3,956 BBY",
+            "description": "Conflict between Republic and Revan's Sith Empire",
+            "participants": ["Darth Revan", "Darth Malak", "Jedi Order"],
+            "climax": "Revan's redemption and defeat of Malak",
+            "outcome": "Sith Empire collapse, Republic restoration",
+            "significance": "Revan's story of fall and redemption"
+          },
+          "great_galactic_war": {
+            "date": "3,681-3,653 BBY",
+            "description": "Return of the 'True Sith' Empire from Unknown Regions",
+            "duration": "28 years",
+            "outcome": "Treaty of Coruscant, Cold War period",
+            "significance": "Sacking of Coruscant, Jedi Temple destruction"
+          }
+        }
+      },
+      "ruusan_reformation": {
+        "timeframe": "1,000 BBY",
+        "description": "End of New Sith Wars and beginning of Rule of Two",
+        "key_events": [
+          "Seventh Battle of Ruusan",
+          "Brotherhood of Darkness destruction",
+          "Darth Bane's Rule of Two implementation",
+          "Jedi Order reorganization"
+        ],
+        "significance": "Established Sith secrecy and Jedi golden age"
+      },
+      "galactic_republic": {
+        "timeframe": "1,000 - 19 BBY",
+        "description": "Golden age of Republic with Jedi as peacekeepers",
+        "characteristics": [
+          "Thousand-year peace",
+          "Jedi Order at height of power",
+          "Democratic governance",
+          "Economic prosperity"
+        ],
+        "decline": [
+          "Corruption in Senate",
+          "Separatist crisis",
+          "Sith manipulation behind scenes",
+          "Clone Wars outbreak"
+        ]
+      },
+      "clone_wars": {
+        "timeframe": "22 - 19 BBY",
+        "description": "Galaxy-wide conflict orchestrated by Darth Sidious",
+        "major_battles": [
+          "First Battle of Geonosis (22 BBY)",
+          "Battle of Kamino (21 BBY)",
+          "Battle of Ryloth (20 BBY)",
+          "Siege of Mandalore (19 BBY)",
+          "Battle of Coruscant (19 BBY)"
+        ],
+        "key_figures": ["Anakin Skywalker", "Obi-Wan Kenobi", "Ahsoka Tano", "Count Dooku"],
+        "outcome": "Republic victory, but transformation into Empire",
+        "significance": "Jedi purge and Anakin's fall to dark side"
+      },
+      "imperial_era": {
+        "timeframe": "19 BBY - 4 ABY",
+        "description": "Galactic Empire's reign of terror",
+        "major_events": {
+          "order_66": {
+            "date": "19 BBY",
+            "description": "Systematic execution of Jedi across galaxy",
+            "method": "Clone troopers' inhibitor chips activated",
+            "survivors": "Obi-Wan, Yoda, few others",
+            "impact": "Near-extinction of Jedi Order"
+          },
+          "jedi_purge": {
+            "timeframe": "19-0 BBY",
+            "description": "Systematic hunting of surviving Jedi",
+            "agents": ["Darth Vader", "Inquisitors", "Imperial forces"],
+            "methods": "Interrogation, torture, execution",
+            "resistance": "Underground Railroad for Jedi"
+          },
+          "alderaan_destruction": {
+            "date": "0 BBY",
+            "description": "Death Star destroys entire planet",
+            "casualties": "2 billion civilians",
+            "impact": "Galactic outrage, Rebellion recruitment surge",
+            "demonstration": "Imperial power and ruthlessness"
+          }
+        }
+      },
+      "galactic_civil_war": {
+        "timeframe": "2 BBY - 4 ABY",
+        "description": "Rebel Alliance vs Galactic Empire",
+        "major_battles": [
+          "Battle of Scarif (0 BBY)",
+          "Battle of Yavin (0 ABY)",
+          "Battle of Hoth (3 ABY)",
+          "Battle of Endor (4 ABY)"
+        ],
+        "outcome": "Rebel victory, Empire's collapse",
+        "significance": "Restoration of democracy and freedom"
+      },
+      "new_republic": {
+        "timeframe": "4 - 25 ABY",
+        "description": "Democratic government restoration",
+        "challenges": [
+          "Imperial remnants",
+          "New Jedi Order establishment",
+          "Political restructuring",
+          "Economic recovery"
+        ],
+        "threats": ["Thrawn's return", "Emperor's return", "Yuuzhan Vong invasion"]
+      }
+    },
+    "pivotal_moments": {
+      "anakins_fall": {
+        "date": "19 BBY",
+        "location": "Coruscant, Mustafar",
+        "description": "Anakin Skywalker's transformation into Darth Vader",
+        "triggers": [
+          "Fear of Padmé's death",
+          "Palpatine's manipulation",
+          "Jedi Council distrust",
+          "Desperation for power"
+        ],
+        "consequences": [
+          "Jedi Order destruction",
+          "Republic becomes Empire",
+          "Padmé's death",
+          "Luke and Leia's separation"
+        ],
+        "significance": "Galaxy's descent into darkness"
+      },
+      "lukes_journey": {
+        "timeframe": "0-4 ABY",
+        "description": "Luke Skywalker's hero's journey",
+        "stages": [
+          "Discovery of Force sensitivity",
+          "Training with Obi-Wan",
+          "Destroying Death Star",
+          "Training with Yoda",
+          "Confronting Vader",
+          "Redeeming his father"
+        ],
+        "significance": "Balance restoration to the Force"
+      },
+      "empires_end": {
+        "date": "4 ABY",
+        "location": "Death Star II, Endor",
+        "description": "Emperor's death and Vader's redemption",
+        "key_moments": [
+          "Luke's surrender to Vader",
+          "Father-son confrontation",
+          "Vader's sacrifice",
+          "Death Star destruction"
+        ],
+        "aftermath": "Empire's collapse, freedom restoration"
+      }
+    }
+  },
+  "force_history": {
+    "ancient_origins": {
+      "cosmic_force": {
+        "description": "Fundamental energy field binding galaxy together",
+        "discovery": "Recognized by first Force-sensitives on Tython",
+        "nature": "Created by life, surrounds and penetrates everything",
+        "aspects": ["Living Force", "Unifying Force", "Cosmic Force"]
+      },
+      "first_force_users": {
+        "location": "Tython",
+        "organization": "Je'daii Order",
+        "philosophy": "Balance between light (Ashla) and dark (Bogan)",
+        "practices": "Meditation, lightsaber training, Force study",
+        "schism": "Split into light and dark factions"
+      }
+    },
+    "jedi_order_evolution": {
+      "early_jedi": {
+        "timeframe": "25,000-7,000 BBY",
+        "characteristics": "Warriors and explorers",
+        "mission": "Galactic peace and protection",
+        "conflicts": "Multiple wars with Sith"
+      },
+      "classical_jedi": {
+        "timeframe": "1,000-19 BBY",
+        "characteristics": "Peacekeepers and diplomats",
+        "philosophy": "Emotion suppression, attachment avoidance",
+        "decline": "Dogmatic thinking, political involvement",
+        "weakness": "Failure to recognize Sith infiltration"
+      },
+      "new_jedi_order": {
+        "timeframe": "4+ ABY",
+        "founder": "Luke Skywalker",
+        "philosophy": "Emotional balance, family attachments accepted",
+        "practices": "Modified from traditional teachings",
+        "challenges": "Rebuilding from near-extinction"
+      }
+    },
+    "sith_evolution": {
+      "sith_species": {
+        "timeframe": "100,000+ - 6,900 BBY",
+        "location": "Korriban",
+        "culture": "Dark side worship, hierarchical society",
+        "conquest": "Defeated by Dark Jedi exiles"
+      },
+      "ancient_sith_empire": {
+        "timeframe": "6,900-5,000 BBY",
+        "rulers": "Dark Jedi who became Sith Lords",
+        "expansion": "Multiple galactic territories",
+        "conflicts": "Great Hyperspace War with Republic"
+      },
+      "rule_of_two": {
+        "timeframe": "1,000 BBY - 4 ABY",
+        "creator": "Darth Bane",
+        "philosophy": "Master and apprentice only",
+        "goal": "Eventual Jedi destruction and Sith rule",
+        "success": "Palpatine's Empire achievement"
+      },
+      "sith_eternal": {
+        "timeframe": "4-35 ABY",
+        "purpose": "Emperor's contingency plan",
+        "location": "Exegol",
+        "goal": "Sith resurrection and Final Order",
+        "defeat": "Rey and all Jedi spirits"
+      }
+    }
+  },
+  "technological_milestones": {
+    "hyperspace_discovery": {
+      "date": "~25,000 BBY",
+      "discoverers": "Corellian explorers",
+      "impact": "Galactic civilization possible",
+      "technology": "Hyperdrive engines",
+      "routes": "Hyperspace lanes mapped over millennia"
+    },
+    "lightsaber_development": {
+      "origins": "Je'daii Order on Tython",
+      "evolution": [
+        "Force-imbued swords",
+        "Protosabers with power packs",
+        "Modern self-contained lightsabers",
+        "Specialized variants"
+      ],
+      "crystal_sources": ["Ilum", "Kyber crystals", "Synthetic crystals"],
+      "significance": "Symbol of Force users"
+    },
+    "death_star_construction": {
+      "conception": "Geonosian designs",
+      "development": "Decades of Imperial engineering",
+      "purpose": "Ultimate weapon of terror",
+      "weakness": "Single point of failure",
+      "legacy": "Symbol of Imperial power and hubris"
+    }
+  },
+  "cultural_shifts": {
+    "jedi_golden_age": {
+      "timeframe": "1,000-100 BBY",
+      "characteristics": "Peace, prosperity, Jedi respect",
+      "achievements": "Galaxy-wide stability",
+      "complacency": "Growing arrogance and dogmatism"
+    },
+    "imperial_propaganda": {
+      "timeframe": "19 BBY - 4 ABY",
+      "methods": "HoloNet control, education revision",
+      "targets": "Jedi demonization, rebellion suppression",
+      "effectiveness": "Significant but not universal"
+    },
+    "new_hope_restoration": {
+      "timeframe": "0 ABY onwards",
+      "catalyst": "Luke Skywalker's emergence",
+      "spread": "Rebellion inspiration, Jedi return",
+      "impact": "Galaxy-wide freedom movement"
+    }
+  }
+}

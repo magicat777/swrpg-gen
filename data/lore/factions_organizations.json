@@ -1,0 +1,680 @@
+{
+  "force_using_organizations": {
+    "jedi_order": {
+      "name": "Jedi Order",
+      "type": "Religious/Military Order",
+      "alignment": "Light Side",
+      "headquarters": "Jedi Temple, Coruscant",
+      "founding": "~25,000 BBY",
+      "philosophy": "Peace, knowledge, serenity, harmony",
+      "code": "There is no emotion, there is peace...",
+      "structure": {
+        "ranks": ["Youngling", "Padawan", "Knight", "Master", "Grand Master"],
+        "councils": ["High Council", "Council of First Knowledge", "Council of Reconciliation"],
+        "specializations": ["Guardian", "Consular", "Sentinel"]
+      },
+      "peak_membership": "~10,000 during Republic era",
+      "major_periods": [
+        "Ancient Jedi (25,000-7,000 BBY)",
+        "Classical Jedi (1,000-19 BBY)",
+        "Imperial Purge (19 BBY-4 ABY)",
+        "New Jedi Order (4+ ABY)"
+      ],
+      "notable_members": ["Yoda", "Obi-Wan Kenobi", "Luke Skywalker", "Mace Windu"],
+      "enemies": ["Sith Order", "Dark Jedi", "Galactic Empire"],
+      "allies": ["Galactic Republic", "Rebel Alliance", "New Republic"],
+      "traditions": [
+        "Lightsaber construction",
+        "Jedi Trials",
+        "Master-Padawan training",
+        "Service to the galaxy"
+      ],
+      "downfall": "Order 66 and Imperial purge",
+      "legacy": "Symbol of hope and justice",
+      "sources": ["All major Star Wars media"]
+    },
+    "sith_order": {
+      "name": "Sith Order",
+      "type": "Religious/Military Order",
+      "alignment": "Dark Side",
+      "philosophy": "Power, passion, strength, victory",
+      "code": "Peace is a lie, there is only passion...",
+      "major_iterations": {
+        "ancient_sith_empire": {
+          "timeframe": "6,900-1,000 BBY",
+          "structure": "Multiple Sith Lords competing for power",
+          "downfall": "Constant infighting and Jedi opposition",
+          "notable_rulers": ["Naga Sadow", "Marka Ragnos", "Exar Kun"]
+        },
+        "rule_of_two": {
+          "timeframe": "1,000 BBY - 4 ABY",
+          "creator": "Darth Bane",
+          "structure": "One Master, one Apprentice",
+          "purpose": "Accumulate power in secret",
+          "culmination": "Emperor Palpatine's Empire",
+          "lineage": ["Bane", "Plagueis", "Sidious", "Vader"]
+        },
+        "sith_eternal": {
+          "timeframe": "4-35 ABY",
+          "location": "Exegol",
+          "purpose": "Emperor's resurrection and Final Order",
+          "structure": "Cultist hierarchy serving resurrected Emperor",
+          "defeat": "Rey and all Jedi spirits"
+        }
+      },
+      "enemies": ["Jedi Order", "Galactic Republic", "Rebel Alliance"],
+      "allies": ["Various dark side cults", "Imperial forces", "Separatists"],
+      "traditions": [
+        "Sith alchemy",
+        "Rule of Two succession",
+        "Sith artifacts and holocrons",
+        "Conquest and domination"
+      ],
+      "sources": ["All major Star Wars media"]
+    },
+    "inquisitorius": {
+      "name": "Inquisitorius",
+      "type": "Imperial Force-using organization",
+      "alignment": "Dark Side",
+      "timeframe": "19 BBY - ~5 ABY",
+      "purpose": "Hunt surviving Jedi and Force-sensitives",
+      "leadership": "Darth Vader",
+      "headquarters": "Fortress Inquisitorius, Nur",
+      "structure": {
+        "grand_inquisitor": "Leader of all Inquisitors",
+        "numbered_inquisitors": ["Second Sister", "Fifth Brother", "Seventh Sister", "Eighth Brother"]
+      },
+      "recruitment": "Fallen Jedi, Force-sensitive Imperials",
+      "training": "Dark side techniques, Jedi hunting methods",
+      "equipment": ["Double-bladed spinning lightsabers", "Imperial technology"],
+      "methods": [
+        "Interrogation and torture",
+        "Jedi location detection",
+        "Force-sensitive child recruitment",
+        "Terror tactics"
+      ],
+      "notable_members": ["Grand Inquisitor", "Second Sister/Trilla", "Fifth Brother"],
+      "enemies": ["Surviving Jedi", "Rebel cells", "Force-sensitive civilians"],
+      "decline": "Gradual elimination by rebels and Vader",
+      "sources": ["Rebels", "Jedi: Fallen Order", "comics"]
+    }
+  },
+  "galactic_governments": {
+    "galactic_republic": {
+      "name": "Galactic Republic",
+      "type": "Democratic federation",
+      "timeframe": "25,000-19 BBY",
+      "capital": "Coruscant",
+      "government_structure": {
+        "supreme_chancellor": "Elected executive leader",
+        "galactic_senate": "Legislative body with planetary representatives",
+        "judicial_department": "Republic courts and law enforcement"
+      },
+      "military": {
+        "republic_navy": "Volunteer fleet",
+        "judicial_forces": "Limited peacekeeping force",
+        "clone_army": "Emergency army (22-19 BBY)"
+      },
+      "peacekeepers": "Jedi Order",
+      "territory": "Most of known galaxy",
+      "decline_factors": [
+        "Senate corruption",
+        "Bureaucratic inefficiency",
+        "Corporate influence",
+        "Separatist crisis",
+        "Sith manipulation"
+      ],
+      "transformation": "Became Galactic Empire in 19 BBY",
+      "legacy": "Democratic ideals, foundation for New Republic",
+      "sources": ["Prequel Trilogy", "Clone Wars", "various media"]
+    },
+    "galactic_empire": {
+      "name": "Galactic Empire",
+      "type": "Authoritarian dictatorship",
+      "timeframe": "19 BBY - 4 ABY",
+      "capital": "Coruscant (Imperial Center)",
+      "ruler": "Emperor Palpatine",
+      "government_structure": {
+        "emperor": "Absolute ruler",
+        "imperial_senate": "Largely ceremonial (disbanded 0 BBY)",
+        "moffs_governors": "Regional administrators",
+        "grand_moffs": "Sector overseers"
+      },
+      "military": {
+        "imperial_navy": "Massive fleet with Star Destroyers",
+        "stormtrooper_corps": "Elite ground forces",
+        "imperial_army": "Conventional ground forces",
+        "death_star": "Ultimate weapon"
+      },
+      "ideology": [
+        "Human supremacy",
+        "Order through strength",
+        "Anti-alien discrimination",
+        "Centralized control"
+      ],
+      "methods": [
+        "Fear and intimidation",
+        "Propaganda and censorship",
+        "Brutal suppression",
+        "Technological terror"
+      ],
+      "enemies": ["Rebel Alliance", "Surviving Jedi", "Free worlds"],
+      "downfall": "Emperor's death at Battle of Endor",
+      "remnants": "Various Imperial factions post-Endor",
+      "sources": ["Original Trilogy", "various media"]
+    },
+    "rebel_alliance": {
+      "name": "Alliance to Restore the Republic",
+      "type": "Resistance movement",
+      "timeframe": "2 BBY - 4 ABY",
+      "purpose": "Overthrow Galactic Empire, restore democracy",
+      "leadership": {
+        "mon_mothma": "Chief of State",
+        "bail_organa": "Founding member",
+        "leia_organa": "Military leader and diplomat"
+      },
+      "military_structure": {
+        "alliance_fleet": "Diverse collection of ships",
+        "ground_forces": "Guerrilla fighters and commandos",
+        "starfighter_corps": "X-wing and other fighter squadrons"
+      },
+      "major_bases": ["Yavin 4", "Hoth", "various mobile bases"],
+      "tactics": [
+        "Hit-and-run attacks",
+        "Intelligence gathering",
+        "Recruitment of sympathizers",
+        "Sabotage operations"
+      ],
+      "major_victories": [
+        "Death Star destruction",
+        "Endor victory",
+        "Emperor's death"
+      ],
+      "transformation": "Became New Republic after victory",
+      "sources": ["Original Trilogy", "Rebels", "Rogue One"]
+    },
+    "new_republic": {
+      "name": "New Republic",
+      "type": "Democratic federation",
+      "timeframe": "4 ABY - 28 ABY",
+      "capital": "Rotating (Chandrila, then Hosnian Prime)",
+      "founding_principles": [
+        "Democratic governance",
+        "Demilitarization",
+        "Decentralization",
+        "Species equality"
+      ],
+      "challenges": [
+        "Imperial remnants",
+        "War crimes tribunals",
+        "Economic reconstruction",
+        "Political fragmentation"
+      ],
+      "military_policy": "Reduced standing forces, local defense emphasis",
+      "fate": "Destroyed by First Order's Starkiller Base",
+      "legacy": "Democratic restoration attempt",
+      "sources": ["Sequel Trilogy", "post-ROTJ novels"]
+    },
+    "first_order": {
+      "name": "First Order",
+      "type": "Neo-Imperial organization",
+      "timeframe": "5-35 ABY",
+      "origins": "Imperial remnants in Unknown Regions",
+      "ideology": "Imperial restoration, Sith worship",
+      "leadership": {
+        "supreme_leader": "Snoke, then Kylo Ren",
+        "shadow_ruler": "Emperor Palpatine (secretly)"
+      },
+      "military": {
+        "first_order_fleet": "Advanced Star Destroyers",
+        "stormtrooper_program": "Child soldier recruitment",
+        "starkiller_base": "Planet-destroying weapon"
+      },
+      "goals": [
+        "New Republic destruction",
+        "Imperial ideology restoration",
+        "Jedi elimination",
+        "Galactic conquest"
+      ],
+      "defeat": "Battle of Exegol, Emperor's final death",
+      "sources": ["Sequel Trilogy"]
+    }
+  },
+  "criminal_organizations": {
+    "hutt_cartel": {
+      "name": "Hutt Cartel",
+      "type": "Crime syndicate",
+      "leadership": "Hutt ruling families",
+      "territory": "Hutt Space, various systems",
+      "activities": [
+        "Slavery",
+        "Spice trafficking",
+        "Smuggling",
+        "Racketeering",
+        "Bounty hunting contracts"
+      ],
+      "major_figures": ["Jabba the Hutt", "Ziro the Hutt", "Gardulla the Hutt"],
+      "strongholds": ["Nal Hutta", "Tatooine", "various worlds"],
+      "influence": "Outer Rim territories primarily",
+      "relationship_with_empire": "Uneasy cooperation, mutual benefit",
+      "sources": ["Original Trilogy", "Clone Wars", "various media"]
+    },
+    "pyke_syndicate": {
+      "name": "Pyke Syndicate",
+      "type": "Spice cartel",
+      "leadership": "Pyke family heads",
+      "specialty": "Spice mining and distribution",
+      "territory": "Kessel, spice routes",
+      "methods": [
+        "Slave labor",
+        "Corporate infiltration",
+        "Political corruption",
+        "Violent enforcement"
+      ],
+      "major_operations": "Kessel spice mines",
+      "enemies": ["Rival cartels", "Jedi interference"],
+      "sources": ["Clone Wars", "Solo film"]
+    },
+    "crimson_dawn": {
+      "name": "Crimson Dawn",
+      "type": "Crime syndicate",
+      "timeframe": "10 BBY - 4 ABY",
+      "leadership": "Maul (shadow leader), Qi'ra",
+      "activities": [
+        "Coaxium trafficking",
+        "Protection rackets",
+        "Information brokering",
+        "Anti-Imperial operations"
+      ],
+      "territory": "Various systems, mobile operations",
+      "relationship_with_empire": "Antagonistic",
+      "notable_members": ["Maul", "Qi'ra", "Dryden Vos"],
+      "sources": ["Solo film", "comics"]
+    }
+  },
+  "manufacturing_corporations": {
+    "kuat_drive_yards": {
+      "name": "Kuat Drive Yards",
+      "type": "Shipbuilding corporation",
+      "headquarters": "Kuat",
+      "products": [
+        "Imperial Star Destroyers",
+        "Victory-class Star Destroyers",
+        "Venator-class Star Destroyers",
+        "Acclamator-class assault ships"
+      ],
+      "clients": ["Galactic Republic", "Galactic Empire"],
+      "significance": "Primary capital ship manufacturer",
+      "influence": "Major military contractor",
+      "sources": ["Various media"]
+    },
+    "corellian_engineering_corporation": {
+      "name": "Corellian Engineering Corporation",
+      "type": "Shipbuilding corporation",
+      "headquarters": "Corellia",
+      "products": [
+        "YT-series freighters",
+        "CR90 corvettes",
+        "Various civilian ships"
+      ],
+      "reputation": "Reliable, versatile designs",
+      "market": "Civilian and military vessels",
+      "sources": ["Various media"]
+    },
+    "sienar_fleet_systems": {
+      "name": "Sienar Fleet Systems",
+      "type": "Starfighter manufacturer",
+      "products": [
+        "TIE fighters",
+        "TIE interceptors",
+        "TIE bombers",
+        "Imperial shuttles"
+      ],
+      "philosophy": "Quantity over individual pilot protection",
+      "primary_client": "Galactic Empire",
+      "sources": ["Various media"]
+    }
+  },
+  "military_organizations": {
+    "clone_army": {
+      "name": "Grand Army of the Republic",
+      "type": "Clone military force",
+      "timeframe": "22-19 BBY",
+      "origin": "Kamino cloning facilities",
+      "template": "Jango Fett",
+      "leadership": "Jedi Generals",
+      "structure": {
+        "units": ["Legions", "Battalions", "Companies", "Squads"],
+        "specializations": ["Standard infantry", "ARCs", "Commandos", "Pilots"]
+      },
+      "notable_units": [
+        "501st Legion (Vader's Fist)",
+        "212th Attack Battalion",
+        "Ghost Company",
+        "Delta Squad"
+      ],
+      "betrayal": "Order 66 execution of Jedi",
+      "transition": "Became Imperial Stormtroopers",
+      "sources": ["Prequel Trilogy", "Clone Wars"]
+    },
+    "imperial_military": {
+      "name": "Imperial Military",
+      "branches": ["Imperial Navy", "Imperial Army", "Stormtrooper Corps"],
+      "doctrine": "Overwhelming force, fear tactics",
+      "recruitment": "Human supremacist, volunteer and conscript",
+      "equipment": [
+        "Star Destroyers",
+        "TIE fighters",
+        "AT-AT walkers",
+        "Stormtrooper armor"
+      ],
+      "notable_units": [
+        "501st Legion",
+        "Imperial Guard",
+        "Death Squadron",
+        "Inferno Squad"
+      ],
+      "decline": "Post-Endor fragmentation",
+      "sources": ["Original Trilogy", "various media"]
+    }
+  },
+  "religious_organizations": {
+    "church_of_force": {
+      "name": "Church of the Force",
+      "type": "Religious organization",
+      "timeframe": "Imperial Era",
+      "beliefs": "Force worship, Jedi reverence",
+      "membership": "Non-Force sensitives",
+      "activities": [
+        "Charitable works",
+        "Jedi history preservation",
+        "Spiritual guidance",
+        "Imperial resistance (covert)"
+      ],
+      "persecution": "Imperial suppression",
+      "sources": ["The Force Awakens", "various media"]
+    },
+    "guardians_of_whills": {
+      "name": "Guardians of the Whills",
+      "type": "Force-worshipping order",
+      "location": "Jedha",
+      "purpose": "Protect kyber crystal sites",
+      "beliefs": "Force reverence, balance",
+      "members": ["Chirrut Îmwe", "Baze Malbus"],
+      "practices": [
+        "Martial arts",
+        "Meditation",
+        "Site protection",
+        "Spiritual discipline"
+      ],
+      "fate": "Largely destroyed with Jedha City",
+      "sources": ["Rogue One"]
+    }
+  },
+  "separatist_factions": {
+    "confederacy_independent_systems": {
+      "name": "Confederacy of Independent Systems",
+      "type": "Separatist alliance",
+      "timeframe": "24-19 BBY",
+      "leadership": "Count Dooku, Separatist Council",
+      "grievances": [
+        "Republic corruption",
+        "Taxation disputes",
+        "Core World favoritism",
+        "Corporate exploitation"
+      ],
+      "military": {
+        "droid_army": "Battle droids, super battle droids",
+        "navy": "Providence-class destroyers",
+        "leadership": "Tactical droids"
+      },
+      "corporate_backers": [
+        "Trade Federation",
+        "Techno Union",
+        "Banking Clan",
+        "Commerce Guild"
+      ],
+      "manipulation": "Secretly controlled by Darth Sidious",
+      "fate": "Dissolved after leaders' execution",
+      "sources": ["Prequel Trilogy", "Clone Wars"]
+    }
+  },
+  "mandalorian_organizations": {
+    "mandalorian_clans": {
+      "name": "Mandalorian Clans",
+      "type": "Cultural/Warrior Society",
+      "alignment": "Varies by clan and era",
+      "homeworld": "Mandalore",
+      "founding": "~9991 BBY",
+      "philosophy": "Honor, combat, tradition, family loyalty",
+      "culture": "Mando'ade (Children of Mandalore)",
+      "leadership_structure": {
+        "supreme_leader": "Mand'alor (single ruler)",
+        "clan_structure": ["House leaders", "Clan elders", "Warriors"],
+        "succession": "Trial by combat or Darksaber inheritance"
+      },
+      "major_clans": {
+        "house_vizsla": {
+          "leadership": "Pre Vizsla, Bo-Katan Kryze (later)",
+          "ideology": "Traditional warrior culture",
+          "notable_members": ["Pre Vizsla", "Paz Vizsla"],
+          "symbol": "Owl motif"
+        },
+        "house_kryze": {
+          "leadership": "Satine Kryze, Bo-Katan Kryze",
+          "ideology": "New Mandalorian pacifism (Satine), Traditional warriors (Bo-Katan)",
+          "notable_members": ["Duchess Satine", "Bo-Katan Kryze"],
+          "political_stance": "Varied - pacifist to traditionalist"
+        },
+        "house_saxon": {
+          "leadership": "Gar Saxon, Tiber Saxon",
+          "ideology": "Imperial collaboration",
+          "notable_members": ["Gar Saxon", "Tiber Saxon"],
+          "status": "Imperial puppet regime"
+        }
+      },
+      "sub_organizations": {
+        "death_watch": {
+          "type": "Terrorist organization",
+          "leadership": "Pre Vizsla, later Maul",
+          "ideology": "Restore traditional warrior ways through violence",
+          "activities": ["Terrorism", "Coup attempts", "Shadow Collective alliance"],
+          "fate": "Fractured after Maul's takeover"
+        },
+        "children_of_the_watch": {
+          "type": "Religious sect",
+          "ideology": "Orthodox Mandalorian traditions",
+          "practices": ["Never remove helmet", "Foundling adoption", "Ancient Way"],
+          "notable_members": ["Din Djarin", "The Armorer"],
+          "status": "Underground traditional sect"
+        },
+        "nite_owls": {
+          "type": "Elite unit",
+          "leadership": "Bo-Katan Kryze",
+          "ideology": "Traditional Mandalorian independence",
+          "activities": "Elite combat operations",
+          "loyalty": "House Kryze and Mandalorian independence"
+        }
+      },
+      "cultural_elements": {
+        "armor_tradition": "Beskar steel armor passed through generations",
+        "weapons": "Blasters, melee weapons, flamethrowers",
+        "symbol_of_leadership": "Darksaber - ancient lightsaber",
+        "language": "Mando'a",
+        "core_values": ["Honor", "Family", "Combat excellence", "Survival"]
+      },
+      "historical_periods": [
+        "Mandalorian Crusades",
+        "Mandalorian Civil Wars",
+        "New Mandalorian pacifist period",
+        "Clone Wars involvement",
+        "Imperial occupation and resistance",
+        "Post-Empire reconstruction"
+      ],
+      "territory": "Mandalore system, scattered diaspora across galaxy",
+      "current_status": "Rebuilding after Imperial devastation",
+      "notable_conflicts": [
+        "Mandalorian-Jedi Wars",
+        "Mandalorian Civil War",
+        "Imperial occupation of Mandalore",
+        "Great Purge of Mandalore"
+      ],
+      "sources": ["Clone Wars", "Rebels", "The Mandalorian", "Various EU materials"]
+    }
+  },
+  "criminal_organizations_expanded": {
+    "black_sun": {
+      "name": "Black Sun",
+      "type": "Crime Syndicate",
+      "alignment": "Criminal/Neutral Evil",
+      "leadership": "Ruling Council of Vigos",
+      "founding": "Pre-Clone Wars era",
+      "philosophy": "Profit through organized crime and political corruption",
+      "headquarters": "Black Sun fortress, Mustafar",
+      "structure": {
+        "ruling_council": "Falleen nobles and crime bosses",
+        "vigos": "Regional underbosses",
+        "bosses": "Operational leaders",
+        "soldiers": "Enforcers and operatives"
+      },
+      "notable_leaders": {
+        "xomit_grunseit": {
+          "era": "Early period",
+          "species": "Unknown",
+          "status": "Historical leader"
+        },
+        "prince_xizor": {
+          "era": "Imperial period",
+          "species": "Falleen",
+          "status": "Major crime lord"
+        },
+        "ziton_moj": {
+          "era": "Clone Wars",
+          "species": "Falleen", 
+          "alliance": "Shadow Collective under Maul"
+        }
+      },
+      "criminal_activities": [
+        "Sentient trafficking",
+        "Narcotics distribution", 
+        "Smuggling operations",
+        "Bounty hunting",
+        "Political extortion",
+        "Protection rackets"
+      ],
+      "territory": {
+        "primary_bases": ["Mustafar", "Ord Mantell", "Dantooine"],
+        "operations": "Galaxy-wide criminal network",
+        "strongholds": "Outer Rim Territories",
+        "influence": "Corporate and political sectors"
+      },
+      "major_operations": [
+        "Shadow Collective alliance during Clone Wars",
+        "Imperial collaboration during Galactic Civil War",
+        "Han Solo bounty operations",
+        "Political manipulation campaigns"
+      ],
+      "relationships": {
+        "allies": ["Shadow Collective", "Imperial remnants", "Corrupt officials"],
+        "enemies": ["Crimson Dawn", "Pyke Syndicate", "New Republic"],
+        "competitors": ["Hutt Cartel", "Other crime syndicates"]
+      },
+      "historical_timeline": [
+        "Pre-Clone Wars: Establishment and expansion",
+        "Clone Wars: Shadow Collective alliance",
+        "Imperial era: Collaboration with Empire",
+        "Galactic Civil War: Continued operations",
+        "New Republic era: Adaptation to new government"
+      ],
+      "current_status": "Active criminal organization",
+      "sources": ["Clone Wars", "Various EU materials", "Expanded Universe"]
+    }
+  },
+  "sequel_trilogy_factions": {
+    "first_order": {
+      "name": "First Order",
+      "type": "Fascist Military Junta",
+      "alignment": "Dark Side/Authoritarian",
+      "founding": "21 ABY",
+      "dissolution": "35 ABY",
+      "philosophy": "Neo-Imperial totalitarianism, galactic order through force",
+      "headquarters": "Mobile command ships, Unknown Regions",
+      "ideology": "Fanatical devotion to order, disdain for democracy",
+      "leadership_structure": {
+        "supreme_leader": "Absolute ruler (Snoke, then Kylo Ren)",
+        "supreme_council": "High-level strategic command",
+        "high_command": "Military leadership council",
+        "ranks": ["Grand Admiral", "Allegiant General", "Admiral", "General", "Captain"]
+      },
+      "notable_leaders": {
+        "supreme_leader_snoke": {
+          "role": "Supreme Leader",
+          "species": "Artificial being",
+          "period": "21-34 ABY",
+          "fate": "Killed by Kylo Ren"
+        },
+        "kylo_ren": {
+          "role": "Master of Knights of Ren, later Supreme Leader",
+          "species": "Human",
+          "period": "28-35 ABY",
+          "fate": "Redeemed and died saving Rey"
+        },
+        "general_hux": {
+          "role": "Allegiant General",
+          "species": "Human",
+          "period": "28-35 ABY",
+          "fate": "Killed by Pryde for treason"
+        },
+        "captain_phasma": {
+          "role": "Stormtrooper Captain",
+          "species": "Human",
+          "period": "28-34 ABY",
+          "fate": "Killed by Finn"
+        }
+      },
+      "military_forces": {
+        "first_order_navy": "Advanced star destroyers and capital ships",
+        "first_order_army": "Ground forces and occupation troops",
+        "stormtrooper_corps": "Recruited through Project Resurrection",
+        "tie_fighter_squadrons": "Advanced TIE fighter variants",
+        "special_forces": "Elite stormtrooper units"
+      },
+      "technology": {
+        "superweapons": "Starkiller Base (destroyed 34 ABY)",
+        "ships": "Resurgent-class Star Destroyers, Dreadnoughts",
+        "weapons": "Advanced blaster technology",
+        "armor": "Improved stormtrooper armor",
+        "communications": "Galaxy-spanning command network"
+      },
+      "territory": {
+        "origin": "Unknown Regions",
+        "expansion": "Rapid conquest of New Republic territory",
+        "peak_control": "Majority of galaxy (34-35 ABY)",
+        "key_systems": "Starkiller Base system, Supremacy mobile base"
+      },
+      "major_operations": [
+        "Destruction of Hosnian Prime (34 ABY)",
+        "First Order-Resistance War",
+        "Occupation of Core Worlds",
+        "Final Order collaboration",
+        "Battle of Exegol (defeat)"
+      ],
+      "relationship_to_empire": {
+        "origin": "Formed from Imperial Remnant survivors",
+        "ideology": "Neo-Imperial authoritarianism",
+        "leadership": "Mix of Imperial veterans and new generation",
+        "technology": "Advanced Imperial military designs"
+      },
+      "enemies": ["Resistance", "New Republic", "Jedi"],
+      "downfall": [
+        "Internal power struggles",
+        "Kylo Ren's conflicted leadership",
+        "Resistance resilience",
+        "Final Order betrayal",
+        "Battle of Exegol defeat"
+      ],
+      "legacy": "Cautionary tale of Imperial ideology's persistence",
+      "sources": ["Sequel Trilogy", "Resistance", "Various novels"]
+    }
+  }
+}

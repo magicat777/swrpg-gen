@@ -1,0 +1,50 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  - "alerts.yml"
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+    scrape_interval: 30s
+
+  # Node Exporter - System metrics
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+    scrape_interval: 15s
+
+  # SWRPG Backend API Metrics
+  - job_name: 'swrpg-backend'
+    static_configs:
+      - targets: ['backend:3000']
+    metrics_path: '/api/metrics'
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    scheme: http
+
+  # SWRPG Backend Health Check
+  - job_name: 'swrpg-backend-health'
+    static_configs:
+      - targets: ['backend:3000']
+    metrics_path: '/api/health'
+    scrape_interval: 30s
+    scrape_timeout: 10s
+    scheme: http
+
+  # Note: Disabled non-essential targets that don't provide proper metrics endpoints
+  # These can be re-enabled once proper metrics endpoints are implemented:
+  # - Neo4j (would need metrics plugin)
+  # - MongoDB (would need metrics exporter) 
+  # - Weaviate (v1/meta returns JSON, not metrics format)
+  # - Frontend (health.json returns JSON, not metrics format)
+  # - LocalAI (may not provide metrics endpoint)

@@ -1,0 +1,1139 @@
+{
+  "jedi_masters": {
+    "yoda": {
+      "full_name": "Yoda",
+      "species": "Unknown (Yoda's species)",
+      "homeworld": "Unknown",
+      "birth_year": "896 BBY",
+      "death_year": "4 ABY",
+      "force_sensitivity": "Legendary",
+      "lightsaber_forms": ["Form IV: Ataru"],
+      "rank": "Grand Master of the Jedi Order",
+      "affiliations": ["Jedi Order", "Galactic Republic", "Rebel Alliance"],
+      "personality_traits": ["Wise", "Cryptic", "Playful", "Patient", "Powerful"],
+      "notable_quotes": [
+        "Do or do not, there is no try.",
+        "Fear leads to anger, anger leads to hate, hate leads to suffering.",
+        "Judge me by my size, do you?"
+      ],
+      "key_relationships": {
+        "padawans": ["Count Dooku", "Luke Skywalker"],
+        "colleagues": ["Mace Windu", "Obi-Wan Kenobi"],
+        "enemies": ["Emperor Palpatine", "Count Dooku"]
+      },
+      "major_events": [
+        "Training Count Dooku",
+        "Discovering Kamino clone army", 
+        "Confronting Emperor Palpatine",
+        "Training Luke Skywalker"
+      ],
+      "abilities": [
+        "Exceptional lightsaber combat despite size",
+        "Powerful Force abilities",
+        "Precognition and Force visions",
+        "Force absorption and redirection"
+      ],
+      "philosophy": "Traditional Jedi teachings with emphasis on letting go of attachments",
+      "sources": ["Original Trilogy", "Prequel Trilogy", "Clone Wars"]
+    },
+    "mace_windu": {
+      "full_name": "Mace Windu",
+      "species": "Human",
+      "homeworld": "Haruun Kal",
+      "birth_year": "72 BBY",
+      "death_year": "19 BBY",
+      "force_sensitivity": "Very High",
+      "lightsaber_forms": ["Form VII: Vaapad (creator)"],
+      "lightsaber_color": "Purple (unique)",
+      "rank": "Jedi Master, High Council Member",
+      "affiliations": ["Jedi Order", "Galactic Republic"],
+      "personality_traits": ["Stern", "Disciplined", "Pragmatic", "Intense", "Unwavering"],
+      "notable_quotes": [
+        "This party's over.",
+        "He's too dangerous to be left alive.",
+        "The oppression of the Sith will never return!"
+      ],
+      "key_relationships": {
+        "colleagues": ["Yoda", "Ki-Adi-Mundi", "Kit Fisto"],
+        "enemies": ["Emperor Palpatine", "General Grievous", "Jango Fett"]
+      },
+      "major_events": [
+        "Battle of Geonosis",
+        "Confronting Chancellor Palpatine",
+        "Death at hands of Anakin and Palpatine"
+      ],
+      "abilities": [
+        "Master of Form VII lightsaber combat",
+        "Shatterpoint ability",
+        "Force lightning resistance",
+        "Exceptional tactical mind"
+      ],
+      "philosophy": "Pragmatic approach to Jedi Code, willing to bend rules when necessary",
+      "sources": ["Prequel Trilogy", "Clone Wars", "Expanded Universe"]
+    },
+    "qui_gon_jinn": {
+      "full_name": "Qui-Gon Jinn",
+      "species": "Human",
+      "homeworld": "Coruscant",
+      "birth_year": "92 BBY",
+      "death_year": "32 BBY",
+      "force_sensitivity": "Very High",
+      "lightsaber_forms": ["Form IV: Ataru"],
+      "lightsaber_color": "Green",
+      "rank": "Jedi Master",
+      "affiliations": ["Jedi Order", "Galactic Republic"],
+      "personality_traits": ["Maverick", "Philosophical", "Compassionate", "Intuitive", "Independent"],
+      "notable_quotes": [
+        "The ability to speak does not make you intelligent.",
+        "Your focus determines your reality.",
+        "There's always a bigger fish."
+      ],
+      "key_relationships": {
+        "master": "Count Dooku",
+        "padawan": "Obi-Wan Kenobi",
+        "discovered": "Anakin Skywalker",
+        "enemies": ["Darth Maul"]
+      },
+      "major_events": [
+        "Discovering Anakin Skywalker",
+        "Battle of Naboo",
+        "Death at hands of Darth Maul",
+        "Becoming the first Force ghost"
+      ],
+      "abilities": [
+        "Exceptional connection to Living Force",
+        "Force visions and prophecy",
+        "Plant surge ability",
+        "Post-death consciousness preservation"
+      ],
+      "philosophy": "Focus on Living Force over Unifying Force, belief in following the will of the Force",
+      "sources": ["Prequel Trilogy", "Clone Wars", "Expanded Universe"]
+    },
+    "kit_fisto": {
+      "full_name": "Kit Fisto",
+      "species": "Nautolan", 
+      "homeworld": "Glee Anselm",
+      "birth_year": "Unknown",
+      "death_year": "19 BBY",
+      "force_sensitivity": "High",
+      "lightsaber_forms": ["Form I: Shii-Cho"],
+      "lightsaber_color": "Green",
+      "rank": "Jedi Master, High Council Member",
+      "affiliations": ["Jedi Order", "Galactic Republic"],
+      "personality_traits": ["Optimistic", "Cheerful", "Brave", "Skilled", "Adaptable"],
+      "notable_quotes": [
+        "Well, this is interesting.",
+        "May the Force be with us all."
+      ],
+      "key_relationships": {
+        "colleagues": ["Mace Windu", "Agen Kolar", "Saesee Tiin"],
+        "enemies": ["Emperor Palpatine", "General Grievous"]
+      },
+      "major_events": [
+        "Battle of Geonosis",
+        "Mon Calamari crisis",
+        "Attempt to arrest Chancellor Palpatine",
+        "Death during confrontation with Palpatine"
+      ],
+      "abilities": [
+        "Underwater combat specialist",
+        "Amphibious physiology",
+        "Pheromone detection via head tentacles",
+        "Exceptional reflexes"
+      ],
+      "philosophy": "Traditional Jedi values with emphasis on protection and service",
+      "sources": ["Prequel Trilogy", "Clone Wars"]
+    },
+    "plo_koon": {
+      "full_name": "Plo Koon",
+      "species": "Kel Dor",
+      "homeworld": "Dorin",
+      "birth_year": "Unknown",
+      "death_year": "19 BBY",
+      "force_sensitivity": "High",
+      "lightsaber_forms": ["Form V: Shien/Djem So"],
+      "lightsaber_color": "Blue",
+      "rank": "Jedi Master, High Council Member",
+      "affiliations": ["Jedi Order", "Galactic Republic"],
+      "personality_traits": ["Calm", "Wise", "Protective", "Principled", "Compassionate"],
+      "notable_quotes": [
+        "We are keepers of the peace, not soldiers.",
+        "The Force flows through all living things."
+      ],
+      "key_relationships": {
+        "discovered": "Ahsoka Tano",
+        "colleagues": ["Yoda", "Mace Windu"],
+        "close_to": "Clone 104th Battalion"
+      },
+      "major_events": [
+        "Discovering Ahsoka Tano",
+        "Battle of Malastare",
+        "Order 66 execution",
+        "Death in starfighter crash"
+      ],
+      "abilities": [
+        "Electric Judgment (rare Force power)",
+        "Enhanced piloting skills",
+        "Telepathic communication",
+        "Atmospheric adaptation mask dependency"
+      ],
+      "philosophy": "Strong believer in protecting innocent life and clone trooper rights",
+      "sources": ["Prequel Trilogy", "Clone Wars"]
+    },
+    "ki_adi_mundi": {
+      "full_name": "Ki-Adi-Mundi",
+      "species": "Cerean",
+      "homeworld": "Cerea",
+      "birth_year": "92 BBY",
+      "death_year": "19 BBY",
+      "force_sensitivity": "High",
+      "lightsaber_forms": ["Form IV: Ataru"],
+      "lightsaber_color": "Blue/Purple",
+      "rank": "Jedi Master, High Council Member",
+      "affiliations": ["Jedi Order", "Galactic Republic"],
+      "personality_traits": ["Analytical", "Logical", "Dutiful", "Traditional", "Concerned"],
+      "notable_quotes": [
+        "What about the droid attack on the Wookiees?",
+        "The Chancellor should never have brought them into this."
+      ],
+      "key_relationships": {
+        "colleagues": ["Yoda", "Mace Windu"],
+        "family": "Multiple wives and children (cultural exception)"
+      },
+      "major_events": [
+        "Battle of Geonosis",
+        "Mygeeto campaign",
+        "Order 66 execution",
+        "Death on Mygeeto"
+      ],
+      "abilities": [
+        "Binary brain structure (enhanced processing)",
+        "Tactical analysis",
+        "Strong Force sensitivity",
+        "Leadership in battle"
+      ],
+      "philosophy": "Strict adherence to Jedi Code with cultural accommodations for Cerean customs",
+      "sources": ["Prequel Trilogy", "Clone Wars"]
+    }
+  },
+  "jedi_knights": {
+    "obi_wan_kenobi": {
+      "full_name": "Obi-Wan Kenobi",
+      "species": "Human",
+      "homeworld": "Stewjon",
+      "birth_year": "57 BBY",
+      "death_year": "0 ABY",
+      "force_sensitivity": "Very High",
+      "lightsaber_forms": ["Form III: Soresu (master)"],
+      "lightsaber_color": "Blue",
+      "rank": "Jedi Master, High Council Member",
+      "affiliations": ["Jedi Order", "Galactic Republic", "Rebel Alliance"],
+      "personality_traits": ["Diplomatic", "Patient", "Witty", "Honorable", "Resilient"],
+      "notable_quotes": [
+        "These aren't the droids you're looking for.",
+        "Hello there.",
+        "The Force will be with you, always."
+      ],
+      "key_relationships": {
+        "master": "Qui-Gon Jinn",
+        "padawan": "Anakin Skywalker",
+        "mentored": "Luke Skywalker",
+        "nemesis": "General Grievous",
+        "former_friend": "Darth Vader"
+      },
+      "major_events": [
+        "Battle of Naboo",
+        "Training Anakin Skywalker",
+        "Clone Wars campaigns",
+        "Duel on Mustafar",
+        "Hermit years on Tatooine",
+        "Sacrifice on Death Star"
+      ],
+      "abilities": [
+        "Master of defensive lightsaber combat",
+        "Force mind tricks",
+        "Beast control",
+        "Exceptional negotiation skills"
+      ],
+      "philosophy": "Balanced approach to Force, emphasis on diplomacy over conflict",
+      "sources": ["All Trilogies", "Clone Wars", "Rebels"]
+    },
+    "anakin_skywalker": {
+      "full_name": "Anakin Skywalker",
+      "species": "Human",
+      "homeworld": "Tatooine",
+      "birth_year": "41 BBY",
+      "death_year": "4 ABY (as Vader)",
+      "force_sensitivity": "Legendary (Chosen One)",
+      "lightsaber_forms": ["Form V: Djem So/Shien"],
+      "lightsaber_color": "Blue",
+      "rank": "Jedi Knight",
+      "affiliations": ["Jedi Order", "Galactic Republic", "Later: Galactic Empire as Darth Vader"],
+      "personality_traits": ["Passionate", "Impulsive", "Powerful", "Conflicted", "Protective"],
+      "notable_quotes": [
+        "I don't like sand.",
+        "This is where the fun begins.",
+        "From my point of view, the Jedi are evil!"
+      ],
+      "key_relationships": {
+        "master": "Obi-Wan Kenobi",
+        "wife": "Padmé Amidala",
+        "children": "Luke and Leia Skywalker",
+        "mother": "Shmi Skywalker",
+        "sith_master": "Emperor Palpatine"
+      },
+      "major_events": [
+        "Podracing victory",
+        "Death of mother",
+        "Marriage to Padmé",
+        "Fall to dark side",
+        "Duel on Mustafar",
+        "Redemption and death"
+      ],
+      "abilities": [
+        "Unparalleled Force potential", 
+        "Exceptional piloting skills",
+        "Mechanical genius",
+        "Precognitive abilities",
+        "Force choking (as Vader)"
+      ],
+      "philosophy": "Struggle between light and dark, attachment vs. duty",
+      "sources": ["All Trilogies", "Clone Wars"]
+    },
+    "ahsoka_tano": {
+      "full_name": "Ahsoka Tano",
+      "species": "Togruta",
+      "homeworld": "Shili",
+      "birth_year": "36 BBY",
+      "death_year": "Unknown (still alive as of Sequel era)",
+      "force_sensitivity": "Very High",
+      "lightsaber_forms": ["Form IV: Ataru", "Jar'Kai (dual wielding)"],
+      "lightsaber_color": "Blue/Green, later White",
+      "rank": "Former Jedi Padawan, later Independent Force User",
+      "affiliations": ["Jedi Order (former)", "Rebel Alliance", "Resistance"],
+      "personality_traits": ["Independent", "Brave", "Compassionate", "Stubborn", "Loyal"],
+      "notable_quotes": [
+        "I am no Jedi.",
+        "Then you will die braver than most.",
+        "I won't leave you. Not this time."
+      ],
+      "key_relationships": {
+        "master": "Anakin Skywalker",
+        "discovered_by": "Plo Koon",
+        "allies": ["Rex", "Ezra Bridger", "Sabine Wren"]
+      },
+      "major_events": [
+        "Clone Wars service",
+        "Trial and exile from Jedi Order",
+        "Siege of Mandalore",
+        "Duel with Darth Vader",
+        "Mentoring Ezra Bridger"
+      ],
+      "abilities": [
+        "Dual lightsaber combat",
+        "Force sense and empathy",
+        "White lightsabers (purified kyber crystals)",
+        "Tactical leadership"
+      ],
+      "philosophy": "Independent path, helping others without institutional constraints",
+      "sources": ["Clone Wars", "Rebels", "Mandalorian"]
+    },
+    "ezra_bridger": {
+      "full_name": "Ezra Bridger",
+      "species": "Human",
+      "homeworld": "Lothal",
+      "birth_year": "19 BBY",
+      "death_year": "Unknown (missing)",
+      "force_sensitivity": "High",
+      "lightsaber_forms": ["Self-taught hybrid style"],
+      "lightsaber_color": "Blue",
+      "rank": "Jedi Padawan",
+      "affiliations": ["Rebel Alliance", "Ghost Crew"],
+      "personality_traits": ["Resourceful", "Impulsive", "Caring", "Streetwise", "Growing"],
+      "notable_quotes": [
+        "I can't defeat Vader alone, but together...",
+        "Sometimes we must let our enemies think they've won."
+      ],
+      "key_relationships": {
+        "master": "Kanan Jarrus",
+        "crew": "Ghost Crew",
+        "mentor": "Ahsoka Tano"
+      },
+      "major_events": [
+        "Joining Ghost Crew",
+        "Liberation of Lothal",
+        "Disappearance with Thrawn"
+      ],
+      "abilities": [
+        "Strong connection to animals",
+        "Force visions",
+        "Unique lightsaber-blaster hybrid",
+        "Space whale communication"
+      ],
+      "philosophy": "Learning balance between personal connections and greater good",
+      "sources": ["Rebels"]
+    },
+    "kanan_jarrus": {
+      "full_name": "Kanan Jarrus (Caleb Dume)",
+      "species": "Human", 
+      "homeworld": "Coruscant",
+      "birth_year": "33 BBY",
+      "death_year": "1 BBY",
+      "force_sensitivity": "High",
+      "lightsaber_forms": ["Form III: Soresu"],
+      "lightsaber_color": "Blue",
+      "rank": "Jedi Knight (Order 66 survivor)",
+      "affiliations": ["Jedi Order", "Rebel Alliance", "Ghost Crew"],
+      "personality_traits": ["Cautious", "Protective", "Wise", "Conflicted", "Brave"],
+      "notable_quotes": [
+        "Kid, I'm about to let everyone in on the secret.",
+        "Ezra, I need you to know: you've shown me what it means to be a Jedi."
+      ],
+      "key_relationships": {
+        "master": "Depa Billaba",
+        "padawan": "Ezra Bridger",
+        "partner": "Hera Syndulla"
+      },
+      "major_events": [
+        "Order 66 survival",
+        "Meeting Ezra Bridger",
+        "Forming Ghost Crew",
+        "Sacrifice on Lothal"
+      ],
+      "abilities": [
+        "Post-Order 66 training resumption",
+        "Force sight after blinding",
+        "Teaching abilities",
+        "Survival skills"
+      ],
+      "philosophy": "Rediscovering Jedi path through teaching, balancing attachment and duty",
+      "sources": ["Rebels", "Clone Wars"]
+    }
+  },
+  "sith_lords": {
+    "emperor_palpatine": {
+      "full_name": "Sheev Palpatine (Darth Sidious)",
+      "species": "Human",
+      "homeworld": "Naboo",
+      "birth_year": "84 BBY",
+      "death_year": "4 ABY (35 ABY final death)",
+      "force_sensitivity": "Legendary",
+      "lightsaber_forms": ["Form VII: Juyo/Vaapad"],
+      "lightsaber_color": "Red",
+      "rank": "Dark Lord of the Sith, Galactic Emperor",
+      "affiliations": ["Sith Order", "Galactic Empire", "Final Order"],
+      "personality_traits": ["Manipulative", "Patient", "Cunning", "Ruthless", "Charismatic"],
+      "notable_quotes": [
+        "Good, good. Let the hate flow through you.",
+        "Execute Order 66.",
+        "I am the Senate!",
+        "Unlimited power!"
+      ],
+      "key_relationships": {
+        "master": "Darth Plagueis",
+        "apprentices": ["Darth Maul", "Count Dooku", "Darth Vader"],
+        "granddaughter": "Rey"
+      },
+      "major_events": [
+        "Rise to Chancellor",
+        "Clone Wars orchestration", 
+        "Order 66 execution",
+        "Empire establishment",
+        "Death and resurrection"
+      ],
+      "abilities": [
+        "Force lightning mastery",
+        "Political manipulation",
+        "Foresight and planning",
+        "Life essence transfer",
+        "Sith sorcery"
+      ],
+      "philosophy": "Rule through fear, elimination of Jedi, ultimate Sith dominance",
+      "sources": ["All Trilogies", "Clone Wars"]
+    },
+    "darth_vader": {
+      "full_name": "Darth Vader (Anakin Skywalker)",
+      "species": "Human (cyborg)",
+      "homeworld": "Tatooine",
+      "birth_year": "41 BBY",
+      "death_year": "4 ABY",
+      "force_sensitivity": "Legendary",
+      "lightsaber_forms": ["Form V: Djem So (adapted for suit)"],
+      "lightsaber_color": "Red",
+      "rank": "Dark Lord of the Sith, Emperor's Enforcer",
+      "affiliations": ["Galactic Empire", "Sith Order"],
+      "personality_traits": ["Intimidating", "Conflicted", "Powerful", "Tragic", "Redeemable"],
+      "notable_quotes": [
+        "I find your lack of faith disturbing.",
+        "The Force is strong with this one.",
+        "No, I am your father.",
+        "Tell your sister... you were right."
+      ],
+      "key_relationships": {
+        "master": "Emperor Palpatine",
+        "former_master": "Obi-Wan Kenobi",
+        "children": "Luke and Leia Skywalker",
+        "wife": "Padmé Amidala (deceased)"
+      },
+      "major_events": [
+        "Transformation after Mustafar",
+        "Jedi Purge participation",
+        "Hunt for Rebel Alliance",
+        "Discovering Luke Skywalker",
+        "Redemption and sacrifice"
+      ],
+      "abilities": [
+        "Enhanced Force powers through suit",
+        "Intimidation and Force choking",
+        "Exceptional lightsaber combat",
+        "Strategic military mind",
+        "Cybernetic enhancements"
+      ],
+      "philosophy": "Torn between Sith loyalty and paternal love, ultimate redemption",
+      "sources": ["Original Trilogy", "Prequel Trilogy", "Rogue One"]
+    },
+    "darth_maul": {
+      "full_name": "Darth Maul (Maul)",
+      "species": "Zabrak (Dathomirian)",
+      "homeworld": "Dathomir",
+      "birth_year": "54 BBY",
+      "death_year": "2 BBY",
+      "force_sensitivity": "Very High",
+      "lightsaber_forms": ["Form VII: Juyo", "Saberstaff combat"],
+      "lightsaber_color": "Red (double-bladed)",
+      "rank": "Sith Lord, later Crime Lord",
+      "affiliations": ["Sith Order", "Shadow Collective", "Crimson Dawn"],
+      "personality_traits": ["Aggressive", "Vengeful", "Proud", "Savage", "Cunning"],
+      "notable_quotes": [
+        "At last we will reveal ourselves to the Jedi.",
+        "Revenge. I must have revenge.",
+        "I was apprentice to the most powerful being in the galaxy once."
+      ],
+      "key_relationships": {
+        "master": "Darth Sidious",
+        "brother": "Savage Opress",
+        "nemesis": "Obi-Wan Kenobi"
+      },
+      "major_events": [
+        "Duel of the Fates",
+        "Survival and cybernetic legs",
+        "Shadow Collective leadership",
+        "Final duel with Obi-Wan"
+      ],
+      "abilities": [
+        "Double-bladed lightsaber mastery",
+        "Acrobatic combat style",
+        "Survival against impossible odds",
+        "Criminal organization leadership",
+        "Nightsister magic knowledge"
+      ],
+      "philosophy": "Consumed by revenge, rejection of both Jedi and Sith in favor of personal power",
+      "sources": ["Prequel Trilogy", "Clone Wars", "Rebels"]
+    },
+    "count_dooku": {
+      "full_name": "Count Dooku (Darth Tyranus)",
+      "species": "Human",
+      "homeworld": "Serenno",
+      "birth_year": "102 BBY",
+      "death_year": "19 BBY",
+      "force_sensitivity": "Very High",
+      "lightsaber_forms": ["Form II: Makashi (master)"],
+      "lightsaber_color": "Red (curved hilt)",
+      "rank": "Sith Lord, Separatist Leader",
+      "affiliations": ["Jedi Order (former)", "Sith Order", "Confederacy of Independent Systems"],
+      "personality_traits": ["Aristocratic", "Elegant", "Disillusioned", "Proud", "Calculating"],
+      "notable_quotes": [
+        "I've become more powerful than any Jedi.",
+        "Twice the pride, double the fall.",
+        "You have interfered with our affairs for the last time."
+      ],
+      "key_relationships": {
+        "former_master": "Yoda",
+        "master": "Darth Sidious",
+        "former_padawan": "Qui-Gon Jinn"
+      },
+      "major_events": [
+        "Leaving the Jedi Order",
+        "Leading Separatist movement",
+        "Clone Wars leadership",
+        "Death at hands of Anakin"
+      ],
+      "abilities": [
+        "Curved lightsaber mastery",
+        "Force lightning",
+        "Political leadership",
+        "Elegant dueling style",
+        "Strategic planning"
+      ],
+      "philosophy": "Disillusionment with Republic corruption, belief in authoritarian order",
+      "sources": ["Prequel Trilogy", "Clone Wars"]
+    }
+  },
+  "smugglers_rogues": {
+    "han_solo": {
+      "full_name": "Han Solo",
+      "species": "Human",
+      "homeworld": "Corellia",
+      "birth_year": "29 BBY",
+      "death_year": "34 ABY",
+      "force_sensitivity": "None/Very Low",
+      "rank": "Captain, General (Rebel Alliance)",
+      "affiliations": ["Rebel Alliance", "New Republic"],
+      "personality_traits": ["Roguish", "Charming", "Loyal", "Skeptical", "Brave"],
+      "notable_quotes": [
+        "Never tell me the odds.",
+        "I know.",
+        "It's true. All of it.",
+        "I've got a bad feeling about this."
+      ],
+      "key_relationships": {
+        "wife": "Leia Organa",
+        "best_friend": "Chewbacca",
+        "son": "Ben Solo (Kylo Ren)",
+        "friends": ["Luke Skywalker", "Lando Calrissian"]
+      },
+      "major_events": [
+        "Kessel Run",
+        "Joining Rebellion",
+        "Rescue from carbonite",
+        "Marriage to Leia",
+        "Death at hands of son"
+      ],
+      "abilities": [
+        "Exceptional piloting skills",
+        "Quick-draw marksmanship",
+        "Smuggling expertise", 
+        "Leadership capabilities",
+        "Street-smart intuition"
+      ],
+      "philosophy": "Pragmatic self-interest evolving into commitment to greater good",
+      "sources": ["Original Trilogy", "Sequel Trilogy", "Solo"]
+    },
+    "lando_calrissian": {
+      "full_name": "Lando Calrissian",
+      "species": "Human",
+      "homeworld": "Socorro",
+      "birth_year": "31 BBY",
+      "death_year": "Unknown",
+      "force_sensitivity": "Low",
+      "rank": "Baron Administrator, General",
+      "affiliations": ["Cloud City", "Rebel Alliance", "New Republic", "Resistance"],
+      "personality_traits": ["Charismatic", "Smooth", "Conflicted", "Loyal", "Stylish"],
+      "notable_quotes": [
+        "Hello, what have we here?",
+        "I'm responsible for these people.",
+        "How you doin', you old pirate?"
+      ],
+      "key_relationships": {
+        "friend": "Han Solo",
+        "allies": ["Chewbacca", "Princess Leia"],
+        "droid": "L3-37"
+      },
+      "major_events": [
+        "Losing Millennium Falcon to Han",
+        "Betraying and rescuing Han",
+        "Battle of Endor",
+        "Search for missing people"
+      ],
+      "abilities": [
+        "Exceptional piloting",
+        "Business acumen",
+        "Political leadership",
+        "Gambling skills",
+        "Social manipulation"
+      ],
+      "philosophy": "Balance between self-preservation and doing the right thing",
+      "sources": ["Original Trilogy", "Sequel Trilogy", "Solo"]
+    },
+    "boba_fett": {
+      "full_name": "Boba Fett",
+      "species": "Human (clone)",
+      "homeworld": "Kamino",
+      "birth_year": "32 BBY",
+      "death_year": "Unknown (survived Sarlacc)",
+      "force_sensitivity": "None",
+      "rank": "Bounty Hunter, Crime Lord",
+      "affiliations": ["Independent", "Galactic Empire (contracts)", "Tatooine (ruler)"],
+      "personality_traits": ["Silent", "Professional", "Dangerous", "Honorable", "Calculating"],
+      "notable_quotes": [
+        "He's no good to me dead.",
+        "I'm a simple man making his way through the galaxy.",
+        "Like my father before me."
+      ],
+      "key_relationships": {
+        "father": "Jango Fett",
+        "ally": "Fennec Shand",
+        "employer": "Jabba the Hutt"
+      },
+      "major_events": [
+        "Father's death on Geonosis",
+        "Capturing Han Solo",
+        "Sarlacc survival",
+        "Ruling Tatooine"
+      ],
+      "abilities": [
+        "Expert marksmanship",
+        "Mandalorian armor mastery",
+        "Tracking and hunting",
+        "Combat expertise",
+        "Strategic thinking"
+      ],
+      "philosophy": "Professional honor, loyalty to contracts and allies",
+      "sources": ["Original Trilogy", "Prequel Trilogy", "Mandalorian", "Book of Boba Fett"]
+    }
+  },
+  "rebels_resistance": {
+    "luke_skywalker": {
+      "full_name": "Luke Skywalker",
+      "species": "Human",
+      "homeworld": "Tatooine",
+      "birth_year": "19 BBY",
+      "death_year": "34 ABY",
+      "force_sensitivity": "Legendary",
+      "lightsaber_forms": ["Self-taught hybrid", "Form V influences"],
+      "lightsaber_color": "Blue, later Green",
+      "rank": "Jedi Knight, Jedi Master",
+      "affiliations": ["Rebel Alliance", "New Republic", "New Jedi Order"],
+      "personality_traits": ["Optimistic", "Brave", "Compassionate", "Determined", "Idealistic"],
+      "notable_quotes": [
+        "I am a Jedi, like my father before me.",
+        "The Force will be with you, always.",
+        "No one's ever really gone."
+      ],
+      "key_relationships": {
+        "father": "Darth Vader",
+        "sister": "Leia Organa",
+        "masters": ["Obi-Wan Kenobi", "Yoda"],
+        "nephew": "Ben Solo"
+      },
+      "major_events": [
+        "Joining Rebellion",
+        "Jedi training",
+        "Confronting Vader and Emperor",
+        "Establishing New Jedi Order",
+        "Force projection sacrifice"
+      ],
+      "abilities": [
+        "Strong Force sensitivity",
+        "Force projection",
+        "Lightsaber construction",
+        "Piloting skills",
+        "Teaching abilities"
+      ],
+      "philosophy": "Hope and redemption, belief in the good in everyone",
+      "sources": ["All Trilogies", "Expanded Universe"]
+    },
+    "leia_organa": {
+      "full_name": "Leia Organa Skywalker Solo",
+      "species": "Human",
+      "homeworld": "Alderaan (adopted)",
+      "birth_year": "19 BBY",
+      "death_year": "35 ABY",
+      "force_sensitivity": "High (untrained initially)",
+      "rank": "Princess, Senator, General",
+      "affiliations": ["Rebel Alliance", "New Republic", "Resistance"],
+      "personality_traits": ["Strong-willed", "Diplomatic", "Brave", "Intelligent", "Caring"],
+      "notable_quotes": [
+        "Help me, Obi-Wan Kenobi. You're my only hope.",
+        "The more you tighten your grip, the more star systems will slip through your fingers.",
+        "Hope is like the sun. If you only believe in it when you can see it, you'll never make it through the night."
+      ],
+      "key_relationships": {
+        "father": "Darth Vader",
+        "brother": "Luke Skywalker", 
+        "husband": "Han Solo",
+        "son": "Ben Solo",
+        "adoptive_parents": "Bail and Breha Organa"
+      },
+      "major_events": [
+        "Alderaan destruction",
+        "Rebellion leadership",
+        "Rescue from Death Star",
+        "Leading Resistance",
+        "Training with Luke"
+      ],
+      "abilities": [
+        "Political leadership",
+        "Diplomatic skills",
+        "Force sensitivity",
+        "Strategic planning",
+        "Inspirational leadership"
+      ],
+      "philosophy": "Fighting tyranny through diplomacy and resistance",
+      "sources": ["All Trilogies", "Expanded Universe"]
+    },
+    "mon_mothma": {
+      "full_name": "Mon Mothma",
+      "species": "Human",
+      "homeworld": "Chandrila",
+      "birth_year": "48 BBY",
+      "death_year": "Unknown",
+      "force_sensitivity": "None",
+      "rank": "Senator, Alliance Leader, Chief of State",
+      "affiliations": ["Galactic Republic", "Rebel Alliance", "New Republic"],
+      "personality_traits": ["Diplomatic", "Principled", "Determined", "Wise", "Political"],
+      "notable_quotes": [
+        "Many Bothans died to bring us this information.",
+        "The Emperor has made a critical error and the time for our attack has come."
+      ],
+      "key_relationships": {
+        "allies": ["Bail Organa", "Padmé Amidala"],
+        "political_partners": ["Admiral Ackbar", "General Rieekan"]
+      },
+      "major_events": [
+        "Founding Rebel Alliance",
+        "Leading Alliance to Restore the Republic",
+        "Establishing New Republic",
+        "Endor briefing"
+      ],
+      "abilities": [
+        "Political maneuvering",
+        "Alliance building",
+        "Strategic planning",
+        "Inspirational leadership",
+        "Diplomatic immunity"
+      ],
+      "philosophy": "Democratic principles, peaceful resistance to tyranny",
+      "sources": ["Original Trilogy", "Prequel Trilogy", "Rogue One"]
+    }
+  },
+  "imperials": {
+    "grand_moff_tarkin": {
+      "full_name": "Wilhuff Tarkin",
+      "species": "Human",
+      "homeworld": "Eriadu",
+      "birth_year": "64 BBY",
+      "death_year": "0 ABY",
+      "force_sensitivity": "None",
+      "rank": "Grand Moff, Death Star Commander",
+      "affiliations": ["Galactic Republic", "Galactic Empire"],
+      "personality_traits": ["Ruthless", "Calculating", "Arrogant", "Strategic", "Cold"],
+      "notable_quotes": [
+        "You may fire when ready.",
+        "Fear will keep the local systems in line.",
+        "Evacuate? In our moment of triumph?"
+      ],
+      "key_relationships": {
+        "ally": "Emperor Palpatine",
+        "colleague": "Darth Vader",
+        "enemy": "Rebel Alliance"
+      },
+      "major_events": [
+        "Clone Wars service",
+        "Death Star construction oversight",
+        "Alderaan destruction",
+        "Death on Death Star"
+      ],
+      "abilities": [
+        "Military strategy",
+        "Political maneuvering",
+        "Ruthless decision-making",
+        "Administrative control",
+        "Fear tactics"
+      ],
+      "philosophy": "Rule through fear and overwhelming force",
+      "sources": ["Original Trilogy", "Clone Wars", "Rebels"]
+    },
+    "grand_admiral_thrawn": {
+      "full_name": "Mitth'raw'nuruodo (Thrawn)",
+      "species": "Chiss",
+      "homeworld": "Csilla (Chiss Ascendancy)",
+      "birth_year": "Unknown",
+      "death_year": "Unknown (missing)",
+      "force_sensitivity": "None",
+      "rank": "Grand Admiral",
+      "affiliations": ["Chiss Ascendancy", "Galactic Empire"],
+      "personality_traits": ["Brilliant", "Analytical", "Cultural", "Patient", "Strategic"],
+      "notable_quotes": [
+        "I study the art of war. Work to perfect it.",
+        "To defeat an enemy, you must know them.",
+        "The key to understanding a species is to understand their art."
+      ],
+      "key_relationships": {
+        "ally": "Agent Kallus (later defected)",
+        "enemy": "Phoenix Squadron",
+        "disappeared_with": "Ezra Bridger"
+      },
+      "major_events": [
+        "Lothal campaign",
+        "Hunt for Rebels",
+        "Disappearance with Ezra",
+        "Return in Sequel era"
+      ],
+      "abilities": [
+        "Tactical genius",
+        "Cultural analysis",
+        "Art appreciation for strategy",
+        "Leadership skills",
+        "Patience and planning"
+      ],
+      "philosophy": "Victory through understanding, tactical superiority over brute force",
+      "sources": ["Rebels", "Expanded Universe", "Ahsoka"]
+    }
+  },
+  "droids": {
+    "c_3po": {
+      "full_name": "C-3PO",
+      "species": "Protocol Droid",
+      "manufacturer": "Cybot Galactica",
+      "creation_year": "32 BBY",
+      "creator": "Anakin Skywalker",
+      "primary_function": "Protocol and Translation",
+      "affiliations": ["Skywalker family", "Rebel Alliance", "Resistance"],
+      "personality_traits": ["Anxious", "Proper", "Loyal", "Verbose", "Cowardly"],
+      "notable_quotes": [
+        "The possibilities of successfully navigating an asteroid field are approximately 3,720 to 1!",
+        "I am fluent in over six million forms of communication.",
+        "Oh my!"
+      ],
+      "key_relationships": {
+        "counterpart": "R2-D2",
+        "creators": "Anakin Skywalker",
+        "owners": ["Padmé Amidala", "Captain Antilles", "Luke Skywalker"]
+      },
+      "major_events": [
+        "Service during Clone Wars",
+        "Witnessing Empire's rise",
+        "Rebel Alliance missions",
+        "Resistance operations"
+      ],
+      "abilities": [
+        "6+ million language translation",
+        "Protocol knowledge",
+        "Etiquette programming", 
+        "Cultural databases",
+        "Diplomatic functions"
+      ],
+      "philosophy": "Duty to organic masters, preference for peaceful solutions",
+      "sources": ["All Trilogies", "Clone Wars"]
+    },
+    "r2_d2": {
+      "full_name": "R2-D2",
+      "species": "Astromech Droid",
+      "manufacturer": "Industrial Automaton",
+      "creation_year": "33 BBY",
+      "primary_function": "Astromech and Repair",
+      "affiliations": ["Naboo Royal Forces", "Jedi Order", "Rebel Alliance", "Resistance"],
+      "personality_traits": ["Brave", "Loyal", "Resourceful", "Stubborn", "Heroic"],
+      "notable_quotes": [
+        "[Beeps and whistles]",
+        "[Assertive beeping]",
+        "[Sad whistling]"
+      ],
+      "key_relationships": {
+        "counterpart": "C-3PO",
+        "owners": ["Padmé Amidala", "Anakin Skywalker", "Luke Skywalker"],
+        "friend": "Luke Skywalker"
+      },
+      "major_events": [
+        "Naboo crisis participation",
+        "Clone Wars service",
+        "Death Star plans delivery",
+        "Jedi Temple infiltration"
+      ],
+      "abilities": [
+        "Starship repair and navigation",
+        "Computer slicing",
+        "Holographic projection",
+        "Electric shock defense",
+        "Rocket boosters (sometimes)"
+      ],
+      "philosophy": "Unwavering loyalty, heroic initiative beyond programming",
+      "sources": ["All Trilogies", "Clone Wars", "Rebels"]
+    }
+  },
+  "sequel_era": {
+    "rey_skywalker": {
+      "full_name": "Rey Skywalker (born Rey Palpatine)",
+      "species": "Human",
+      "homeworld": "Jakku",
+      "birth_year": "15 ABY",
+      "death_year": "Unknown",
+      "force_sensitivity": "Legendary",
+      "lightsaber_forms": ["Self-taught staff combat adapted"],
+      "lightsaber_color": "Blue, later Yellow",
+      "rank": "Jedi",
+      "affiliations": ["Resistance", "New Jedi Order"],
+      "personality_traits": ["Determined", "Compassionate", "Independent", "Strong", "Searching"],
+      "notable_quotes": [
+        "I am all the Jedi.",
+        "Be with me. Be with me.",
+        "I know who I am."
+      ],
+      "key_relationships": {
+        "grandfather": "Emperor Palpatine",
+        "father": "Emperor's son",
+        "mentor": "Luke Skywalker",
+        "connection": "Ben Solo"
+      },
+      "major_events": [
+        "Awakening on Jakku",
+        "Training with Luke",
+        "Confronting Palpatine",
+        "Rebuilding Jedi Order"
+      ],
+      "abilities": [
+        "Natural Force abilities",
+        "Staff and lightsaber combat",
+        "Force healing",
+        "Lightning (inherited)",
+        "Mind tricks"
+      ],
+      "philosophy": "Finding family and purpose, balancing heritage with choice",
+      "sources": ["Sequel Trilogy"]
+    },
+    "kylo_ren": {
+      "full_name": "Ben Solo (Kylo Ren)",
+      "species": "Human",
+      "homeworld": "Chandrila",
+      "birth_year": "5 ABY",
+      "death_year": "35 ABY",
+      "force_sensitivity": "Very High",
+      "lightsaber_forms": ["Aggressive hybrid style"],
+      "lightsaber_color": "Red (crossguard)",
+      "rank": "Master of Knights of Ren, Supreme Leader",
+      "affiliations": ["New Jedi Order (former)", "First Order", "Knights of Ren"],
+      "personality_traits": ["Conflicted", "Powerful", "Angry", "Searching", "Redeemable"],
+      "notable_quotes": [
+        "Let the past die. Kill it if you have to.",
+        "I know what I have to do but I don't know if I have the strength to do it.",
+        "Dad..."
+      ],
+      "key_relationships": {
+        "parents": "Han Solo and Leia Organa",
+        "uncle": "Luke Skywalker",
+        "connection": "Rey",
+        "grandfather": "Darth Vader"
+      },
+      "major_events": [
+        "Fall to dark side",
+        "Destroying Luke's temple",
+        "Killing Han Solo",
+        "Leading First Order",
+        "Redemption and sacrifice"
+      ],
+      "abilities": [
+        "Powerful Force abilities",
+        "Crossguard lightsaber combat",
+        "Force freeze technique",
+        "Leadership skills",
+        "Force connection with Rey"
+      ],
+      "philosophy": "Struggle between light and dark, seeking belonging and purpose",
+      "sources": ["Sequel Trilogy"]
+    }
+  },
+  "mandalorians": {
+    "din_djarin": {
+      "full_name": "Din Djarin (The Mandalorian)",
+      "species": "Human",
+      "homeworld": "Aq Vetina",
+      "birth_year": "Unknown",
+      "death_year": "Unknown",
+      "force_sensitivity": "None",
+      "rank": "Mandalorian Bounty Hunter",
+      "affiliations": ["Mandalorian Covert", "Clan Mudhorn"],
+      "personality_traits": ["Honorable", "Protective", "Traditional", "Skilled", "Loyal"],
+      "notable_quotes": [
+        "This is the Way.",
+        "I can bring you in warm, or I can bring you in cold.",
+        "He is a foundling. By Creed, until he is of age or reunited with his own kind, you are as his father."
+      ],
+      "key_relationships": {
+        "foundling": "Grogu",
+        "allies": ["Cara Dune", "Greef Karga"],
+        "armorer": "The Armorer"
+      },
+      "major_events": [
+        "Great Purge survival",
+        "Finding Grogu",
+        "Darksaber acquisition",
+        "Retaking Mandalore"
+      ],
+      "abilities": [
+        "Expert marksmanship",
+        "Mandalorian armor mastery",
+        "Bounty hunting skills",
+        "Combat expertise",
+        "Piloting abilities"
+      ],
+      "philosophy": "Mandalorian Creed adherence, protection of foundlings",
+      "sources": ["Mandalorian", "Book of Boba Fett"]
+    },
+    "bo_katan_kryze": {
+      "full_name": "Bo-Katan Kryze",
+      "species": "Human",
+      "homeworld": "Mandalore",
+      "birth_year": "Unknown",
+      "death_year": "Unknown",
+      "force_sensitivity": "None",
+      "rank": "Mandalorian Leader, Former Death Watch",
+      "affiliations": ["Death Watch", "Mandalorian Resistance", "Clan Kryze"],
+      "personality_traits": ["Strong-willed", "Warrior", "Leader", "Traditional", "Determined"],
+      "notable_quotes": [
+        "Mandalorians are stronger together.",
+        "I was born on Mandalore. This armor has been in my family for three generations.",
+        "A Mandalorian and a Jedi? They'll never see it coming."
+      ],
+      "key_relationships": {
+        "sister": "Duchess Satine Kryze",
+        "ally": "Din Djarin",
+        "former_leader": "Pre Vizsla"
+      },
+      "major_events": [
+        "Death Watch membership",
+        "Sister's death",
+        "Fighting Imperial occupation",
+        "Retaking Mandalore"
+      ],
+      "abilities": [
+        "Expert warrior",
+        "Leadership skills",
+        "Tactical planning",
+        "Jetpack combat",
+        "Political maneuvering"
+      ],
+      "philosophy": "Mandalorian independence and traditional warrior culture",
+      "sources": ["Clone Wars", "Rebels", "Mandalorian"]
+    }
+  },
+  "clone_troopers": {
+    "captain_rex": {
+      "full_name": "CT-7567 (Rex)",
+      "species": "Human (clone)",
+      "homeworld": "Kamino",
+      "birth_year": "32 BBY",
+      "death_year": "Unknown",
+      "force_sensitivity": "None",
+      "rank": "Clone Captain, later Commander",
+      "affiliations": ["Galactic Republic", "501st Legion", "Rebel Alliance"],
+      "personality_traits": ["Loyal", "Independent", "Brave", "Tactical", "Caring"],
+      "notable_quotes": [
+        "Experience outranks everything.",
+        "I used to believe that being a good soldier meant doing everything they told you. That's how they engineered us. But we're not droids.",
+        "Find him. Find him. Fives! Find him!"
+      ],
+      "key_relationships": {
+        "general": "Anakin Skywalker",
+        "commander": "Ahsoka Tano",
+        "brothers": ["Fives", "Echo", "Jesse"],
+        "rebel_allies": ["Kanan Jarrus", "Ezra Bridger"]
+      },
+      "major_events": [
+        "Clone Wars campaigns",
+        "Order 66 resistance",
+        "Chip removal",
+        "Joining Rebellion"
+      ],
+      "abilities": [
+        "Military tactics",
+        "Combat expertise",
+        "Leadership skills",
+        "Independent thinking",
+        "Loyalty beyond programming"
+      ],
+      "philosophy": "Loyalty to friends over orders, protection of innocent life",
+      "sources": ["Clone Wars", "Rebels"]
+    }
+  }
+}

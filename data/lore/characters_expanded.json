@@ -1,0 +1,457 @@
+{
+  "jedi_masters": {
+    "yoda": {
+      "full_name": "Yoda",
+      "species": "Unknown (Yoda's species)",
+      "homeworld": "Unknown",
+      "birth_year": "896 BBY",
+      "death_year": "4 ABY",
+      "force_sensitivity": "Legendary",
+      "lightsaber_forms": ["Form IV: Ataru"],
+      "rank": "Grand Master of the Jedi Order",
+      "affiliations": ["Jedi Order", "Galactic Republic", "Rebel Alliance"],
+      "personality_traits": ["Wise", "Cryptic", "Playful", "Patient", "Powerful"],
+      "notable_quotes": [
+        "Do or do not, there is no try.",
+        "Fear leads to anger, anger leads to hate, hate leads to suffering.",
+        "Judge me by my size, do you?"
+      ],
+      "key_relationships": {
+        "padawans": ["Count Dooku", "Luke Skywalker"],
+        "colleagues": ["Mace Windu", "Obi-Wan Kenobi"],
+        "enemies": ["Emperor Palpatine", "Count Dooku"]
+      },
+      "major_events": [
+        "Training Count Dooku",
+        "Discovering Kamino clone army",
+        "Confronting Emperor Palpatine",
+        "Training Luke Skywalker"
+      ],
+      "abilities": [
+        "Exceptional lightsaber combat despite size",
+        "Powerful Force abilities",
+        "Precognition and Force visions",
+        "Force absorption and redirection"
+      ],
+      "philosophy": "Traditional Jedi teachings with emphasis on letting go of attachments",
+      "sources": ["Original Trilogy", "Prequel Trilogy", "Clone Wars"]
+    },
+    "mace_windu": {
+      "full_name": "Mace Windu",
+      "species": "Human",
+      "homeworld": "Haruun Kal",
+      "birth_year": "72 BBY",
+      "death_year": "19 BBY",
+      "force_sensitivity": "Very High",
+      "lightsaber_forms": ["Form VII: Vaapad (creator)"],
+      "lightsaber_color": "Purple (unique)",
+      "rank": "Jedi Master, High Council Member",
+      "affiliations": ["Jedi Order", "Galactic Republic"],
+      "personality_traits": ["Stern", "Disciplined", "Pragmatic", "Intense", "Unwavering"],
+      "notable_quotes": [
+        "He's too dangerous to be left alive!",
+        "The oppression of the Sith will never return."
+      ],
+      "key_relationships": {
+        "padawans": ["Depa Billaba"],
+        "colleagues": ["Yoda", "Obi-Wan Kenobi", "Ki-Adi-Mundi"],
+        "enemies": ["Emperor Palpatine", "General Grievous"]
+      },
+      "unique_abilities": [
+        "Shatterpoint perception",
+        "Vaapad lightsaber form mastery",
+        "Channeling inner darkness without corruption"
+      ],
+      "major_events": [
+        "Creating Vaapad fighting form",
+        "Leading the mission to arrest Palpatine",
+        "Geonosis arena battle",
+        "Various Clone Wars campaigns"
+      ],
+      "philosophy": "Aggressive stance against dark side, belief in decisive action",
+      "fate": "Killed by Anakin Skywalker and Emperor Palpatine",
+      "sources": ["Prequel Trilogy", "Clone Wars", "Shatterpoint novel"]
+    },
+    "qui_gon_jinn": {
+      "full_name": "Qui-Gon Jinn",
+      "species": "Human",
+      "homeworld": "Unknown",
+      "birth_year": "92 BBY",
+      "death_year": "32 BBY",
+      "force_sensitivity": "High",
+      "lightsaber_forms": ["Form IV: Ataru"],
+      "rank": "Jedi Master",
+      "affiliations": ["Jedi Order", "Galactic Republic"],
+      "personality_traits": ["Maverick", "Intuitive", "Compassionate", "Independent", "Wise"],
+      "notable_quotes": [
+        "The Force will guide us.",
+        "Your focus determines your reality."
+      ],
+      "key_relationships": {
+        "master": "Dooku",
+        "padawans": ["Obi-Wan Kenobi"],
+        "discovered": ["Anakin Skywalker"],
+        "enemies": ["Darth Maul"]
+      },
+      "unique_abilities": [
+        "Strong connection to Living Force",
+        "Force speed mastery",
+        "First to achieve Force ghost immortality"
+      ],
+      "major_events": [
+        "Discovering Anakin Skywalker",
+        "Naboo crisis intervention",
+        "Duel with Darth Maul",
+        "Posthumous Force ghost guidance"
+      ],
+      "philosophy": "Focus on Living Force over Unifying Force, trust in instinct over Council wisdom",
+      "legacy": "Pioneered Force ghost technique, influenced Luke's training",
+      "sources": ["Prequel Trilogy", "Clone Wars", "various novels"]
+    }
+  },
+  "sith_lords": {
+    "darth_revan": {
+      "full_name": "Revan",
+      "titles": ["Darth Revan", "Revan the Butcher", "The Prodigal Knight"],
+      "species": "Human",
+      "homeworld": "Unknown",
+      "era": "Old Republic (3956-3950 BBY)",
+      "force_sensitivity": "Legendary",
+      "lightsaber_forms": ["Multiple forms mastery"],
+      "lightsaber_colors": ["Blue (Jedi)", "Red (Sith)", "Purple (Redeemed)"],
+      "affiliations": ["Jedi Order", "Sith Empire", "Old Republic"],
+      "personality_traits": ["Charismatic", "Strategic", "Complex", "Driven", "Pragmatic"],
+      "unique_journey": "Jedi → Sith Lord → Redeemed Jedi → Gray Force User",
+      "key_relationships": {
+        "companions": ["Bastila Shan", "Carth Onasi", "HK-47"],
+        "apprentice": "Darth Malak",
+        "enemies": ["Darth Malak", "Vitiate/Valkorion"]
+      },
+      "major_achievements": [
+        "Ended Mandalorian Wars",
+        "Discovered Star Forge",
+        "Founded Sith Empire",
+        "Defeated Darth Malak",
+        "Confronted Emperor Vitiate"
+      ],
+      "philosophy": "Balance between light and dark, greater good over rigid dogma",
+      "legacy": "Influenced galactic history for millennia, symbol of redemption",
+      "sources": ["Knights of the Old Republic", "The Old Republic MMO", "Revan novel"]
+    },
+    "darth_nihilus": {
+      "full_name": "Unknown (became Darth Nihilus)",
+      "titles": ["Darth Nihilus", "Lord of Hunger", "The Wound in the Force"],
+      "species": "Human (transformed)",
+      "era": "Old Republic (3951 BBY)",
+      "force_sensitivity": "Unnatural/Corrupted",
+      "unique_nature": "Living wound in the Force",
+      "affiliations": ["Sith Triumvirate"],
+      "personality_traits": ["Consumed by hunger", "Silent", "Devastating", "Hollow"],
+      "key_relationships": {
+        "allies": ["Darth Sion", "Darth Traya"],
+        "enemies": ["Jedi Exile", "remaining Jedi"]
+      },
+      "unique_abilities": [
+        "Force Drain on planetary scale",
+        "Life absorption through Force consumption",
+        "Immunity to conventional Force attacks",
+        "Presence causes Force-sensitive death"
+      ],
+      "major_events": [
+        "Malachor V transformation",
+        "Joining Sith Triumvirate",
+        "Consuming planets",
+        "Death at hands of Jedi Exile"
+      ],
+      "philosophy": "Hunger incarnate, existence through consumption",
+      "threat_level": "Galactic extinction threat",
+      "sources": ["Knights of the Old Republic II"]
+    },
+    "darth_plagueis": {
+      "full_name": "Hego Damask (Darth Plagueis)",
+      "species": "Muun",
+      "homeworld": "Mygeeto",
+      "birth_year": "147 BBY",
+      "death_year": "19 BBY",
+      "force_sensitivity": "Very High",
+      "rank": "Sith Lord",
+      "affiliations": ["Sith Order", "Banking Clan"],
+      "personality_traits": ["Intellectual", "Manipulative", "Scientific", "Patient", "Ambitious"],
+      "notable_titles": ["Darth Plagueis the Wise", "Hego Damask"],
+      "key_relationships": {
+        "master": "Darth Tenebrous",
+        "apprentice": "Darth Sidious/Palpatine",
+        "enemies": ["Jedi Order"]
+      },
+      "research_focus": [
+        "Midi-chlorian manipulation",
+        "Immortality through the Force",
+        "Life creation and preservation",
+        "Cheating death"
+      ],
+      "major_achievements": [
+        "Near-immortality research",
+        "Training Emperor Palpatine",
+        "Influencing Anakin's conception",
+        "Banking Clan manipulation"
+      ],
+      "philosophy": "Power through knowledge, immortality through mastery",
+      "fate": "Killed by Darth Sidious in his sleep",
+      "legacy": "Research influenced Palpatine's plans and Anakin's fall",
+      "sources": ["Darth Plagueis novel", "Revenge of the Sith references"]
+    }
+  },
+  "expanded_universe_jedi": {
+    "bastila_shan": {
+      "full_name": "Bastila Shan",
+      "species": "Human",
+      "homeworld": "Talravin",
+      "era": "Old Republic",
+      "force_sensitivity": "High",
+      "lightsaber_forms": ["Form VI: Niman", "Double-bladed combat"],
+      "lightsaber_type": "Double-bladed lightsaber",
+      "rank": "Jedi Knight",
+      "affiliations": ["Jedi Order", "Old Republic"],
+      "personality_traits": ["Proud", "Determined", "Conflicted", "Strong-willed", "Passionate"],
+      "unique_abilities": [
+        "Battle Meditation mastery",
+        "Force Bond creation",
+        "Exceptional lightsaber skills"
+      ],
+      "key_relationships": {
+        "bond": "Revan",
+        "companions": ["Carth Onasi", "Mission Vao", "Jolee Bindo"],
+        "enemies": ["Darth Malak"]
+      },
+      "major_events": [
+        "Capturing Darth Revan",
+        "Joining Revan's quest",
+        "Temporary fall to dark side",
+        "Redemption and marriage to Revan"
+      ],
+      "character_arc": "Pride and duty → Love and understanding → Balance",
+      "sources": ["Knights of the Old Republic"]
+    },
+    "jaina_solo": {
+      "full_name": "Jaina Solo",
+      "species": "Human",
+      "homeworld": "Coruscant",
+      "birth_year": "9 ABY",
+      "force_sensitivity": "Very High",
+      "lightsaber_forms": ["Form V: Djem So", "Jar'Kai (dual wielding)"],
+      "rank": "Jedi Master",
+      "affiliations": ["New Jedi Order", "New Republic", "Galactic Alliance"],
+      "personality_traits": ["Determined", "Skilled", "Burdened", "Strategic", "Conflicted"],
+      "family": {
+        "parents": ["Han Solo", "Leia Organa Solo"],
+        "siblings": ["Jacen Solo/Darth Caedus", "Anakin Solo"],
+        "uncle": "Luke Skywalker"
+      },
+      "unique_abilities": [
+        "Exceptional piloting skills",
+        "Military tactical genius",
+        "Dual-wielding mastery",
+        "Force-enhanced combat coordination"
+      ],
+      "major_events": [
+        "Yuuzhan Vong War participation",
+        "Training under Luke Skywalker",
+        "Confronting Darth Caedus",
+        "Killing her twin brother Jacen"
+      ],
+      "burden": "Destined to kill her twin brother to save the galaxy",
+      "sources": ["New Jedi Order series", "Legacy of the Force series"]
+    },
+    "mara_jade": {
+      "full_name": "Mara Jade Skywalker",
+      "species": "Human",
+      "homeworld": "Unknown",
+      "birth_year": "17 BBY",
+      "death_year": "40 ABY",
+      "force_sensitivity": "High",
+      "lightsaber_forms": ["Form V: Djem So", "Ataru elements"],
+      "lightsaber_color": "Purple",
+      "affiliations": ["Galactic Empire", "New Republic", "New Jedi Order"],
+      "personality_traits": ["Independent", "Fierce", "Loyal", "Conflicted", "Strong"],
+      "career_progression": "Emperor's Hand → Smuggler → Jedi Master → Wife/Mother",
+      "key_relationships": {
+        "master": "Emperor Palpatine",
+        "husband": "Luke Skywalker",
+        "son": "Ben Skywalker",
+        "killer": "Darth Caedus/Jacen Solo"
+      },
+      "unique_abilities": [
+        "Emperor's Hand training",
+        "Exceptional combat skills",
+        "Force stealth techniques",
+        "Intelligence gathering"
+      ],
+      "character_arc": "Imperial assassin → Reluctant ally → Jedi Master → Tragic death",
+      "major_events": [
+        "Serving as Emperor's Hand",
+        "Hunting Luke Skywalker",
+        "Alliance with Luke against Thrawn",
+        "Marriage to Luke",
+        "Death protecting family"
+      ],
+      "sources": ["Thrawn Trilogy", "Hand of Thrawn", "New Jedi Order", "Legacy of the Force"]
+    },
+    "kyle_katarn": {
+      "full_name": "Kyle Katarn",
+      "species": "Human",
+      "homeworld": "Sulon",
+      "era": "New Republic/New Jedi Order",
+      "force_sensitivity": "High (late discovery)",
+      "lightsaber_forms": ["Form V: Djem So", "Strong style"],
+      "rank": "Jedi Master",
+      "affiliations": ["Galactic Empire (former)", "Rebel Alliance", "New Republic", "New Jedi Order"],
+      "personality_traits": ["Pragmatic", "Witty", "Independent", "Skilled", "Reluctant"],
+      "career_progression": "Imperial Officer → Rebel Agent → Mercenary → Jedi Knight → Jedi Master",
+      "key_relationships": {
+        "partner": "Jan Ors",
+        "students": ["Jaden Korr", "Rosh Penin"],
+        "enemies": ["Jerec", "Desann", "various Dark Jedi"]
+      },
+      "unique_abilities": [
+        "Exceptional marksmanship",
+        "Military tactics knowledge",
+        "Force lightning resistance",
+        "Combat pragmatism"
+      ],
+      "major_events": [
+        "Discovering father's murder",
+        "Joining Rebellion",
+        "Discovering Force sensitivity",
+        "Confronting Dark Jedi cults",
+        "Teaching at Jedi Academy"
+      ],
+      "philosophy": "Practical application of Jedi skills, skeptical of dogma",
+      "sources": ["Dark Forces/Jedi Knight game series"]
+    }
+  },
+  "non_force_users": {
+    "thrawn": {
+      "full_name": "Mitth'raw'nuruodo (Thrawn)",
+      "species": "Chiss",
+      "homeworld": "Csilla",
+      "birth_year": "Unknown",
+      "affiliations": ["Chiss Ascendancy", "Galactic Empire"],
+      "rank": "Grand Admiral",
+      "personality_traits": ["Brilliant", "Calculating", "Cultured", "Strategic", "Honorable"],
+      "unique_abilities": [
+        "Tactical genius through art analysis",
+        "Cultural psychology expertise",
+        "Military strategy mastery",
+        "Xenobiology knowledge"
+      ],
+      "key_relationships": {
+        "aide": "Gilad Pellaeon",
+        "enemies": ["New Republic", "Luke Skywalker", "Mara Jade"],
+        "reluctant_allies": ["Joruus C'baoth"]
+      },
+      "major_campaigns": [
+        "Imperial campaigns in Unknown Regions",
+        "Post-Endor Imperial resurgence",
+        "Siege of Coruscant",
+        "Battle of Bilbringi"
+      ],
+      "philosophy": "Understanding enemies through their art and culture",
+      "fate": "Killed by Rukh, his Noghri bodyguard",
+      "legacy": "Greatest non-Force using military mind in galactic history",
+      "sources": ["Thrawn Trilogy", "Thrawn novel series", "Rebels TV series"]
+    },
+    "boba_fett": {
+      "full_name": "Boba Fett",
+      "species": "Human (clone)",
+      "homeworld": "Kamino",
+      "birth_year": "32 BBY",
+      "affiliations": ["Independent", "Galactic Empire (contractor)"],
+      "profession": "Bounty Hunter",
+      "personality_traits": ["Professional", "Ruthless", "Honor-bound", "Independent", "Skilled"],
+      "equipment": [
+        "Mandalorian armor (inherited)",
+        "Slave I starship",
+        "Jetpack with missile",
+        "Various weapons and gadgets"
+      ],
+      "key_relationships": {
+        "father": "Jango Fett",
+        "enemies": ["Han Solo", "Luke Skywalker"],
+        "clients": ["Darth Vader", "Jabba the Hutt"]
+      },
+      "major_events": [
+        "Witnessing father's death",
+        "Becoming premier bounty hunter",
+        "Capturing Han Solo",
+        "Surviving Sarlacc pit",
+        "Leading Mandalorians"
+      ],
+      "reputation": "Most feared bounty hunter in the galaxy",
+      "sources": ["Original Trilogy", "Prequel Trilogy", "The Book of Boba Fett", "various novels"]
+    }
+  },
+  "ancient_figures": {
+    "nomi_sunrider": {
+      "full_name": "Nomi Sunrider",
+      "species": "Human",
+      "homeworld": "H'ptar",
+      "era": "Old Republic (4000 BBY)",
+      "force_sensitivity": "Very High",
+      "rank": "Jedi Master, Grand Master",
+      "affiliations": ["Jedi Order", "Old Republic"],
+      "personality_traits": ["Strong-willed", "Compassionate", "Natural leader", "Protective", "Wise"],
+      "unique_abilities": [
+        "Battle Meditation mastery",
+        "Force Severing (cutting Force connection)",
+        "Exceptional leadership",
+        "Powerful Force barriers"
+      ],
+      "key_relationships": {
+        "husband": "Andur Sunrider (deceased)",
+        "daughter": "Vima Sunrider",
+        "allies": ["Ulic Qel-Droma", "Master Arca"],
+        "enemies": ["Exar Kun", "Sith forces"]
+      },
+      "major_events": [
+        "Forced into Jedi training",
+        "Great Sith War leadership",
+        "Severing Ulic's Force connection",
+        "Defeating Exar Kun",
+        "Becoming Grand Master"
+      ],
+      "legacy": "One of the greatest Jedi leaders in history",
+      "sources": ["Tales of the Jedi comics"]
+    },
+    "exar_kun": {
+      "full_name": "Exar Kun",
+      "species": "Human",
+      "homeworld": "Coruscant",
+      "era": "Old Republic (4000 BBY)",
+      "force_sensitivity": "Very High",
+      "rank": "Jedi Knight → Dark Lord of the Sith",
+      "affiliations": ["Jedi Order", "Sith Order"],
+      "personality_traits": ["Ambitious", "Arrogant", "Powerful", "Charismatic", "Corrupted"],
+      "fall_to_darkness": "Pride and desire for forbidden knowledge",
+      "unique_abilities": [
+        "Exceptional lightsaber skills",
+        "Sith alchemy mastery",
+        "Spirit binding techniques",
+        "Ancient Sith magic"
+      ],
+      "key_relationships": {
+        "master": "Vodo-Siosk Baas",
+        "apprentice": "Ulic Qel-Droma",
+        "enemies": ["Nomi Sunrider", "Jedi Order"]
+      },
+      "major_events": [
+        "Discovery of Sith teachings",
+        "Corruption by Sith spirits",
+        "Starting Great Sith War",
+        "Binding spirit to Yavin 4",
+        "Attempting return millennia later"
+      ],
+      "fate": "Spirit bound to Yavin 4 temples, eventually destroyed",
+      "sources": ["Tales of the Jedi", "Jedi Academy trilogy"]
+    }
+  }
+}
